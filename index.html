@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html class="page" lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="index.css">
+  <link rel="stylesheet" href="libs/swiper/swiper.css">
+</head>
+
+<body class="body page__body">
+  <header class="header body__header">
+    <div class="header-overlay"></div>
+    <div class="header__top">
+      <div class="header__top-container">
+        <div class="header__top-currency-wrapper">
+          <select class="header__top-currency">
+            <option class="header__top-currency-option" value="RUB">Рубли</option>
+            <option class="header__top-currency-option" value="USD">Доллары</option>
+          </select>
+        </div>
+
+        <div class="header__top-right">
+          <div class="header__top-cart-wrapper">
+            <a class="header__top-cart-link" href="#">
+              <img class="header__top-cart-img" src="images/cart.svg" alt="user">
+              <span class="header__top-cart-count">8</span>
+            </a>
+          </div>
+
+          <div class="header__top-user-wrapper">
+            <button class="header__top-user">
+              <img class="header__top-user-img" src="images/user.svg" alt="user">
+            </button>
+            <ul class="header__top-user-list">
+              <li class="header__top-user-list-item">
+                <a class="header__top-user-list-item-link" href="#">Войти</a>
+              </li>
+              <li class="header__top-user-list-item">
+                <a class="header__top-user-list-item-link" href="#">Зарегистрироваться</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="header__bottom">
+      <div class="header__bottom-container">
+        <button class="header__bottom-open-nav">
+          <span class="header__bottom-open-nav-liner"></span>
+          <span class="header__bottom-open-nav-liner"></span>
+          <span class="header__bottom-open-nav-liner"></span>
+        </button>
+
+        <div class="header__bottom-logo-wrapper">
+          <h1 class="header__bottom-logo">
+            <a class="header__bottom-logo-link" href="#">Luxury Wacthes</a>
+          </h1>
+        </div>
+
+        
+
+        <button class="header__bottom-search">
+          <img class="header__bottom-search-img" src="images/search.svg" alt="user">
+        </button>
+
+        <form class="header__bottom-form"> 
+          <input class="header__bottom-form-input" type="search" name="search"
+            placeholder="Поиск">
+          <button class="header__bottom-form-submit" type="submit">
+            <img class="header__bottom-form-submit-img" src="images/search.svg" alt="user">
+          </button>
+        </form>
+      </div>
+    </div>
+  </header>
+
+
+  <main class="main body__main">
+    <section class="index-top-slider-section main__index-top-slider-section">
+      <h2 class="visually-hidden">слайдер</h2>
+      <div class="index-top-slider swiper-container">
+        <div class="index-top-slider__wrapper swiper-wrapper">
+          <div class="index-top-slider__slide swiper-slide">
+            <img class="index-top-slider__slide-img" src="./images/slider-top-1.jpg" alt="">
+          </div>
+          <div class="index-top-slider__slide swiper-slide">
+            <img class="index-top-slider__slide-img" src="./images/slider-top-2.jpg" alt="">
+          </div>
+          <div class="index-top-slider__slide swiper-slide">
+            <img class="index-top-slider__slide-img" src="./images/slider-top-3.jpg" alt="">
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="footer body__footer"></footer>
+  <script src="libs/swiper/swiper-min.js"></script>
+  <script src="core.js"></script>
+  <script src="index.js"></script>
+</body>
+
+</html>
