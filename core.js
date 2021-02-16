@@ -23,6 +23,7 @@
   };
 
   const headerBottomNavOpen = () => {
+    body.classList.add('body--lock');
     headerBottomNav.classList.add('header__bottom-nav--active');
     headerBottomNavOverlay.classList.add('header__bottom-nav-overlay--active');
   };
@@ -30,6 +31,7 @@
   const headerBottomNavClose = () => {
     headerBottomNav.classList.remove('header__bottom-nav--active');
     headerBottomNavOverlay.classList.remove('header__bottom-nav-overlay--active');
+    body.classList.close('body--lock');
   };
 
   const headerBottomFormOpen = () => {
