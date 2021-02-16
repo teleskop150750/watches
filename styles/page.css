@@ -8,8 +8,9 @@
   --color-grey-lighter: #b1b3b6;
   --color-grey-light: #828282;
   --color-grey-medium: #696969;
-  --color-grey-dark: #273238;
+  --color-grey-dark: #41474b;
   --color-grey-dark-15a: rgba(233, 234, 235, 0.15);
+  --color-grey-dark-55a: rgba(0, 0, 0, 0.55);
   --color-grey-darker: #333333;
   --color-black-8a: rgba(0, 0, 0, 0.075);
   --color-blue-lightest: #def3f6;
