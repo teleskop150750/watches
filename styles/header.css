@@ -342,19 +342,19 @@
   height: 10px;
 }
 
-.header__bottom-nav-list-wrapper {
+.menu {
   height: calc(100% - 56px);
   overflow: auto;
 }
 
-.header__bottom-nav-list {
+.menu__list {
   padding: 1rem 0;
   margin: 0;
   font-size: 1.1em;
   list-style: none;
 }
 
-.header__bottom-nav-link {
+.menu__link {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -363,7 +363,7 @@
   text-decoration: none;
 }
 
-.header__bottom-nav-link-arrow {
+.menu__link-arrow {
   display: block;
   height: 10px;
   padding-left: 1.1rem;
