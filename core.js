@@ -1,93 +1,107 @@
 {
   const body = document.querySelector('.body');
-  const headerTopUser = document.querySelector('.header__top-user');
-  const headerTopUserList = document.querySelector('.header__top-user-list');
+  const userButtonOpen = document.querySelector('.header__top-user');
+  const userList = document.querySelector('.header__top-user-list');
 
-  const headerBottomOpenNav = document.querySelector('.header__bottom-open-nav');
-  const headerBottomNavHeaderBack = document.querySelector('.header__bottom-nav-header-back');
+  const navButtonOpen = document.querySelector('.header__bottom-open-nav');
+  const navButtonClose = document.querySelector('.header__bottom-nav-header-back');
 
-  const headerBottomNav = document.querySelector('.header__bottom-nav');
-  const headerBottomNavOverlay = document.querySelector('.header__bottom-nav-overlay');
+  const nav = document.querySelector('.header__bottom-nav');
+  const navOverlay = document.querySelector('.header__bottom-nav-overlay');
+  const linksSubmenu = document.querySelectorAll('.menu__link-submenu');
 
-  const headerBottomSearch = document.querySelector('.header__bottom-search');
-  const headerBottomForm = document.querySelector('.header__bottom-form');
-  const headerBottomFormInput = document.querySelector('.header__bottom-form-input');
+  const searchButtonOpen = document.querySelector('.header__bottom-search');
+  const search = document.querySelector('.header__bottom-form');
+  const searchInput = document.querySelector('.header__bottom-form-input');
   const headerOverlay = document.querySelector('.header-overlay');
 
-  const headerTopUserListOpen = () => {
-    headerTopUserList.classList.add('header__top-user-list--active');
+  const userListOpen = () => {
+    userList.classList.add('header__top-user-list--active');
   };
 
-  const headerTopUserListClose = () => {
-    headerTopUserList.classList.remove('header__top-user-list--active');
+  const userListClose = () => {
+    userList.classList.remove('header__top-user-list--active');
   };
 
-  const headerBottomNavOpen = () => {
+  const navOpen = () => {
     body.classList.add('body--lock');
-    headerBottomNav.classList.add('header__bottom-nav--active');
-    headerBottomNavOverlay.classList.add('header__bottom-nav-overlay--active');
+    nav.classList.add('header__bottom-nav--active');
+    navOverlay.classList.add('header__bottom-nav-overlay--active');
   };
 
-  const headerBottomNavClose = () => {
-    headerBottomNav.classList.remove('header__bottom-nav--active');
-    headerBottomNavOverlay.classList.remove('header__bottom-nav-overlay--active');
+  const navClose = () => {
+    nav.classList.remove('header__bottom-nav--active');
+    navOverlay.classList.remove('header__bottom-nav-overlay--active');
     body.classList.close('body--lock');
   };
 
-  const headerBottomFormOpen = () => {
+  const searchOpen = () => {
     headerOverlay.classList.add('header-overlay--active');
-    headerBottomForm.classList.add('header__bottom-form--active');
-    headerBottomFormInput.focus();
+    search.classList.add('header__bottom-form--active');
+    searchInput.focus();
   };
 
-  const headerBottomFormClose = () => {
+  const searchClose = () => {
     headerOverlay.classList.remove('header-overlay--active');
-    headerBottomForm.classList.remove('header__bottom-form--active');
-    headerBottomForm.reset();
-    headerBottomFormInput.blur();
+    search.classList.remove('header__bottom-form--active');
+    search.reset();
+    searchInput.blur();
+  };
+
+  const submenuOpen = (linkSubmenu) => {
+    const menuItem = linkSubmenu.closest('.menu__item');
+    const submenu = menuItem.querySelector('.menu__list');
+    submenu.classList.add('menu__list--active');
   };
 
   body.addEventListener('click', (e) => {
     if (!e.target.classList.contains('header__top-user-list--active')
       && !e.target.classList.contains('header__top-user-list-item-link')) {
-      headerTopUserListClose();
+      userListClose();
     }
     if (!e.target.classList.contains('header__bottom-nav--active')
     && e.target.classList.contains('header__bottom-nav-overlay')) {
-      headerBottomNavClose();
+      navClose();
     }
 
     if (!e.target.classList.contains('header__bottom-form-input')
     && e.target.classList.contains('header-overlay')) {
-      headerBottomFormClose();
+      searchClose();
     }
   });
 
-  headerTopUser.addEventListener('click', (e) => {
+  userButtonOpen.addEventListener('click', (e) => {
     e.stopPropagation();
-    if (!headerTopUserList.classList.contains('header__top-user-list--active')) {
-      headerTopUserListOpen();
+    if (!userList.classList.contains('header__top-user-list--active')) {
+      userListOpen();
     } else {
-      headerTopUserListClose();
+      userListClose();
     }
   });
 
-  headerBottomOpenNav.addEventListener('click', (e) => {
+  navButtonOpen.addEventListener('click', (e) => {
     e.stopPropagation();
-    headerBottomNavOpen();
+    navOpen();
   });
 
-  headerBottomNavHeaderBack.addEventListener('click', (e) => {
+  navButtonClose.addEventListener('click', (e) => {
     e.stopPropagation();
-    headerBottomNavClose();
+    navClose();
   });
 
-  headerBottomSearch.addEventListener('click', (e) => {
+  searchButtonOpen.addEventListener('click', (e) => {
     e.stopPropagation();
-    if (!headerBottomForm.classList.contains('header__bottom-form--active')) {
-      headerBottomFormOpen();
+    if (!search.classList.contains('header__bottom-form--active')) {
+      searchOpen();
     } else {
-      headerBottomFormClose();
+      searchClose();
     }
+  });
+
+
+  linksSubmenu.forEach((linkSubmenu) => {
+    linkSubmenu.addEventListener('click', function f() {
+      submenuOpen(this);
+    });
   });
 }
