@@ -3,10 +3,10 @@
   const userButtonOpen = document.querySelector('.header__top-user');
   const userList = document.querySelector('.header__top-user-list');
 
-  const navButtonOpen = document.querySelector('.header__bottom-open-nav');
-  const navButtonClose = document.querySelector('.header__bottom-nav-mobile-header-back');
+  const navMobileButtonOpen = document.querySelector('.header__bottom-open-nav');
+  const navMobileButtonClose = document.querySelector('.header__bottom-nav-mobile-header-back');
 
-  const nav = document.querySelector('.header__bottom-nav-mobile');
+  const navMobile = document.querySelector('.header__bottom-nav-mobile');
   const navOverlay = document.querySelector('.header__bottom-nav-mobile-overlay');
   const linksSubmenu = document.querySelectorAll('.menu-mobile__link-submenu');
 
@@ -47,16 +47,16 @@
     userList.classList.remove('header__top-user-list--active');
   };
 
-  const navOpen = () => {
+  const navMobileOpen = () => {
     pageLock();
-    nav.classList.add('header__bottom-nav-mobile--active');
+    navMobile.classList.add('header__bottom-nav-mobile--active');
     navOverlay.classList.add('header__bottom-nav-mobile-overlay--active');
   };
 
-  const navClose = () => {
-    nav.classList.remove('header__bottom-nav-mobile--active');
+  const navMobileClose = () => {
+    navMobile.classList.remove('header__bottom-nav-mobile--active');
     navOverlay.classList.remove('header__bottom-nav-mobile-overlay--active');
-    const menuActive = nav.querySelectorAll('.menu-mobile__list--active');
+    const menuActive = navMobile.querySelectorAll('.menu-mobile__list--active');
     menuActive.forEach((item) => {
       item.classList.remove('menu-mobile__list--active');
     });
@@ -100,7 +100,7 @@
     }
     if (!e.target.classList.contains('header__bottom-nav-mobile--active')
       && e.target.classList.contains('header__bottom-nav-mobile-overlay')) {
-      navClose();
+      navMobileClose();
     }
 
     if (!e.target.classList.contains('header__bottom-form-input')
@@ -118,14 +118,14 @@
     }
   });
 
-  navButtonOpen.addEventListener('click', (e) => {
+  navMobileButtonOpen.addEventListener('click', (e) => {
     e.stopPropagation();
-    navOpen();
+    navMobileOpen();
   });
 
-  navButtonClose.addEventListener('click', (e) => {
+  navMobileButtonClose.addEventListener('click', (e) => {
     e.stopPropagation();
-    navClose();
+    navMobileClose();
     e.target.blur();
   });
 
