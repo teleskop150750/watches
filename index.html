@@ -5,9 +5,9 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>Главная</title>
+  <link rel="stylesheet" href="core.css">
   <link rel="stylesheet" href="index.css">
-  <link rel="stylesheet" href="libs/swiper/swiper.css">
 </head>
 
 <body class="body page__body">
@@ -31,7 +31,7 @@
           </div>
 
           <div class="header__top-user-wrapper">
-            <button class="header__top-user">
+            <button class="header__top-user" aria-label="user">
               <img class="header__top-user-img" src="images/user.svg" alt="user">
             </button>
             <ul class="header__top-user-list">
@@ -48,41 +48,41 @@
     </div>
     <div class="header__bottom">
       <div class="header__bottom-container">
-        <button class="header__bottom-open-nav">
+        <button class="header__bottom-open-nav" aria-label="menu">
           <span class="header__bottom-open-nav-liner"></span>
           <span class="header__bottom-open-nav-liner"></span>
           <span class="header__bottom-open-nav-liner"></span>
         </button>
 
-        <div class="header__bottom-nav-overlay"></div>
-        <div class="header__bottom-nav">
-          <nav class="header__bottom-nav-inner">
-            <header class="header__bottom-nav-header">
-              <h3 class="header__bottom-nav-header-title">
+        <div class="header__bottom-nav-mobile-overlay"></div>
+        <div class="header__bottom-nav-mobile">
+          <div class="header__bottom-nav-mobile-inner">
+            <header class="header__bottom-nav-mobile-header">
+              <h3 class="header__bottom-nav-mobile-header-title">
                 Категории
               </h3>
-              <button class="header__bottom-nav-header-back">
-                <img class="header__bottom-nav-header-back-icon" src="images/nav-back.svg" alt="">
+              <button class="header__bottom-nav-mobile-header-back">
+                <img class="header__bottom-nav-mobile-header-back-icon" src="images/nav-back.svg" alt="">
               </button>
             </header>
-            <div class="menu header__bottom-nav-list-wrapper">
+            <nav class="menu header__bottom-nav-mobile-list-wrapper">
               <ul class="menu__list">
                 <li class="menu__item">
                   <a href="#" class="menu__link menu__link-submenu">
-                    Мужские женские
-                    <img class="menu__link-arrow" src="images/nav-arrow-left.svg" alt="">
+                    Мужские
+                    <img class="menu__link-submenu-arrow" src="images/nav-arrow-left.svg" alt="">
                   </a>
                   <ul class="menu__list">
                     <li class="menu__item">
-                      <button class="menu__back">
+                      <a class="menu__back">
                         <img class="menu__back-arrow" src="images/nav-back.svg" alt="">
                         Назад
-                      </button>
+                      </a>
                     </li>
                     <li class="menu__item">
-                      <a href="#" class="menu__link">
-                        Пример
-                        <img class="menu__link-arrow" src="images/nav-arrow-left.svg" alt="">
+                      <a href="#" class="menu__link menu__link-submenu">
+                        Электронные
+                        <img class="menu__link-submenu-arrow" src="images/nav-arrow-left.svg" alt="">
                       </a>
                       <ul class="menu__list">
                         <li class="menu__item">
@@ -93,34 +93,58 @@
                         </li>
                         <li class="menu__item">
                           <a href="#" class="menu__link">
-                            Пример 2
-                            <img class="menu__link-arrow" src="images/nav-arrow-left.svg" alt="">
+                            Casio
                           </a>
                         </li>
                         <li class="menu__item">
                           <a href="#" class="menu__link">
-                            Пример 2
-                            <img class="menu__link-arrow" src="images/nav-arrow-left.svg" alt="">
+                            Citizen
                           </a>
                         </li>
                         <li class="menu__item">
-                          <a href="#" class="menu__link">
-                            Пример 2
-                            <img class="menu__link-arrow" src="images/nav-arrow-left.svg" alt="">
+                          <a href="#" class="menu__link menu__link--all">
+                            Показать все
                           </a>
                         </li>
                       </ul>
                     </li>
                     <li class="menu__item">
-                      <a href="#" class="menu__link">
-                        Пример
-                        <img class="menu__link-arrow" src="images/nav-arrow-left.svg" alt="">
+                      <a href="#" class="menu__link menu__link-submenu">
+                        Механические
+                        <img class="menu__link-submenu-arrow" src="images/nav-arrow-left.svg" alt="">
                       </a>
+                      <ul class="menu__list">
+                        <li class="menu__item">
+                          <button class="menu__back">
+                            <img class="menu__back-arrow" src="images/nav-back.svg" alt="">
+                            Назад
+                          </button>
+                        </li>
+                        <li class="menu__item">
+                          <a href="#" class="menu__link">
+                            Royal London
+                          </a>
+                        </li>
+                        <li class="menu__item">
+                          <a href="#" class="menu__link">
+                            Seiko
+                          </a>
+                        </li>
+                        <li class="menu__item">
+                          <a href="#" class="menu__link">
+                            Epos
+                          </a>
+                        </li>
+                        <li class="menu__item">
+                          <a href="#" class="menu__link menu__link--all">
+                            Показать все
+                          </a>
+                        </li>
+                      </ul>
                     </li>
                     <li class="menu__item">
-                      <a href="#" class="menu__link">
-                        Пример
-                        <img class="menu__link-arrow" src="images/nav-arrow-left.svg" alt="">
+                      <a href="#" class="menu__link menu__link--all">
+                        Показать все
                       </a>
                     </li>
                   </ul>
@@ -128,66 +152,78 @@
                 <li class="menu__item">
                   <a href="#" class="menu__link menu__link-submenu">
                     Женские
-                    <img class="menu__link-arrow" src="images/nav-arrow-left.svg" alt="">
+                    <img class="menu__link-submenu-arrow" src="images/nav-arrow-left.svg" alt="">
                   </a>
+                  <ul class="menu__list">
+                    <li class="menu__item">
+                      <a class="menu__back">
+                        <img class="menu__back-arrow" src="images/nav-back.svg" alt="">
+                        Назад
+                      </a>
+                    </li>
+                    <li class="menu__item">
+                      <a href="#" class="menu__link menu__link-submenu">
+                        Электронные
+                        <img class="menu__link-submenu-arrow" src="images/nav-arrow-left.svg" alt="">
+                      </a>
+                      <ul class="menu__list">
+                        <li class="menu__item">
+                          <button class="menu__back">
+                            <img class="menu__back-arrow" src="images/nav-back.svg" alt="">
+                            Назад
+                          </button>
+                        </li>
+                        <li class="menu__item">
+                          <a href="#" class="menu__link">
+                            Adriatica
+                          </a>
+                        </li>
+                        <li class="menu__item">
+                          <a href="#" class="menu__link menu__link--all">
+                            Показать все
+                          </a>
+                        </li>
+                      </ul>
+                    </li>
+                    <li class="menu__item">
+                      <a href="#" class="menu__link menu__link-submenu">
+                        Механические
+                        <img class="menu__link-submenu-arrow" src="images/nav-arrow-left.svg" alt="">
+                      </a>
+                      <ul class="menu__list">
+                        <li class="menu__item">
+                          <button class="menu__back">
+                            <img class="menu__back-arrow" src="images/nav-back.svg" alt="">
+                            Назад
+                          </button>
+                        </li>
+                        <li class="menu__item">
+                          <a href="#" class="menu__link">
+                            Anne Klein
+                          </a>
+                        </li>
+                        <li class="menu__item">
+                          <a href="#" class="menu__link  menu__link--all">
+                            Показать все
+                          </a>
+                        </li>
+                      </ul>
+                    </li>
+                    <li class="menu__item">
+                      <a href="#" class="menu__link menu__link--all">
+                        Показать все
+                      </a>
+                    </li>
+                  </ul>
                 </li>
                 <li class="menu__item">
-                  <a href="#" class="menu__link menu__link-submenu">
+                  <a href="#" class="menu__link">
                     Детские
-                    <img class="menu__link-arrow" src="images/nav-arrow-left.svg" alt="">
-                  </a>
-                </li>
-                <li class="menu__item">
-                  <a href="#" class="menu__link">
-                    Мужские женские
-                    <img class="menu__link-arrow" src="images/nav-arrow-left.svg" alt="">
-                  </a>
-                </li>
-                <li class="menu__item">
-                  <a href="#" class="menu__link">
-                    Женские
-                    <img class="menu__link-arrow" src="images/nav-arrow-left.svg" alt="">
-                  </a>
-                </li>
-                <li class="menu__item">
-                  <a href="#" class="menu__link">
-                    Детские
-                    <img class="menu__link-arrow" src="images/nav-arrow-left.svg" alt="">
-                  </a>
-                </li>
-                <li class="menu__item">
-                  <a href="#" class="menu__link">
-                    Женские
-                    <img class="menu__link-arrow" src="images/nav-arrow-left.svg" alt="">
-                  </a>
-                </li>
-                <li class="menu__item">
-                  <a href="#" class="menu__link">
-                    Детские
-                    <img class="menu__link-arrow" src="images/nav-arrow-left.svg" alt="">
-                  </a>
-                </li>
-                <li class="menu__item">
-                  <a href="#" class="menu__link">
-                    Мужские женские
-                    <img class="menu__link-arrow" src="images/nav-arrow-left.svg" alt="">
-                  </a>
-                </li>
-                <li class="menu__item">
-                  <a href="#" class="menu__link">
-                    Женские
-                    <img class="menu__link-arrow" src="images/nav-arrow-left.svg" alt="">
-                  </a>
-                </li>
-                <li class="menu__item">
-                  <a href="#" class="menu__link">
-                    Детские
-                    <img class="menu__link-arrow" src="images/nav-arrow-left.svg" alt="">
                   </a>
                 </li>
               </ul>
-            </div>
-          </nav>
+            </nav>
+          </div>
         </div>
 
         <div class="header__bottom-logo-wrapper">
@@ -196,7 +232,9 @@
           </h1>
         </div>
 
-        <button class="header__bottom-search">
+        <div class="header__bottom-menu"></div>
+
+        <button class="header__bottom-search" aria-label="search">
           <img class="header__bottom-search-img" src="images/search.svg" alt="user">
         </button>
 
@@ -212,24 +250,219 @@
 
 
   <main class="main body__main">
-    <section class="index-top-slider-section main__index-top-slider-section">
+    <section class="main-slider-section main__main-slider-section">
       <h2 class="visually-hidden">слайдер</h2>
-      <div class="index-top-slider swiper-container">
-        <div class="index-top-slider__wrapper swiper-wrapper">
-          <div class="index-top-slider__slide swiper-slide">
-            <img class="index-top-slider__slide-img" src="./images/slider-top-1.jpg" alt="">
+      <div class="main-slider">
+        <div class="main-slider__wrapper">
+          <div class="main-slider__slide">
+            <img class="main-slider__slide-img" src="./images/slider-top-1.jpg" alt="">
           </div>
-          <div class="index-top-slider__slide swiper-slide">
-            <img class="index-top-slider__slide-img" src="./images/slider-top-2.jpg" alt="">
+          <div class="main-slider__slide">
+            <img class="main-slider__slide-img" src="./images/slider-top-2.jpg" alt="">
           </div>
-          <div class="index-top-slider__slide swiper-slide">
-            <img class="index-top-slider__slide-img" src="./images/slider-top-3.jpg" alt="">
+          <div class="main-slider__slide">
+            <img class="main-slider__slide-img" src="./images/slider-top-3.jpg" alt="">
           </div>
         </div>
       </div>
     </section>
+
+    <section class="section-brands main__section-brands">
+      <h2 class="visually-hidden">Бренды</h2>
+      <div class="section-brands__container">
+        <div class="brands-slider">
+          <div class="brands-slider__wrapper">
+            <div class="brands-slider__slide">
+              <div class="brand-item">
+                <figure class="brand-item__figure">
+                  <img class="brand-item__img" src="images/slider-top-1.jpg" alt="">
+                  <figcaption class="brand-item__figcaption">
+                    <h3 class="brand-item__title">
+                      Cras elit mauris
+                    </h3>
+                    <p class="brand-item__text">
+                      In sit amet sapien eros Integer dolore magna aliqua
+                    </p>
+                  </figcaption>
+                </figure>
+              </div>
+            </div>
+            <div class="brands-slider__slide">
+              <div class="brand-item">
+                <figure class="brand-item__figure">
+                  <img class="brand-item__img" src="images/slider-top-1.jpg" alt="">
+                  <figcaption class="brand-item__figcaption">
+                    <h3 class="brand-item__title">
+                      Cras elit mauris
+                    </h3>
+                    <p class="brand-item__text">
+                      In sit amet sapien eros Integer dolore magna aliqua
+                    </p>
+                  </figcaption>
+                </figure>
+              </div>
+            </div>
+            <div class="brands-slider__slide">
+              <div class="brand-item">
+                <figure class="brand-item__figure">
+                  <img class="brand-item__img" src="images/slider-top-1.jpg" alt="">
+                  <figcaption class="brand-item__figcaption">
+                    <h3 class="brand-item__title">
+                      Cras elit mauris
+                    </h3>
+                    <p class="brand-item__text">
+                      In sit amet sapien eros Integer dolore magna aliqua
+                    </p>
+                  </figcaption>
+                </figure>
+              </div>
+            </div>
+          </div>
+          <div class="brands-slider__pagination"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-product main__section-product">
+      <h2 class="visually-hidden">Хиты</h2>
+      <div class="section-product__container">
+        <article class="product">
+          <header class="product__header">
+            <div class="product__img-wrapper">
+              <img class="product__img" src="images/product-1.png" alt="">
+            </div>
+          </header>
+          <h3 class="product__title">Royal London 41156-02</h3>
+          <div class="product__price-wrapper">
+            <span class="product__price">13 400 ₽</span>
+            <span class="product__price-old">21 100 ₽</span>
+          </div>
+          <button class="product__button">
+            Купить
+          </button>
+        </article>
+
+        <article class="product">
+          <header class="product__header">
+            <div class="product__img-wrapper">
+              <img class="product__img" src="images/product-1.png" alt="">
+            </div>
+          </header>
+          <h3 class="product__title">Royal London</h3>
+          <div class="product__price-wrapper">
+            <span class="product__price">13 400 ₽</span>
+            <span class="product__price-old">21 100 ₽</span>
+          </div>
+          <button class="product__button">
+            Купить
+          </button>
+        </article>
+
+        <article class="product">
+          <header class="product__header">
+            <div class="product__img-wrapper">
+              <img class="product__img" src="images/product-1.png" alt="">
+            </div>
+          </header>
+          <h3 class="product__title">Royal London</h3>
+          <div class="product__price-wrapper">
+            <span class="product__price">13 400 ₽</span>
+            <span class="product__price-old">21 100 ₽</span>
+          </div>
+          <button class="product__button">
+            Купить
+          </button>
+        </article>
+
+        <article class="product">
+          <header class="product__header">
+            <div class="product__img-wrapper">
+              <img class="product__img" src="images/product-1.png" alt="">
+            </div>
+          </header>
+          <h3 class="product__title">Royal London</h3>
+          <div class="product__price-wrapper">
+            <span class="product__price">13 400 ₽</span>
+            <span class="product__price-old">21 100 ₽</span>
+          </div>
+          <button class="product__button">
+            Купить
+          </button>
+        </article>
+
+        <article class="product">
+          <header class="product__header">
+            <div class="product__img-wrapper">
+              <img class="product__img" src="images/product-1.png" alt="">
+            </div>
+          </header>
+          <h3 class="product__title">Royal London</h3>
+          <div class="product__price-wrapper">
+            <span class="product__price">13 400 ₽</span>
+            <span class="product__price-old">21 100 ₽</span>
+          </div>
+          <button class="product__button">
+            Купить
+          </button>
+        </article>
+
+        <article class="product">
+          <header class="product__header">
+            <div class="product__img-wrapper">
+              <img class="product__img" src="images/product-1.png" alt="">
+            </div>
+          </header>
+          <h3 class="product__title">Royal London</h3>
+          <div class="product__price-wrapper">
+            <span class="product__price">13 400 ₽</span>
+            <span class="product__price-old">21 100 ₽</span>
+          </div>
+          <button class="product__button">
+            Купить
+          </button>
+        </article>
+
+        <article class="product">
+          <header class="product__header">
+            <div class="product__img-wrapper">
+              <img class="product__img" src="images/product-1.png" alt="">
+            </div>
+          </header>
+          <h3 class="product__title">Royal London</h3>
+          <div class="product__price-wrapper">
+            <span class="product__price">13 400 ₽</span>
+            <span class="product__price-old">21 100 ₽</span>
+          </div>
+          <button class="product__button">
+            Купить
+          </button>
+        </article>
+
+        <article class="product">
+          <header class="product__header">
+            <div class="product__img-wrapper">
+              <img class="product__img" src="images/product-1.png" alt="">
+            </div>
+          </header>
+          <h3 class="product__title">Royal London</h3>
+          <div class="product__price-wrapper">
+            <span class="product__price">13 400 ₽</span>
+            <span class="product__price-old">21 100 ₽</span>
+          </div>
+          <button class="product__button">
+            Купить
+          </button>
+        </article>
+      </div>
+    </section>
   </main>
-  <footer class="footer body__footer"></footer>
+  <footer class="footer body__footer">
+    <div class="footer__container">
+      <p class="footer__copy">
+        © 2021 ГПОУ ТО "Донской колледж информационных технологий" Куликов Денис 4-П-1
+      </p>
+    </div>
+  </footer>
   <script src="libs/swiper/swiper-min.js"></script>
   <script src="core.js"></script>
   <script src="index.js"></script>

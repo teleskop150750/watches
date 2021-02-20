@@ -3,11 +3,11 @@
 :root {
   --color-white-55a: rgba(255, 255, 255, 0.55);
   --color-white-84a: rgba(255, 255, 255, 0.835);
-  --color-grey-lightest: #e9eaeb;
+  --color-grey-lightest: #f6f6f6;
   --color-grey-lightest-55a: rgba(233, 234, 235, 0.55);
   --color-grey-lighter: #b1b3b6;
   --color-grey-light: #828282;
-  --color-grey-medium: #696969;
+  --color-grey-medium: #676767;
   --color-grey-dark: #41474b;
   --color-grey-dark-15a: rgba(233, 234, 235, 0.15);
   --color-grey-dark-55a: rgba(0, 0, 0, 0.55);
@@ -16,8 +16,9 @@
   --color-blue-lightest: #def3f6;
   --color-blue-lightest-0a: rgba(222, 243, 246, 0);
   --color-blue-light: #32adfd;
-  --color-blue-medium: #377db3;
+  --color-blue-medium: #5c7aff;
   --color-blue-darker: #405cda;
+  --color-blue-darker: #5c7aff;
   --color-green-light: #ddf2ea;
   --color-green-darker: #a3cfd1;
   --color-green-darker-50a: rgba(163, 207, 209, 0.5);
@@ -28,6 +29,7 @@
   --color-grass: #95d445;
   --color-black: #252525;
   --color-white: #ffffff;
+  --color-white: #fefefe;
   --max-width: 1172px;
   --box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
 }
