@@ -73,7 +73,6 @@
 
       return;
     }
-    console.log(2);
 
     enableSwiper();
   };

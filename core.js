@@ -8,8 +8,9 @@
 
   const nav = document.querySelector('.header__bottom-nav-mobile');
   const navOverlay = document.querySelector('.header__bottom-nav-mobile-overlay');
-  const linksSubmenu = document.querySelectorAll('.menu__link-submenu');
-  const menuBackButtons = document.querySelectorAll('.menu__back');
+  const linksSubmenu = document.querySelectorAll('.menu-mobile__link-submenu');
+
+  const menuBackButtons = document.querySelectorAll('.menu-mobile__back');
 
   const searchButtonOpen = document.querySelector('.header__bottom-search');
   const search = document.querySelector('.header__bottom-form');
@@ -55,9 +56,9 @@
   const navClose = () => {
     nav.classList.remove('header__bottom-nav-mobile--active');
     navOverlay.classList.remove('header__bottom-nav-mobile-overlay--active');
-    const menuActive = nav.querySelectorAll('.menu__list--active');
+    const menuActive = nav.querySelectorAll('.menu-mobile__list--active');
     menuActive.forEach((item) => {
-      item.classList.remove('menu__list--active');
+      item.classList.remove('menu-mobile__list--active');
     });
 
     pageOnLock();
@@ -81,14 +82,14 @@
   };
 
   const submenuOpen = (linkSubmenu) => {
-    const menuItem = linkSubmenu.closest('.menu__item');
-    const submenu = menuItem.querySelector('.menu__list');
-    submenu.classList.add('menu__list--active');
+    const menuItem = linkSubmenu.closest('.menu-mobile__item');
+    const submenu = menuItem.querySelector('.menu-mobile__list');
+    submenu.classList.add('menu-mobile__list--active');
   };
 
   const submenuClose = (menuBackButton) => {
-    const submenu = menuBackButton.closest('.menu__list');
-    submenu.classList.remove('menu__list--active');
+    const submenu = menuBackButton.closest('.menu-mobile__list');
+    submenu.classList.remove('menu-mobile__list--active');
     menuBackButton.blur();
   };
 
