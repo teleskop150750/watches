@@ -61,10 +61,6 @@
     width: 100%;
     max-width: 350px;
   }
-
-  /* .brands-slider__slide:nth-child(1) {
-    justify-self: end;
-  } */
 }
 
 .brand-item {
@@ -242,6 +238,6 @@
 }
 
 .brands-slider__pagination-bullet--active {
-  background-color: var(--color-blue-darker);
+  background-color: var(--color-blue-medium);
   transform: scale(1);
 }

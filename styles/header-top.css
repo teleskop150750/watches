@@ -35,8 +35,8 @@
 }
 
 .header__top-currency {
-  padding: 6px;
-  padding-right: 1em;
+  padding: 0.25rem;
+  padding-right: 1rem;
   font-size: 0.9em;
   line-height: 1;
   color: var(--color-grey-lightest);
@@ -53,16 +53,15 @@
 
 /* ===================================================== */
 
-/* right */
+/* header right */
 .header__top-right {
   display: flex;
-  gap: 1.5rem;
+  gap: 1.5em;
 }
 
 /* ===================================================== */
 
 /* cart */
-
 .header__top-cart-link {
   position: relative;
   display: block;
@@ -85,7 +84,7 @@
   font-weight: 700;
   line-height: 1;
   color: #ffffff;
-  background-color: var(--color-blue-darker);
+  background-color: var(--color-blue-medium);
   border: 0.25em solid var(--color-black);
   border-radius: 200px;
   transform: translateX(100%);
@@ -139,5 +138,4 @@
   display: block;
   padding: 0.5em;
   color: inherit;
-  text-decoration: none;
 }
