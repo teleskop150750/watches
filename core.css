@@ -1,5 +1,11 @@
 @import 'styles/fonts.css';
 @import 'styles/page.css';
 @import 'styles/header.css';
+@import 'styles/header-top.css';
+
+/* @import 'styles/logo.css'; */
+@import 'styles/header-bottom.css';
+
+/* @import 'styles/header-bottom-mobile.css'; */
 @import 'styles/main.css';
 @import 'styles/footer.css';

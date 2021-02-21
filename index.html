@@ -25,15 +25,12 @@
         <div class="header__top-right">
           <div class="header__top-cart-wrapper">
             <a class="header__top-cart-link" href="#">
-              <img class="header__top-cart-img" src="images/cart.svg" alt="user">
               <span class="header__top-cart-count">8</span>
             </a>
           </div>
 
           <div class="header__top-user-wrapper">
-            <button class="header__top-user" aria-label="user">
-              <img class="header__top-user-img" src="images/user.svg" alt="user">
-            </button>
+            <button class="header__top-user" aria-label="user"></button>
             <ul class="header__top-user-list">
               <li class="header__top-user-list-item">
                 <a class="header__top-user-list-item-link" href="#">Войти</a>
@@ -46,6 +43,13 @@
         </div>
       </div>
     </div>
+
+    <div class="header__logo-wrapper">
+      <h1 class="logo">
+        <a class="logo__link" href="#">Luxury Wacthes</a>
+      </h1>
+    </div>
+
     <div class="header__bottom">
       <div class="header__bottom-container">
         <button class="header__bottom-open-nav" aria-label="menu">
@@ -74,10 +78,10 @@
                   </a>
                   <ul class="menu-mobile__list">
                     <li class="menu-mobile__item">
-                      <a class="menu-mobile__back">
+                      <button class="menu-mobile__back">
                         <img class="menu-mobile__back-arrow" src="images/nav-back.svg" alt="">
                         Назад
-                      </a>
+                      </button>
                     </li>
                     <li class="menu-mobile__item">
                       <a href="#" class="menu-mobile__link menu-mobile__link-submenu">
@@ -156,10 +160,10 @@
                   </a>
                   <ul class="menu-mobile__list">
                     <li class="menu-mobile__item">
-                      <a class="menu-mobile__back">
+                      <button class="menu-mobile__back">
                         <img class="menu-mobile__back-arrow" src="images/nav-back.svg" alt="">
                         Назад
-                      </a>
+                      </button>
                     </li>
                     <li class="menu-mobile__item">
                       <a href="#" class="menu-mobile__link menu-mobile__link-submenu">
@@ -227,22 +231,29 @@
         </div>
 
         <div class="header__bottom-logo-wrapper">
-          <h1 class="header__bottom-logo">
-            <a class="header__bottom-logo-link" href="#">Luxury Wacthes</a>
+          <h1 class="logo">
+            <a class="logo__link" href="#">Luxury Wacthes</a>
           </h1>
         </div>
 
-        <div class="header__bottom-menu"></div>
+        <div class="header__bottom-menu">
+          <nav class="menu">
+            <ul class="menu__list">
+              <li class="menu__item">
+                <a href="" class="menu__link">Мужские</a>
+              </li>
+              <li class="menu__item">
+                <a href="" class="menu__link">Жениские</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
 
-        <button class="bottom-search header__bottom-search" aria-label="search">
-          <img class="bottom-search__img" src="images/search.svg" alt="user">
-        </button>
+        <button class="search-button header__bottom-search-button" aria-label="search"></button>
 
-        <form class="header__bottom-form">
-          <input class="header__bottom-form-input" type="search" name="search" autocomplete="off" placeholder="Поиск">
-          <button class="bottom-search header__bottom-form-bottom" aria-label="search">
-            <img class="bottom-search__img" src="images/search.svg" alt="user">
-          </button>
+        <form class="header__bottom-search">
+          <input class="header__bottom-search-input" type="search" name="search" autocomplete="off" placeholder="Поиск">
+          <button class="search-button header__bottom-search-submit" type="submit"></button>
         </form>
       </div>
     </div>

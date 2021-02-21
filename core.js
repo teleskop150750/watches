@@ -5,16 +5,15 @@
 
   const navMobileButtonOpen = document.querySelector('.header__bottom-open-nav');
   const navMobileButtonClose = document.querySelector('.header__bottom-nav-mobile-header-back');
-
   const navMobile = document.querySelector('.header__bottom-nav-mobile');
   const navOverlay = document.querySelector('.header__bottom-nav-mobile-overlay');
-  const linksSubmenu = document.querySelectorAll('.menu-mobile__link-submenu');
 
+  const linksSubmenu = document.querySelectorAll('.menu-mobile__link-submenu');
   const menuBackButtons = document.querySelectorAll('.menu-mobile__back');
 
-  const searchButtonOpen = document.querySelector('.header__bottom-search');
-  const search = document.querySelector('.header__bottom-form');
-  const searchInput = document.querySelector('.header__bottom-form-input');
+  const searchButtonOpen = document.querySelector('.header__bottom-search-button');
+  const search = document.querySelector('.header__bottom-search');
+  const searchInput = document.querySelector('.header__bottom-search-input');
   const headerOverlay = document.querySelector('.header-overlay');
 
   const addPadding = (item) => {
@@ -68,13 +67,13 @@
     pageLock();
 
     headerOverlay.classList.add('header-overlay--active');
-    search.classList.add('header__bottom-form--active');
+    search.classList.add('header__bottom-search--active');
     searchInput.focus();
   };
 
   const searchClose = () => {
     headerOverlay.classList.remove('header-overlay--active');
-    search.classList.remove('header__bottom-form--active');
+    search.classList.remove('header__bottom-search--active');
     search.reset();
     searchInput.blur();
 
@@ -143,7 +142,7 @@
 
   searchButtonOpen.addEventListener('click', (e) => {
     e.stopPropagation();
-    if (!search.classList.contains('header__bottom-form--active')) {
+    if (!search.classList.contains('header__bottom-search--active')) {
       searchOpen();
     } else {
       searchClose();
