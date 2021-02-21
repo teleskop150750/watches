@@ -20,28 +20,3 @@
   pointer-events: all;
   opacity: 1;
 }
-
-/* ============================================================= */
-.header__bottom-menu {
-  display: none;
-}
-
-@media (min-width: 1000px) {
-  .header__bottom-menu {
-    display: block;
-    grid-column: 1 / 2;
-  }
-}
-
-.menu__list {
-  display: flex;
-  padding: 0;
-  margin: 0;
-  list-style: none;
-}
-
-.menu__link {
-  font-size: 1.2rem;
-  color: inherit;
-  text-decoration: none;
-}
