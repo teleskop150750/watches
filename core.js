@@ -93,20 +93,19 @@
   };
 
   body.addEventListener('click', (e) => {
-    if (!e.target.classList.contains('header__top-user-list--active')
-      && !e.target.classList.contains('header__top-user-list-item-link')) {
+    if (!e.target.closest('.header__top-user-list--active')
+      && userList.classList.contains('header__top-user-list--active')) {
       userListClose();
     }
-    if (!e.target.classList.contains('header__bottom-nav-mobile--active')
-      && e.target.classList.contains('header__bottom-nav-mobile-overlay')) {
+
+    if (e.target.classList.contains('header__bottom-nav-mobile-overlay')) {
       navMobileClose();
     }
 
-    if (!e.target.classList.contains('header__bottom-form-input')
-      && e.target.classList.contains('header-overlay')) {
+    if (e.target.classList.contains('header-overlay')) {
       searchClose();
     }
-  }, true);
+  });
 
   userButtonOpen.addEventListener('click', (e) => {
     e.stopPropagation();
