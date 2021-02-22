@@ -215,12 +215,13 @@ const pageUnlock = () => {
 
     timeEnd = new Date().getTime();
     time = timeEnd - timeStart;
+    console.log({ path, time });
 
-    if (path > 40 && time < 100) {
+    if (path > 25 && time < 200) {
       cb();
     }
 
-    if (path > 40 || time > 100) {
+    if (path > 25 || time > 200) {
       vClear();
     }
   };
