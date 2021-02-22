@@ -113,7 +113,7 @@ const pageUnlock = () => {
       item.classList.remove('menu-mobile__list--active');
     });
 
-    pageOnLock();
+    pageUnlock();
   };
 
   navMobileButtonOpen.addEventListener('click', (e) => {
