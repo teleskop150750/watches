@@ -54,7 +54,7 @@ const pageLock = () => {
   body.classList.add('page__body--lock');
 };
 
-const pageOnLock = () => {
+const pageUnlock = () => {
   body.classList.remove('page__body--lock');
   removePadding();
 };
@@ -302,7 +302,7 @@ const pageOnLock = () => {
     search.classList.remove('header__bottom-search--active');
     search.reset();
     searchInput.blur();
-    pageOnLock();
+    pageUnlock();
   };
 
   body.addEventListener('click', (e) => {
