@@ -1,5 +1,5 @@
 {
-  const body = document.querySelector('.body');
+  const body = document.querySelector('.page__body');
   const userButtonOpen = document.querySelector('.header__top-user');
   const userList = document.querySelector('.header__top-user-list');
 
@@ -30,11 +30,11 @@
 
   const pageLock = () => {
     addPadding(body);
-    body.classList.add('body--lock');
+    body.classList.add('page__body--lock');
   };
 
   const pageOnLock = () => {
-    body.classList.remove('body--lock');
+    body.classList.remove('page__body--lock');
     removePadding(body);
   };
 

@@ -75,10 +75,10 @@ a {
   background-color: var(--color-grey-lightest);
 }
 
-.body {
+.page__body {
   margin: 0;
 }
 
-.body--lock {
+.page__body--lock {
   overflow-y: hidden;
 }
