@@ -106,7 +106,7 @@
       && e.target.classList.contains('header-overlay')) {
       searchClose();
     }
-  });
+  }, true);
 
   userButtonOpen.addEventListener('click', (e) => {
     e.stopPropagation();
