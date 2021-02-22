@@ -45,12 +45,6 @@
   background-color: var(--color-white);
 }
 
-@media (max-width: 767px) {
-  .header__bottom {
-    padding: 1rem 0;
-  }
-}
-
 .header__bottom--fixed {
   position: fixed;
   top: 0;
@@ -74,8 +68,9 @@
   grid-template-columns: min-content 1fr min-content;
   align-items: center;
   max-width: var(--max-width);
-  padding: 0 1rem;
+  padding: 1rem;
   margin: 0 auto;
+  background-color: var(--color-white);
 }
 
 @media (min-width: 768px) {
@@ -83,6 +78,7 @@
     display: grid;
     grid-template-columns: 1fr min-content;
     gap: 3em;
+    padding: 0 1rem;
   }
 }
 
