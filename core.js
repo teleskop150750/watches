@@ -1,25 +1,31 @@
 const body = document.querySelector('.page__body');
 
-const addPadding = (item) => {
-  const el = item;
-  const { paddingRight } = getComputedStyle(item);
-  el.style.paddingRight = `${parseFloat(paddingRight) + window.innerWidth - document.documentElement.clientWidth}px`;
+const addPadding = () => {
+  const items = document.querySelectorAll('.js-scroll');
+  items.forEach((el) => {
+    const item = el;
+    const { paddingRight } = getComputedStyle(item);
+    item.style.paddingRight = `${parseFloat(paddingRight) + window.innerWidth - document.documentElement.clientWidth}px`;
+  });
 };
 
-const removePadding = (item) => {
-  const el = item;
-  const { paddingRight } = getComputedStyle(item);
-  el.style.paddingRight = `${parseFloat(paddingRight) - (window.innerWidth - document.documentElement.clientWidth)}px`;
+const removePadding = () => {
+  const items = document.querySelectorAll('.js-scroll');
+  items.forEach((el) => {
+    const item = el;
+    const { paddingRight } = getComputedStyle(item);
+    item.style.paddingRight = `${parseFloat(paddingRight) - (window.innerWidth - document.documentElement.clientWidth)}px`;
+  });
 };
 
 const pageLock = () => {
-  addPadding(body);
+  addPadding();
   body.classList.add('page__body--lock');
 };
 
 const pageOnLock = () => {
   body.classList.remove('page__body--lock');
-  removePadding(body);
+  removePadding();
 };
 
 // User
@@ -139,32 +145,96 @@ const pageOnLock = () => {
   };
 
   const header = document.querySelector('.header');
+  let headerHeight = header.offsetHeight;
   const navbar = document.querySelector('.header__bottom');
-  const navbarHeight = navbar.offsetHeight;
-  const navbarOffset = offset(navbar) + navbarHeight;
+  let navbarHeight = navbar.offsetHeight;
+  let navbarOffset = offset(navbar);
+  let navbarOffsetBottom = navbarOffset + navbarHeight;
+
+  window.addEventListener('resize', () => {
+    headerHeight = header.offsetHeight;
+    navbarHeight = navbar.offsetHeight;
+    navbarOffset = offset(navbar);
+    navbarOffsetBottom = navbarOffset + navbarHeight;
+  });
+
   let scrollPrev = 0;
+  let pathStart = 0;
+  let timeStart = 0;
+  let timeEnd = 0;
+  let time = 0;
+  let pathEnd = 0;
+  let path = 0;
+  let isUp = false;
 
   window.addEventListener('scroll', () => {
-    console.log(1);
-
     const scrolled = window.pageYOffset;
-    console.log(scrolled);
 
-    if (scrolled > navbarOffset) {
+    if (scrolled > navbarOffsetBottom) {
       navbar.classList.add('header__bottom--fixed');
       header.style.paddingBottom = `${navbarHeight}px`;
-    } else {
-      header.style.paddingBottom = '0px';
-      navbar.classList.remove('header__bottom--fixed');
     }
 
-    if (scrolled > 100 && scrolled > scrollPrev) {
-      console.log(2);
-
+    if (navbar.classList.contains('header__bottom--show')) {
+      if (scrolled < navbarOffset) {
+        header.style.paddingBottom = '0px';
+        navbar.classList.remove('header__bottom--fixed');
+        navbar.classList.remove('header__bottom--show');
+      }
+    } else if (scrolled < navbarOffsetBottom) {
+      header.style.paddingBottom = '0px';
+      navbar.classList.remove('header__bottom--fixed');
       navbar.classList.remove('header__bottom--show');
+    }
+
+    // if (scrolled > headerHeight && scrolled > scrollPrev) {
+    //   console.log(2);
+
+    //   navbar.classList.remove('header__bottom--show');
+    // }
+
+    if (scrolled < scrollPrev) {
+      if (!isUp) {
+        timeStart = new Date().getTime();
+        pathStart = scrolled;
+        isUp = true;
+      }
+      pathEnd = scrolled;
+      path = pathStart - pathEnd;
+
+      timeEnd = new Date().getTime();
+      time = timeEnd - timeStart;
+      if (path > 50 || time > 120) {
+        pathStart = 0;
+        pathEnd = 0;
+        path = 0;
+
+        timeStart = 0;
+        timeEnd = 0;
+        time = 0;
+        isUp = false;
+      }
     } else {
-      console.log(3);
-      navbar.classList.add('header__bottom--show');
+      isUp = false;
+      pathStart = 0;
+      pathEnd = 0;
+      path = 0;
+    }
+
+    if (scrolled > headerHeight + 300
+      && scrolled < scrollPrev
+      && path > 40
+      && time < 120) {
+      setTimeout(() => {
+        navbar.classList.add('header__bottom--show');
+        navbar.classList.add('js-scroll');
+      }, 0);
+    }
+
+    if (scrolled > scrollPrev) {
+      setTimeout(() => {
+        navbar.classList.remove('header__bottom--show');
+      }, 0);
     }
 
     scrollPrev = scrolled;
