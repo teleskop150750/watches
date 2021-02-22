@@ -22,7 +22,7 @@ const pageOnLock = () => {
   removePadding(body);
 };
 
-// Use/r
+// User
 {
   const userButtonOpen = document.querySelector('.header__top-user');
   const userList = document.querySelector('.header__top-user-list');
@@ -103,7 +103,6 @@ const pageOnLock = () => {
   };
 
   const submenuHide = (e) => {
-    console.log(1);
     const submenu = e.target;
 
     submenu.classList.remove('menu-mobile__list--active');
@@ -149,6 +148,7 @@ const pageOnLock = () => {
     console.log(1);
 
     const scrolled = window.pageYOffset;
+    console.log(scrolled);
 
     if (scrolled > navbarOffset) {
       navbar.classList.add('header__bottom--fixed');
