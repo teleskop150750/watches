@@ -1,3 +1,34 @@
+function throttle(func, ms) {
+  let isThrottled = false;
+  let savedArgs;
+  let savedThis;
+
+  function wrapper() {
+    if (isThrottled) {
+      // eslint-disable-next-line prefer-rest-params
+      savedArgs = arguments;
+      savedThis = this;
+      return;
+    }
+
+    // eslint-disable-next-line prefer-rest-params
+    func.apply(this, arguments);
+
+    isThrottled = true;
+
+    setTimeout(() => {
+      isThrottled = false; // (3)
+      if (savedArgs) {
+        wrapper.apply(savedThis, savedArgs);
+        savedArgs = null;
+        savedThis = null;
+      }
+    }, ms);
+  }
+
+  return wrapper;
+}
+
 const body = document.querySelector('.page__body');
 
 const addPadding = () => {
@@ -151,12 +182,18 @@ const pageOnLock = () => {
   let navbarOffset = offset(navbar);
   let navbarOffsetBottom = navbarOffset + navbarHeight;
 
-  window.addEventListener('resize', () => {
+  let getHeight = () => {
+    console.log(1);
+
     headerHeight = header.offsetHeight;
     navbarHeight = navbar.offsetHeight;
     navbarOffset = offset(navbar);
     navbarOffsetBottom = navbarOffset + navbarHeight;
-  });
+  };
+
+  getHeight = throttle(getHeight, 1000);
+
+  window.addEventListener('resize', getHeight);
 
   let scrollPrev = 0;
   let pathStart = 0;
@@ -253,7 +290,7 @@ const pageOnLock = () => {
 
     headerOverlay.classList.add('header-overlay--active');
     search.classList.add('header__bottom-search--active');
-    searchInput.focus();
+    // searchInput.focus();
   };
 
   const searchClose = () => {
