@@ -63,6 +63,11 @@
   transform: translateY(0);
 }
 
+.header__bottom--hide {
+  opacity: 0;
+  transform: translateY(-100%);
+}
+
 .header__bottom-container {
   display: grid;
   grid-template-columns: min-content 1fr min-content;

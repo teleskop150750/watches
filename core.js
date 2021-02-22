@@ -10,22 +10,20 @@ function throttle(func, ms) {
       savedThis = this;
       return;
     }
-
     // eslint-disable-next-line prefer-rest-params
     func.apply(this, arguments);
-
     isThrottled = true;
-
-    setTimeout(() => {
-      isThrottled = false; // (3)
+    // eslint-disable-next-line func-names
+    // eslint-disable-next-line prefer-arrow-callback
+    setTimeout(function f() {
+      isThrottled = false;
       if (savedArgs) {
         wrapper.apply(savedThis, savedArgs);
-        savedArgs = null;
-        savedThis = null;
+        // eslint-disable-next-line no-multi-assign
+        savedArgs = savedThis = null;
       }
     }, ms);
   }
-
   return wrapper;
 }
 
@@ -182,29 +180,74 @@ const pageUnlock = () => {
   let navbarOffset = offset(navbar);
   let navbarOffsetBottom = navbarOffset + navbarHeight;
 
-  let getHeight = () => {
-    console.log(1);
-
+  let updateVars = () => {
     headerHeight = header.offsetHeight;
     navbarHeight = navbar.offsetHeight;
     navbarOffset = offset(navbar);
     navbarOffsetBottom = navbarOffset + navbarHeight;
   };
 
-  getHeight = throttle(getHeight, 1000);
-
-  window.addEventListener('resize', getHeight);
+  updateVars = throttle(updateVars, 1000);
+  window.addEventListener('resize', updateVars);
 
   let scrollPrev = 0;
   let pathStart = 0;
+  let pathEnd = 0;
+  let path = 0;
   let timeStart = 0;
   let timeEnd = 0;
   let time = 0;
-  let pathEnd = 0;
-  let path = 0;
-  let isUp = false;
+  let isScroll = false;
 
-  window.addEventListener('scroll', () => {
+  const vClear = () => {
+    pathStart = 0;
+    pathEnd = 0;
+    path = 0;
+    timeStart = 0;
+    timeEnd = 0;
+    time = 0;
+    isScroll = false;
+  };
+
+  let getV = (scrolled, cb) => {
+    pathEnd = scrolled;
+    path = Math.abs(pathStart - pathEnd);
+
+    timeEnd = new Date().getTime();
+    time = timeEnd - timeStart;
+
+    if (path > 100 && time < 300) {
+      cb();
+    }
+
+    if (path > 100 || time > 300) {
+      vClear();
+    }
+  };
+
+  getV = throttle(getV, 100);
+
+  const menuDefault = () => {
+    header.style.paddingBottom = '0px';
+    navbar.classList.remove('header__bottom--fixed');
+    navbar.classList.remove('header__bottom--hide');
+    navbar.classList.remove('header__bottom--show');
+    navbar.classList.remove('js-scroll');
+  };
+
+  const show = () => {
+    navbar.classList.remove('header__bottom--hide');
+    navbar.classList.add('js-scroll');
+    navbar.classList.add('header__bottom--show');
+  };
+
+  const hide = () => {
+    if (navbar.classList.contains('header__bottom--show')) {
+      navbar.classList.add('header__bottom--hide');
+    }
+  };
+
+  const scrollHandeler = () => {
     const scrolled = window.pageYOffset;
 
     if (scrolled > navbarOffsetBottom) {
@@ -214,68 +257,37 @@ const pageUnlock = () => {
 
     if (navbar.classList.contains('header__bottom--show')) {
       if (scrolled < navbarOffset) {
-        header.style.paddingBottom = '0px';
-        navbar.classList.remove('header__bottom--fixed');
-        navbar.classList.remove('header__bottom--show');
+        menuDefault();
       }
     } else if (scrolled < navbarOffsetBottom) {
-      header.style.paddingBottom = '0px';
-      navbar.classList.remove('header__bottom--fixed');
-      navbar.classList.remove('header__bottom--show');
-    }
-
-    // if (scrolled > headerHeight && scrolled > scrollPrev) {
-    //   console.log(2);
-
-    //   navbar.classList.remove('header__bottom--show');
-    // }
-
-    if (scrolled < scrollPrev) {
-      if (!isUp) {
-        timeStart = new Date().getTime();
-        pathStart = scrolled;
-        isUp = true;
-      }
-      pathEnd = scrolled;
-      path = pathStart - pathEnd;
-
-      timeEnd = new Date().getTime();
-      time = timeEnd - timeStart;
-      if (path > 50 || time > 120) {
-        pathStart = 0;
-        pathEnd = 0;
-        path = 0;
-
-        timeStart = 0;
-        timeEnd = 0;
-        time = 0;
-        isUp = false;
-      }
-    } else {
-      isUp = false;
-      pathStart = 0;
-      pathEnd = 0;
-      path = 0;
+      menuDefault();
     }
 
     if (scrolled > headerHeight + 300
-      && scrolled < scrollPrev
-      && path > 40
-      && time < 120) {
-      setTimeout(() => {
-        navbar.classList.add('header__bottom--show');
-        navbar.classList.add('js-scroll');
-      }, 0);
+      && scrolled < scrollPrev) {
+      if (!isScroll) {
+        timeStart = new Date().getTime();
+        pathStart = scrolled;
+        isScroll = true;
+      }
+
+      getV(scrolled, show);
     }
 
     if (scrolled > scrollPrev) {
-      setTimeout(() => {
-        navbar.classList.remove('header__bottom--show');
-      }, 0);
+      if (!isScroll) {
+        timeStart = new Date().getTime();
+        pathStart = scrolled;
+        isScroll = true;
+      }
+
+      getV(scrolled, hide);
     }
 
     scrollPrev = scrolled;
-  });
+  };
+
+  window.addEventListener('scroll', scrollHandeler);
 }
 
 // search
