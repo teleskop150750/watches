@@ -1,42 +1,31 @@
+const body = document.querySelector('.page__body');
+
+const addPadding = (item) => {
+  const el = item;
+  const { paddingRight } = getComputedStyle(item);
+  el.style.paddingRight = `${parseFloat(paddingRight) + window.innerWidth - document.documentElement.clientWidth}px`;
+};
+
+const removePadding = (item) => {
+  const el = item;
+  const { paddingRight } = getComputedStyle(item);
+  el.style.paddingRight = `${parseFloat(paddingRight) - (window.innerWidth - document.documentElement.clientWidth)}px`;
+};
+
+const pageLock = () => {
+  addPadding(body);
+  body.classList.add('page__body--lock');
+};
+
+const pageOnLock = () => {
+  body.classList.remove('page__body--lock');
+  removePadding(body);
+};
+
+// Use/r
 {
-  const body = document.querySelector('.page__body');
   const userButtonOpen = document.querySelector('.header__top-user');
   const userList = document.querySelector('.header__top-user-list');
-
-  const navMobileButtonOpen = document.querySelector('.header__bottom-open-nav');
-  const navMobileButtonClose = document.querySelector('.header__bottom-nav-mobile-header-back');
-  const navMobile = document.querySelector('.header__bottom-nav-mobile');
-  const navOverlay = document.querySelector('.header__bottom-nav-mobile-overlay');
-
-  const linksSubmenu = document.querySelectorAll('.menu-mobile__link-submenu');
-  const menuBackButtons = document.querySelectorAll('.menu-mobile__back');
-
-  const searchButtonOpen = document.querySelector('.header__bottom-search-button');
-  const search = document.querySelector('.header__bottom-search');
-  const searchInput = document.querySelector('.header__bottom-search-input');
-  const headerOverlay = document.querySelector('.header-overlay');
-
-  const addPadding = (item) => {
-    const el = item;
-    const { paddingRight } = getComputedStyle(item);
-    el.style.paddingRight = `${parseFloat(paddingRight) + window.innerWidth - document.documentElement.clientWidth}px`;
-  };
-
-  const removePadding = (item) => {
-    const el = item;
-    const { paddingRight } = getComputedStyle(item);
-    el.style.paddingRight = `${parseFloat(paddingRight) - (window.innerWidth - document.documentElement.clientWidth)}px`;
-  };
-
-  const pageLock = () => {
-    addPadding(body);
-    body.classList.add('page__body--lock');
-  };
-
-  const pageOnLock = () => {
-    body.classList.remove('page__body--lock');
-    removePadding(body);
-  };
 
   const userListOpen = () => {
     userList.classList.add('header__top-user-list--active');
@@ -45,6 +34,33 @@
   const userListClose = () => {
     userList.classList.remove('header__top-user-list--active');
   };
+
+  userButtonOpen.addEventListener('click', (e) => {
+    e.stopPropagation();
+    if (!userList.classList.contains('header__top-user-list--active')) {
+      userListOpen();
+    } else {
+      userListClose();
+    }
+  });
+
+  body.addEventListener('click', (e) => {
+    if (!e.target.closest('.header__top-user-list--active')
+      && userList.classList.contains('header__top-user-list--active')) {
+      userListClose();
+    }
+  });
+}
+
+// nav mobile
+{
+  const navMobileButtonOpen = document.querySelector('.header__bottom-open-nav');
+  const navMobileButtonClose = document.querySelector('.header__bottom-nav-mobile-header-back');
+  const navMobile = document.querySelector('.header__bottom-nav-mobile');
+  const navOverlay = document.querySelector('.header__bottom-nav-mobile-overlay');
+
+  const linksSubmenu = document.querySelectorAll('.menu-mobile__link-submenu');
+  const menuBackButtons = document.querySelectorAll('.menu-mobile__back');
 
   const navMobileOpen = () => {
     pageLock();
@@ -63,6 +79,55 @@
     pageOnLock();
   };
 
+  navMobileButtonOpen.addEventListener('click', (e) => {
+    e.stopPropagation();
+    navMobileOpen();
+  });
+
+  navMobileButtonClose.addEventListener('click', (e) => {
+    e.stopPropagation();
+    navMobileClose();
+    e.target.blur();
+  });
+
+  body.addEventListener('click', (e) => {
+    if (e.target.classList.contains('header__bottom-nav-mobile-overlay')) {
+      navMobileClose();
+    }
+  });
+
+  const submenuOpen = (linkSubmenu) => {
+    const menuItem = linkSubmenu.closest('.menu-mobile__item');
+    const submenu = menuItem.querySelector('.menu-mobile__list');
+    submenu.classList.add('menu-mobile__list--active');
+  };
+
+  const submenuClose = (menuBackButton) => {
+    const submenu = menuBackButton.closest('.menu-mobile__list');
+    submenu.classList.remove('menu-mobile__list--active');
+    menuBackButton.blur();
+  };
+
+  linksSubmenu.forEach((linkSubmenu) => {
+    linkSubmenu.addEventListener('click', function f() {
+      submenuOpen(this);
+    });
+  });
+
+  menuBackButtons.forEach((menuBackButton) => {
+    menuBackButton.addEventListener('click', function f() {
+      submenuClose(this);
+    });
+  });
+}
+
+// search
+{
+  const searchButtonOpen = document.querySelector('.header__bottom-search-button');
+  const search = document.querySelector('.header__bottom-search');
+  const searchInput = document.querySelector('.header__bottom-search-input');
+  const headerOverlay = document.querySelector('.header-overlay');
+
   const searchOpen = () => {
     pageLock();
 
@@ -80,63 +145,10 @@
     pageOnLock();
   };
 
-  const submenuOpen = (linkSubmenu) => {
-    const menuItem = linkSubmenu.closest('.menu-mobile__item');
-    const submenu = menuItem.querySelector('.menu-mobile__list');
-    submenu.classList.add('menu-mobile__list--active');
-  };
-
-  const submenuClose = (menuBackButton) => {
-    const submenu = menuBackButton.closest('.menu-mobile__list');
-    submenu.classList.remove('menu-mobile__list--active');
-    menuBackButton.blur();
-  };
-
   body.addEventListener('click', (e) => {
-    if (!e.target.closest('.header__top-user-list--active')
-      && userList.classList.contains('header__top-user-list--active')) {
-      userListClose();
-    }
-
-    if (e.target.classList.contains('header__bottom-nav-mobile-overlay')) {
-      navMobileClose();
-    }
-
     if (e.target.classList.contains('header-overlay')) {
       searchClose();
     }
-  });
-
-  userButtonOpen.addEventListener('click', (e) => {
-    e.stopPropagation();
-    if (!userList.classList.contains('header__top-user-list--active')) {
-      userListOpen();
-    } else {
-      userListClose();
-    }
-  });
-
-  navMobileButtonOpen.addEventListener('click', (e) => {
-    e.stopPropagation();
-    navMobileOpen();
-  });
-
-  navMobileButtonClose.addEventListener('click', (e) => {
-    e.stopPropagation();
-    navMobileClose();
-    e.target.blur();
-  });
-
-  linksSubmenu.forEach((linkSubmenu) => {
-    linkSubmenu.addEventListener('click', function f() {
-      submenuOpen(this);
-    });
-  });
-
-  menuBackButtons.forEach((menuBackButton) => {
-    menuBackButton.addEventListener('click', function f() {
-      submenuClose(this);
-    });
   });
 
   searchButtonOpen.addEventListener('click', (e) => {
