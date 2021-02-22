@@ -287,10 +287,16 @@ const pageOnLock = () => {
 
   const searchOpen = () => {
     pageLock();
+    const addFocus = () => {
+      search.removeEventListener('transitionend', addFocus);
+      setTimeout(() => {
+        searchInput.focus();
+      }, 500);
+    };
+    search.addEventListener('transitionend', addFocus);
 
     headerOverlay.classList.add('header-overlay--active');
     search.classList.add('header__bottom-search--active');
-    searchInput.focus();
   };
 
   const searchClose = () => {
