@@ -290,7 +290,7 @@ const pageOnLock = () => {
 
     headerOverlay.classList.add('header-overlay--active');
     search.classList.add('header__bottom-search--active');
-    // searchInput.focus();
+    searchInput.focus();
   };
 
   const searchClose = () => {
