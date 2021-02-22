@@ -102,16 +102,19 @@ const pageOnLock = () => {
     submenu.classList.add('menu-mobile__list--active');
   };
 
-  // const submenuHide = (submenu) => {
-  //   submenu.classList.add('menu-mobile__list--hidden');
-  // };
+  const submenuHide = (e) => {
+    console.log(1);
+    const submenu = e.target;
+
+    submenu.classList.remove('menu-mobile__list--active');
+    submenu.classList.remove('menu-mobile__list--hiding');
+    submenu.removeEventListener('transitionend', submenuHide);
+  };
 
   const submenuClose = (menuBackButton) => {
     const submenu = menuBackButton.closest('.menu-mobile__list');
-    submenu.classList.remove('menu-mobile__list--active');
-    // submenu.addEventListener('transitionend', () => {
-    //   this.classList.add('menu-mobile__list--hidden');
-    // });
+    submenu.classList.add('menu-mobile__list--hiding');
+    submenu.addEventListener('transitionend', submenuHide);
     menuBackButton.blur();
   };
 

@@ -46,6 +46,7 @@ button {
   font-size: inherit;
   color: inherit;
   cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
 }
 
 a {

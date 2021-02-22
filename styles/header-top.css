@@ -67,7 +67,7 @@
   display: block;
   width: 1.7em;
   height: 1.7em;
-  background-image: url('/images/cart.svg');
+  background-image: url('..//images/cart.svg');
   background-repeat: no-repeat;
   background-size: contain;
 }
@@ -105,7 +105,7 @@
   margin: 0;
   font-size: inherit;
   background-color: transparent;
-  background-image: url('/images/user.svg');
+  background-image: url('../images/user.svg');
   background-repeat: no-repeat;
   background-size: contain;
   border: none;

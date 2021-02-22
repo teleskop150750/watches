@@ -133,7 +133,7 @@
   margin: 0;
   font-size: inherit;
   background-color: transparent;
-  background-image: url('/images/search.svg');
+  background-image: url('../images/search.svg');
   background-repeat: no-repeat;
   background-position: center;
   background-size: 63%;
@@ -322,6 +322,7 @@
   display: block;
   padding: 1rem 0;
   color: var(--color-grey-medium);
+  cursor: pointer;
 }
 
 .menu-mobile__link--all {
@@ -360,9 +361,14 @@
 }
 
 .menu-mobile__item .menu-mobile__list--active {
-  height: auto;
+  height: 100%;
+  height: calc(100vh - 64px);
   overflow: auto;
   transform: translateX(0);
+}
+
+.menu-mobile__item .menu-mobile__list--hiding {
+  transform: translateX(-100%);
 }
 
 .menu-mobile__back {
