@@ -226,7 +226,7 @@ const pageUnlock = () => {
     }
   };
 
-  getV = throttle(getV, 100);
+  // getV = throttle(getV, 100);
 
   const menuDefault = () => {
     header.style.paddingBottom = '0px';
