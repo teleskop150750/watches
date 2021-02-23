@@ -176,38 +176,38 @@ const pageUnlock = () => {
   };
 
   const header = document.querySelector('.header');
-  let headerHeight = header.offsetHeight;
+  const headerHeight = header.offsetHeight;
   const navbar = document.querySelector('.header__bottom');
-  let navbarHeight = navbar.offsetHeight;
-  let navbarOffset = offset(navbar);
+  const navbarHeight = navbar.offsetHeight;
+  const navbarOffset = offset(navbar);
 
-  let updateVars = () => {
-    headerHeight = header.offsetHeight;
-    navbarHeight = navbar.offsetHeight;
-    navbarOffset = offset(navbar);
-  };
+  // let updateVars = () => {
+  //   headerHeight = header.offsetHeight;
+  //   navbarHeight = navbar.offsetHeight;
+  //   navbarOffset = offset(navbar);
+  // };
 
-  updateVars = throttle(updateVars, 1000);
-  window.addEventListener('resize', updateVars);
+  // updateVars = throttle(updateVars, 1000);
+  // window.addEventListener('resize', updateVars);
 
-  let scrollPrev = 0;
-  let pathStart = 0;
-  let pathEnd = 0;
-  let path = 0;
-  let timeStart = 0;
-  let timeEnd = 0;
-  let time = 0;
-  let isScroll = false;
+  // let scrollPrev = 0;
+  // let pathStart = 0;
+  // let pathEnd = 0;
+  // let path = 0;
+  // let timeStart = 0;
+  // let timeEnd = 0;
+  // let time = 0;
+  // let isScroll = false;
 
-  const vClear = () => {
-    pathStart = 0;
-    pathEnd = 0;
-    path = 0;
-    timeStart = 0;
-    timeEnd = 0;
-    time = 0;
-    isScroll = false;
-  };
+  // const vClear = () => {
+  //   pathStart = 0;
+  //   pathEnd = 0;
+  //   path = 0;
+  //   timeStart = 0;
+  //   timeEnd = 0;
+  //   time = 0;
+  //   isScroll = false;
+  // };
 
   const getV = (scrolled, cb) => {
     pathEnd = scrolled;
