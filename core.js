@@ -323,13 +323,13 @@ const pageUnlock = () => {
   };
 
   const searchClose = () => {
-    headerOverlay.classList.remove('header-overlay--active');
-    search.classList.remove('header__bottom-search--active');
+    search.reset();
+    searchInput.blur();
     pageUnlock();
 
     setTimeout(() => {
-      search.reset();
-      searchInput.blur();
+      headerOverlay.classList.remove('header-overlay--active');
+      search.classList.remove('header__bottom-search--active');
     }, 700);
   };
 
