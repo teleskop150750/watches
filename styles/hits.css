@@ -1,8 +1,8 @@
-.section-product {
+.hits {
   padding: 1rem 0;
 }
 
-.section-product__container {
+.hits__container {
   display: grid;
   grid-template-columns: 1fr;
   gap: 0.9em;
@@ -13,13 +13,13 @@
 }
 
 @media (min-width: 750px) {
-  .section-product__container {
+  .hits__container {
     grid-template-columns: 1fr 1fr;
   }
 }
 
 @media (min-width: 1000px) {
-  .section-product__container {
+  .hits__container {
     grid-template-columns: 1fr 1fr 1fr 1fr;
     gap: 1.5em;
   }

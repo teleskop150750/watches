@@ -5,7 +5,7 @@ const mainSlider = new Swiper('.main-slider', {
   init: false,
   slidesPerView: 1,
 
-  wrapperClass: 'main-slider__wrapper',
+  wrapperClass: 'main-slider__inner',
   slideClass: 'main-slider__slide',
   slideActiveClass: 'main-slider__slide--active',
   slidePrevClass: 'main-slider__slide--prev',
