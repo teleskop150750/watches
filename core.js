@@ -330,7 +330,7 @@ const pageUnlock = () => {
       headerOverlay.classList.remove('header-overlay--active');
       search.classList.remove('header__bottom-search--active');
       pageUnlock();
-    }, 2000);
+    }, 1000);
   };
 
   body.addEventListener('click', (e) => {
