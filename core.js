@@ -209,13 +209,13 @@ const pageUnlock = () => {
     isScroll = false;
   };
 
-  let getV = (scrolled, cb) => {
+  const getV = (scrolled, cb) => {
     pathEnd = scrolled;
     path = Math.abs(pathStart - pathEnd);
 
     timeEnd = new Date().getTime();
     time = timeEnd - timeStart;
-    console.log({ path, time });
+    // console.log({ path, time });
 
     if (path > 25 && time < 200) {
       cb();
@@ -253,16 +253,25 @@ const pageUnlock = () => {
   const scrollHandeler = () => {
     const scrolled = window.pageYOffset;
 
-    if (scrolled > headerHeight) {
+    if (
+      scrolled > headerHeight
+      && !navbar.classList.contains('header__bottom--fixed')
+    ) {
+      console.log('FIXED');
       navbar.classList.add('header__bottom--fixed');
       header.style.paddingBottom = `${navbarHeight}px`;
-    }
-
-    if (navbar.classList.contains('header__bottom--show')) {
-      if (scrolled < navbarOffset) {
-        menuDefault();
-      }
-    } else if (scrolled < headerHeight) {
+    } else if (
+      scrolled < headerHeight
+      && navbar.classList.contains('header__bottom--fixed')
+      && !navbar.classList.contains('header__bottom--show')
+    ) {
+      console.log('убрать FIXED');
+      menuDefault();
+    } else if (
+      scrolled < navbarOffset
+      && navbar.classList.contains('header__bottom--show')
+    ) {
+      console.log('убрать FIXED SHOW');
       menuDefault();
     }
 
