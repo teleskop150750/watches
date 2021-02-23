@@ -175,20 +175,22 @@ const pageUnlock = () => {
     return rect.top + scrollTop;
   };
 
-  const header = document.querySelector('.header');
-  const headerHeight = header.offsetHeight;
-  const navbar = document.querySelector('.header__bottom');
-  const navbarHeight = navbar.offsetHeight;
-  const navbarOffset = offset(navbar);
+  let header = document.querySelector('.header');
+  let headerHeight = header.offsetHeight;
+  let navbar = document.querySelector('.header__bottom');
+  let navbarHeight = navbar.offsetHeight;
+  let navbarOffset = offset(navbar);
 
-  // let updateVars = () => {
-  //   headerHeight = header.offsetHeight;
-  //   navbarHeight = navbar.offsetHeight;
-  //   navbarOffset = offset(navbar);
-  // };
+  let updateVars = () => {
+    header = document.querySelector('.header');
+    headerHeight = header.offsetHeight;
+    navbar = document.querySelector('.header__bottom');
+    navbarHeight = navbar.offsetHeight;
+    navbarOffset = offset(navbar);
+  };
 
-  // updateVars = throttle(updateVars, 1000);
-  // window.addEventListener('resize', updateVars);
+  updateVars = throttle(updateVars, 1000);
+  window.addEventListener('resize', updateVars);
 
   let scrollPrev = 0;
   // let pathStart = 0;
