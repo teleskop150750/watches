@@ -76,7 +76,7 @@
   position: absolute;
   top: -0.5em;
   right: 0.7em;
-  z-index: 2;
+  z-index: 1;
   display: flex;
   justify-content: center;
   padding: 0.4em 0.6em;
@@ -88,6 +88,24 @@
   border: 0.25em solid var(--color-black);
   border-radius: 200px;
   transform: translateX(100%);
+}
+
+/* ===================================================== */
+
+/* user overlay */
+
+.user-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1;
+  height: 100vh;
+  pointer-events: none;
+}
+
+.user-overlay--active {
+  pointer-events: all;
 }
 
 /* ===================================================== */
@@ -115,7 +133,7 @@
   position: absolute;
   top: 100%;
   right: -0.5rem;
-  z-index: 2;
+  z-index: 3;
   padding: 1rem;
   margin: 0;
   list-style: none;

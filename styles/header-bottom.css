@@ -153,6 +153,28 @@
 
 /* ===================================================== */
 
+/* search overlay */
+
+.search-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  width: 100%;
+  height: 100vh;
+  pointer-events: none;
+  background-color: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  transition: opacity 0.2s linear;
+}
+
+.search-overlay--active {
+  pointer-events: all;
+  opacity: 1;
+}
+
+/* ===================================================== */
+
 /* search */
 @media (max-width: 767px) {
   .header__bottom-search {
@@ -212,7 +234,7 @@
 /* ===================================================== */
 
 /* nav overlay */
-.header__bottom-nav-mobile-overlay {
+.nav-mobile-overlay {
   position: fixed;
   top: 0;
   left: 0;
@@ -226,12 +248,12 @@
 }
 
 @media (min-width: 768px) {
-  .header__bottom-nav-mobile-overlay {
+  .nav-mobile-overlay {
     display: none;
   }
 }
 
-.header__bottom-nav-mobile-overlay--active {
+.nav-mobile-overlay--active {
   pointer-events: all;
   opacity: 1;
 }
