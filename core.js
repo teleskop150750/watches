@@ -190,7 +190,7 @@ const pageUnlock = () => {
   // updateVars = throttle(updateVars, 1000);
   // window.addEventListener('resize', updateVars);
 
-  // let scrollPrev = 0;
+  let scrollPrev = 0;
   // let pathStart = 0;
   // let pathEnd = 0;
   // let path = 0;
@@ -209,24 +209,24 @@ const pageUnlock = () => {
   //   isScroll = false;
   // };
 
-  const getV = (scrolled, cb) => {
-    pathEnd = scrolled;
-    path = Math.abs(pathStart - pathEnd);
+  // const getV = (scrolled, cb) => {
+  //   pathEnd = scrolled;
+  //   path = Math.abs(pathStart - pathEnd);
 
-    timeEnd = new Date().getTime();
-    time = timeEnd - timeStart;
-    // console.log({ path, time });
+  //   timeEnd = new Date().getTime();
+  //   time = timeEnd - timeStart;
+  //   // console.log({ path, time });
 
-    if (path > 25 && time < 200) {
-      cb();
-    }
+  //   if (path > 25 && time < 200) {
+  //     cb();
+  //   }
 
-    if (path > 25 || time > 200) {
-      vClear();
-    }
+  //   if (path > 25 || time > 200) {
+  //     vClear();
+  //   }
 
-    // cb();
-  };
+  //   // cb();
+  // };
 
   // getV = throttle(getV, 100);
 
