@@ -1,3 +1,4 @@
+/* eslint-disable no-param-reassign */
 function throttle(func, ms) {
   let isThrottled = false;
   let savedArgs;
@@ -195,44 +196,49 @@ const pageUnlock = () => {
   window.addEventListener('resize', updateVars);
 
   let scrollPrev = 0;
-  // let pathStart = 0;
-  // let pathEnd = 0;
-  // let path = 0;
-  // let timeStart = 0;
-  // let timeEnd = 0;
-  // let time = 0;
-  // let isScroll = false;
+  let pathStart = 0;
+  let pathEnd = 0;
+  let path = 0;
+  let timeStart = 0;
+  let timeEnd = 0;
+  let time = 0;
+  let isUp = false;
+  let isDown = false;
 
-  // const vClear = () => {
-  //   pathStart = 0;
-  //   pathEnd = 0;
-  //   path = 0;
-  //   timeStart = 0;
-  //   timeEnd = 0;
-  //   time = 0;
-  //   isScroll = false;
-  // };
+  const vClear = (direction) => {
+    pathStart = 0;
+    pathEnd = 0;
+    path = 0;
+    timeStart = 0;
+    timeEnd = 0;
+    time = 0;
+    if (direction) {
+      isUp = false;
+      isDown = true;
+    } else {
+      isUp = true;
+      isDown = false;
+    }
+  };
 
-  // const getV = (scrolled, cb) => {
-  //   pathEnd = scrolled;
-  //   path = Math.abs(pathStart - pathEnd);
+  let getV = (scrolled, direction, cb) => {
+    pathEnd = scrolled;
+    path = Math.abs(pathStart - pathEnd);
 
-  //   timeEnd = new Date().getTime();
-  //   time = timeEnd - timeStart;
-  //   // console.log({ path, time });
+    timeEnd = new Date().getTime();
+    time = timeEnd - timeStart;
+    console.log({ path, time });
 
-  //   if (path > 25 && time < 200) {
-  //     cb();
-  //   }
+    if (path > 25 && time < 200) {
+      cb();
+    }
 
-  //   if (path > 25 || time > 200) {
-  //     vClear();
-  //   }
+    if (path > 25 || time > 200) {
+      vClear(direction);
+    }
+  };
 
-  //   // cb();
-  // };
-
-  // getV = throttle(getV, 100);
+  getV = throttle(getV, 100);
 
   const menuDefault = () => {
     header.style.paddingBottom = '0px';
@@ -243,6 +249,7 @@ const pageUnlock = () => {
   };
 
   const show = () => {
+    console.log('SHOW');
     navbar.classList.remove('header__bottom--hide');
     navbar.classList.add('js-scroll');
     navbar.classList.add('header__bottom--show');
@@ -250,6 +257,7 @@ const pageUnlock = () => {
 
   const hide = () => {
     if (navbar.classList.contains('header__bottom--show')) {
+      console.log('HIDE');
       navbar.classList.add('header__bottom--hide');
     }
   };
@@ -286,15 +294,27 @@ const pageUnlock = () => {
       && navbar.classList.contains('header__bottom--hide')
     )
     ) {
-      console.log('SHOW');
-      show();
+      if (!isUp) {
+        timeStart = new Date().getTime();
+        pathStart = scrolled;
+        isUp = true;
+        isDown = false;
+      } else {
+        getV(scrolled, true, show);
+      }
     } else if (
       scrolled > scrollPrev
       && navbar.classList.contains('header__bottom--show')
       && !navbar.classList.contains('header__bottom--hide')
     ) {
-      console.log('HIDE');
-      hide();
+      if (!isDown) {
+        timeStart = new Date().getTime();
+        pathStart = scrolled;
+        isDown = true;
+        isUp = false;
+      } else {
+        getV(scrolled, false, hide);
+      }
     }
 
     scrollPrev = scrolled;
