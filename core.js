@@ -169,24 +169,26 @@ const pageUnlock = () => {
 
 // nav
 {
-  const offset = (el) => {
-    const rect = el.getBoundingClientRect();
-    const scrollTop = window.pageYOffset;
-    return rect.top + scrollTop;
-  };
+  // const offset = (el) => {
+  //   const rect = el.getBoundingClientRect();
+  //   const scrollTop = window.pageYOffset;
+  //   return rect.top + scrollTop;
+  // };
 
-  let header = document.querySelector('.header');
+  const header = document.querySelector('.header');
   let headerHeight = header.offsetHeight;
-  let navbar = document.querySelector('.header__bottom');
+  let headerTop = document.querySelector('.header__top').offsetHeight;
+  let headerLogo = document.querySelector('.header__logo-wrapper').offsetHeight || 0;
+  const navbar = document.querySelector('.header__bottom');
   let navbarHeight = navbar.offsetHeight;
-  let navbarOffset = offset(navbar);
+  let navbarOffset = headerTop + headerLogo;
 
   let updateVars = () => {
-    header = document.querySelector('.header');
     headerHeight = header.offsetHeight;
-    navbar = document.querySelector('.header__bottom');
+    headerTop = document.querySelector('.header__top').offsetHeight;
+    headerLogo = document.querySelector('.header__logo-wrapper').offsetHeight || 0;
     navbarHeight = navbar.offsetHeight;
-    navbarOffset = offset(navbar);
+    navbarOffset = headerTop + headerLogo;
   };
 
   updateVars = throttle(updateVars, 1000);
