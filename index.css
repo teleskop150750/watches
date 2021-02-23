@@ -2,3 +2,7 @@
 @import 'styles/brands.css';
 @import 'styles/main-product.css';
 @import 'styles/product.css';
+
+.content {
+  padding-bottom: 2rem;
+}
