@@ -178,13 +178,11 @@ const pageUnlock = () => {
   const navbar = document.querySelector('.header__bottom');
   let navbarHeight = navbar.offsetHeight;
   let navbarOffset = offset(navbar);
-  let navbarOffsetBottom = navbarOffset + navbarHeight;
 
   let updateVars = () => {
     headerHeight = header.offsetHeight;
     navbarHeight = navbar.offsetHeight;
     navbarOffset = offset(navbar);
-    navbarOffsetBottom = navbarOffset + navbarHeight;
   };
 
   updateVars = throttle(updateVars, 1000);
@@ -251,7 +249,7 @@ const pageUnlock = () => {
   const scrollHandeler = () => {
     const scrolled = window.pageYOffset;
 
-    if (scrolled > navbarOffsetBottom) {
+    if (scrolled > headerHeight) {
       navbar.classList.add('header__bottom--fixed');
       header.style.paddingBottom = `${navbarHeight}px`;
     }
@@ -260,7 +258,7 @@ const pageUnlock = () => {
       if (scrolled < navbarOffset) {
         menuDefault();
       }
-    } else if (scrolled < navbarOffsetBottom) {
+    } else if (scrolled < headerHeight) {
       menuDefault();
     }
 
