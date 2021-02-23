@@ -249,17 +249,18 @@ const pageUnlock = () => {
   };
 
   const show = () => {
+    if (!navbar.classList.contains('header__bottom--show')) {
+      navbar.classList.add('header__bottom--show');
+      navbar.classList.add('js-scroll');
+    } else {
+      navbar.classList.remove('header__bottom--hide');
+    }
     console.log('SHOW');
-    navbar.classList.remove('header__bottom--hide');
-    navbar.classList.add('js-scroll');
-    navbar.classList.add('header__bottom--show');
   };
 
   const hide = () => {
-    if (navbar.classList.contains('header__bottom--show')) {
-      console.log('HIDE');
-      navbar.classList.add('header__bottom--hide');
-    }
+    console.log('HIDE');
+    navbar.classList.add('header__bottom--hide');
   };
 
   const scrollHandeler = () => {
@@ -290,8 +291,10 @@ const pageUnlock = () => {
       && scrolled < scrollPrev
       && !navbar.classList.contains('header__bottom--show')
     ) || (
-      scrolled < scrollPrev
-      && navbar.classList.contains('header__bottom--hide')
+      scrolled > headerHeight + 300
+        && scrolled < scrollPrev
+        && navbar.classList.contains('header__bottom--show')
+        && navbar.classList.contains('header__bottom--hide')
     )
     ) {
       if (!isUp) {
