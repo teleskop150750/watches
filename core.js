@@ -273,27 +273,24 @@ const pageUnlock = () => {
     ) {
       console.log('убрать FIXED SHOW');
       menuDefault();
-    }
-
-    if (scrolled > headerHeight + 300
-      && scrolled < scrollPrev) {
-      if (!isScroll) {
-        timeStart = new Date().getTime();
-        pathStart = scrolled;
-        isScroll = true;
-      }
-
-      getV(scrolled, show);
-    }
-
-    if (scrolled > scrollPrev) {
-      if (!isScroll) {
-        timeStart = new Date().getTime();
-        pathStart = scrolled;
-        isScroll = true;
-      }
-
-      getV(scrolled, hide);
+    } else if ((
+      scrolled > headerHeight + 300
+      && scrolled < scrollPrev
+      && !navbar.classList.contains('header__bottom--show')
+    ) || (
+      scrolled < scrollPrev
+      && navbar.classList.contains('header__bottom--hide')
+    )
+    ) {
+      console.log('SHOW');
+      show();
+    } else if (
+      scrolled > scrollPrev
+      && navbar.classList.contains('header__bottom--show')
+      && !navbar.classList.contains('header__bottom--hide')
+    ) {
+      console.log('HIDE');
+      hide();
     }
 
     scrollPrev = scrolled;
