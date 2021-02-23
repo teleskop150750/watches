@@ -208,20 +208,22 @@ const pageUnlock = () => {
   };
 
   let getV = (scrolled, cb) => {
-    pathEnd = scrolled;
-    path = Math.abs(pathStart - pathEnd);
+    // pathEnd = scrolled;
+    // path = Math.abs(pathStart - pathEnd);
 
-    timeEnd = new Date().getTime();
-    time = timeEnd - timeStart;
-    console.log({ path, time });
+    // timeEnd = new Date().getTime();
+    // time = timeEnd - timeStart;
+    // console.log({ path, time });
 
-    if (path > 25 && time < 200) {
-      cb();
-    }
+    // if (path > 25 && time < 200) {
+    //   cb();
+    // }
 
-    if (path > 25 || time > 200) {
-      vClear();
-    }
+    // if (path > 25 || time > 200) {
+    //   vClear();
+    // }
+
+    cb();
   };
 
   // getV = throttle(getV, 100);
@@ -264,21 +266,21 @@ const pageUnlock = () => {
 
     if (scrolled > headerHeight + 300
       && scrolled < scrollPrev) {
-      if (!isScroll) {
-        timeStart = new Date().getTime();
-        pathStart = scrolled;
-        isScroll = true;
-      }
+      // if (!isScroll) {
+      //   timeStart = new Date().getTime();
+      //   pathStart = scrolled;
+      //   isScroll = true;
+      // }
 
       getV(scrolled, show);
     }
 
     if (scrolled > scrollPrev) {
-      if (!isScroll) {
-        timeStart = new Date().getTime();
-        pathStart = scrolled;
-        isScroll = true;
-      }
+      // if (!isScroll) {
+      //   timeStart = new Date().getTime();
+      //   pathStart = scrolled;
+      //   isScroll = true;
+      // }
 
       getV(scrolled, hide);
     }
