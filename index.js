@@ -1,7 +1,7 @@
 // eslint-disable-next-line import/no-named-as-default
 import Swiper from './libs/swiper/swiper.js';
 
-const mainSlider = new Swiper('.main-slider', {
+const mainSlider = new Swiper('.main-slider__wrapper', {
   init: false,
   slidesPerView: 1,
 
