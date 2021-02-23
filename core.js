@@ -325,11 +325,11 @@ const pageUnlock = () => {
   const searchClose = () => {
     search.reset();
     searchInput.blur();
-    pageUnlock();
 
     setTimeout(() => {
       headerOverlay.classList.remove('header-overlay--active');
       search.classList.remove('header__bottom-search--active');
+      pageUnlock();
     }, 2000);
   };
 
