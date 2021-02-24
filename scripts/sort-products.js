@@ -7,6 +7,7 @@ export default () => {
   const userListOpen = () => {
     sortList.classList.add('products__sort-list--active');
     sortOverlay.classList.add('products__sort-overlay--active');
+    sortItems.focus();
   };
 
   const userListClose = () => {

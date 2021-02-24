@@ -1,3 +1,3 @@
-import sortProducts from './scripts/sortProducts.js';
+import sortProducts from './scripts/sort-products.js';
 
 sortProducts();
