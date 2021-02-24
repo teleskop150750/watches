@@ -21,14 +21,14 @@
             <option class="header__top-currency-option" value="USD">Доллары</option>
           </select>
         </div>
-
+        
         <div class="header__top-right">
           <div class="header__top-cart-wrapper">
             <a class="header__top-cart-link" href="#">
               <span class="header__top-cart-count">8</span>
             </a>
           </div>
-
+          
           <div class="header__top-user-wrapper">
             <div class="user-overlay"></div>
             <button class="header__top-user" aria-label="user"></button>
@@ -44,21 +44,22 @@
         </div>
       </div>
     </div>
-
+    
     <div class="header__logo-wrapper">
       <h1 class="logo">
         <a class="logo__link" href="index.html">Luxury Wacthes</a>
       </h1>
     </div>
-
+    
     <div class="header__bottom">
+      <div class="search-overlay"></div>
       <div class="header__bottom-container">
         <button class="header__bottom-open-nav" aria-label="menu">
           <span class="header__bottom-open-nav-liner"></span>
           <span class="header__bottom-open-nav-liner"></span>
           <span class="header__bottom-open-nav-liner"></span>
         </button>
-
+        
         <div class="nav-mobile-overlay"></div>
         <div class="header__bottom-nav-mobile">
           <div class="header__bottom-nav-mobile-inner">
@@ -308,7 +309,6 @@
 
         <button class="search-button header__bottom-search-button" aria-label="search"></button>
 
-        <div class="search-overlay"></div>
         <form class="header__bottom-search">
           <input class="header__bottom-search-input" type="search" name="search" autocomplete="off" placeholder="Поиск">
           <button class="search-button header__bottom-search-submit" type="submit"></button>
@@ -347,6 +347,9 @@
           <div class="products__header-container-bottom">
             <button class="products__sort-button">
               Сначало дешевле
+            </button>
+            <button class="products__sort-button">
+              Фильтры
             </button>
           </div>
         </header>
@@ -496,6 +499,43 @@
             </button>
           </article>
         </div>
+        <footer class="products__footer">
+          <nav class="pagination">
+            <ul class="pagination__list">
+              <li class="pagination__item">
+                <a class="pagination__button" href="#">
+                  <svg class="pagination__button-icon" fill="currentColor" focusable="false" viewBox="0 0 24 24" aria-hidden="true"><path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"></path></svg>
+                </a>
+              </li>
+              <li class="pagination__item">
+                <a class="pagination__button" href="#">1</a>
+              </li>
+              <li class="pagination__item">
+                <a class="pagination__button pagination__button--ellipsis" href="#">...</a>
+              </li>
+              <li class="pagination__item">
+                <a class="pagination__button" href="#">3</a>
+              </li>
+              <li class="pagination__item">
+                <a class="pagination__button pagination__button--active" href="#">4</a>
+              </li>
+              <li class="pagination__item">
+                <a class="pagination__button" href="#">5</a>
+              </li>
+              <li class="pagination__item">
+                <a class="pagination__button pagination__button--ellipsis" href="#">...</a>
+              </li>
+              <li class="pagination__item">
+                <a class="pagination__button" href="#">9</a>
+              </li>
+              <li class="pagination__item">
+                <a class="pagination__button" href="#">
+                  <svg class="pagination__button-icon" fill="currentColor" focusable="false" viewBox="0 0 24 24" aria-hidden="true"><path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"></path></svg>
+                </a>
+              </li>
+            </ul>
+          </nav>
+        </footer>
       </section>
     </main>
   </div>
@@ -508,8 +548,7 @@
     </div>
   </footer>
 
-  <script src="core.js"></script>
-  <script src="index.js" type="module"></script>
+  <script src="core.js" type="module"></script>
 </body>
 
 </html>

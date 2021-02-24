@@ -65,6 +65,7 @@
 
 .brand-item {
   max-width: 350px;
+  user-select: none;
 }
 
 @media (max-width: 1180px) {
