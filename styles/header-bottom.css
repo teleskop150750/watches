@@ -13,7 +13,6 @@
   font-size: 0.8em;
   font-weight: 400;
   line-height: 1;
-  color: var(--color-black);
 }
 
 @media (min-width: 768px) {
@@ -306,7 +305,6 @@
   margin: 0;
   font-size: 1.8em;
   font-weight: 400;
-  color: var(--color-black);
 }
 
 .header__bottom-nav-mobile-header-back {
@@ -409,7 +407,6 @@
   padding-left: 1.25rem;
   font: inherit;
   font-size: 1.1em;
-  color: var(--color-black);
   text-align: start;
   background-color: transparent;
   border: none;
@@ -450,7 +447,6 @@
   gap: 2em;
   padding: 0;
   margin: 0;
-  color: var(--color-black);
   list-style: none;
 }
 

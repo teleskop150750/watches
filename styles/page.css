@@ -70,14 +70,14 @@ a {
 /* Page */
 
 .page {
-  font-family: 'Roboto', sans-serif;
-  line-height: 1.2;
-  color: var(--basic-black);
   background-color: var(--color-grey-lightest);
 }
 
 .page__body {
   margin: 0;
+  font-family: 'Roboto', sans-serif;
+  line-height: 1.2;
+  color: var(--color-black);
 }
 
 .page__body--lock {

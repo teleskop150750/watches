@@ -11,7 +11,7 @@
   <link rel="stylesheet" href="products.css">
 </head>
 
-<body class="page__body">
+<body class="page__body page__body--lock">
   <header class="header">
     <div class="header__top">
       <div class="header__top-container">
@@ -336,235 +336,414 @@
       </div>
     </section>
 
-    <main class="main">
-      <section class="products">
-        <header class="products__header">
-          <div class="products__header-container-top">
-            <h2 class="products__title">Royal London</h2>
-            <span class="products__count">13</span>
-          </div>
-
-          <div class="products__header-container-bottom">
-            <div class="products__sort">
-              <button class="products__sort-button">
-                Сначала дешевле
-              </button>
-              <div class="products__sort-overlay"></div>
-
-              <div class="products__sort-list">
-                <ul class="products__sort-list-inner">
-                  <li class="products__sort-item">
-                    <buttom class="products__sort-item-buttom products__sort-button--active">
-                      Сначала дешевле
-                    </buttom>
-                  </li>
-                  <li class="products__sort-item">
-                    <buttom class="products__sort-item-buttom">
-                      Сначала дороже
-                    </buttom>
-                  </li>
-                </ul>
+    <div class="products-wrapper">
+      <aside class="filters">
+        <header class="filters__header">
+          <button class="filters__clear">Сбросить</button>
+          <h2 class="filter__title">Фильтры</h2>
+          <button class="filter__close" aria-label="закрыть"></button>
+        </header>
+        <div class="filters__inner">
+          <div class="filter filters__filter">
+            <div class="filter__header">
+              <h3 class="filter__title">
+                <button class="filter__toggle">
+                  Механизм<span class="filter__toggle-span"></span>
+                  <span class="filter__toggle-icon">
+                    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M6.707 14.707a1 1 0 11-1.414-1.414l6-6a1 1 0 011.414 0l6 6a1 1 0 01-1.414 1.414L12 9.414l-5.293 5.293z"
+                        fill="currentColor" fill-rule="evenodd"></path>
+                    </svg>
+                  </span>
+                </button>
+              </h3>
+            </div>
+            <div class="filter__body filter__body--open">
+              <div class="filter__body-inner">
+                <label class="check">
+                  <input type="checkbox" class="check__input">
+                  <span class="check__box"></span>
+                  Механика с автоподзаводом
+                </label>
+                <label class="check">
+                  <input type="checkbox" class="check__input">
+                  <span class="check__box"></span>
+                  Механика с автоподзаводом
+                </label>
+                <label class="check">
+                  <input type="checkbox" class="check__input">
+                  <span class="check__box"></span>
+                  Механика с автоподзаводом
+                </label>
+                <label class="check">
+                  <input type="checkbox" class="check__input">
+                  <span class="check__box"></span>
+                  Механика с автоподзаводом
+                </label>
+                <label class="check">
+                  <input type="checkbox" class="check__input">
+                  <span class="check__box"></span>
+                  Механика с автоподзаводом
+                </label>
+                <label class="check">
+                  <input type="checkbox" class="check__input">
+                  <span class="check__box"></span>
+                  Механика с автоподзаводом
+                </label>
+                <label class="check">
+                  <input type="checkbox" class="check__input">
+                  <span class="check__box"></span>
+                  Механика с автоподзаводом
+                </label>
+                <label class="check">
+                  <input type="checkbox" class="check__input">
+                  <span class="check__box"></span>
+                  Механика с автоподзаводом
+                </label>
+                <label class="check">
+                  <input type="checkbox" class="check__input">
+                  <span class="check__box"></span>
+                  Механика с автоподзаводом
+                </label>
+                <label class="check">
+                  <input type="checkbox" class="check__input">
+                  <span class="check__box"></span>
+                  Механика с автоподзаводом
+                </label>
+                <label class="check">
+                  <input type="checkbox" class="check__input">
+                  <span class="check__box"></span>
+                  Механика с автоподзаводом
+                </label>
+                <label class="check">
+                  <input type="checkbox" class="check__input">
+                  <span class="check__box"></span>
+                  Механика с автоподзаводом
+                </label>
+                <button class="filter__show-all">Показать ещё</button>
               </div>
             </div>
-
-
-            <button class="products__sort-button">
-              Фильтры
-            </button>
           </div>
-        </header>
 
-        <div class="products__container">
-          <article class="product">
-            <header class="product__header">
-              <a class="product__img-wrapper" href="single.html">
-                <img class="product__img" src="images/product-1.jpeg" alt="">
-              </a>
-            </header>
-            <h3 class="product__title">
-              <a class="product__title-link" href="single.html">Royal London 41156-02</a>
-            </h3>
-            <div class="product__price-wrapper">
-              <span class="product__price">13 400 ₽</span>
-              <span class="product__price-old">21 100 ₽</span>
+          <div class="filter filters__filter">
+            <div class="filter__header">
+              <h3 class="filter__title">
+                <button class="filter__toggle">
+                  Механизм<span class="filter__toggle-span"></span>
+                  <span class="filter__toggle-icon">
+                    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M6.707 14.707a1 1 0 11-1.414-1.414l6-6a1 1 0 011.414 0l6 6a1 1 0 01-1.414 1.414L12 9.414l-5.293 5.293z"
+                        fill="currentColor" fill-rule="evenodd"></path>
+                    </svg>
+                  </span>
+                </button>
+              </h3>
             </div>
-            <button class="product__button">
-              Купить
-            </button>
-          </article>
-
-          <article class="product">
-            <header class="product__header">
-              <a class="product__img-wrapper" href="single.html">
-                <img class="product__img" src="images/product-1.jpeg" alt="">
-              </a>
-            </header>
-            <h3 class="product__title">
-              <a class="product__title-link" href="single.html">Royal London</a>
-            </h3>
-            <div class="product__price-wrapper">
-              <span class="product__price">13 400 ₽</span>
-              <span class="product__price-old">21 100 ₽</span>
+            <div class="filter__body filter__body--open">
+              <div class="filter__body-inner">
+                <label class="check">
+                  <input type="checkbox" class="check__input">
+                  <span class="check__box"></span>
+                  Механика с автоподзаводом
+                </label>
+                <label class="check">
+                  <input type="checkbox" class="check__input">
+                  <span class="check__box"></span>
+                  Механика с автоподзаводом
+                </label>
+                <label class="check">
+                  <input type="checkbox" class="check__input">
+                  <span class="check__box"></span>
+                  Механика с автоподзаводом
+                </label>
+                <label class="check">
+                  <input type="checkbox" class="check__input">
+                  <span class="check__box"></span>
+                  Механика с автоподзаводом
+                </label>
+                <label class="check">
+                  <input type="checkbox" class="check__input">
+                  <span class="check__box"></span>
+                  Механика с автоподзаводом
+                </label>
+                <label class="check">
+                  <input type="checkbox" class="check__input">
+                  <span class="check__box"></span>
+                  Механика с автоподзаводом
+                </label>
+                <label class="check">
+                  <input type="checkbox" class="check__input">
+                  <span class="check__box"></span>
+                  Механика с автоподзаводом
+                </label>
+                <label class="check">
+                  <input type="checkbox" class="check__input">
+                  <span class="check__box"></span>
+                  Механика с автоподзаводом
+                </label>
+                <label class="check">
+                  <input type="checkbox" class="check__input">
+                  <span class="check__box"></span>
+                  Механика с автоподзаводом
+                </label>
+                <label class="check">
+                  <input type="checkbox" class="check__input">
+                  <span class="check__box"></span>
+                  Механика с автоподзаводом
+                </label>
+                <label class="check">
+                  <input type="checkbox" class="check__input">
+                  <span class="check__box"></span>
+                  Механика с автоподзаводом
+                </label>
+                <label class="check">
+                  <input type="checkbox" class="check__input">
+                  <span class="check__box"></span>
+                  Механика с автоподзаводом
+                </label>
+                <button class="filter__show-all">Показать ещё</button>
+              </div>
             </div>
-            <button class="product__button">
-              Купить
-            </button>
-          </article>
-
-          <article class="product">
-            <header class="product__header">
-              <a class="product__img-wrapper" href="single.html">
-                <img class="product__img" src="images/product-1.jpeg" alt="">
-              </a>
-            </header>
-            <h3 class="product__title">
-              <a class="product__title-link" href="single.html">Royal London</a>
-            </h3>
-            <div class="product__price-wrapper">
-              <span class="product__price">13 400 ₽</span>
-              <span class="product__price-old">21 100 ₽</span>
-            </div>
-            <button class="product__button">
-              Купить
-            </button>
-          </article>
-
-          <article class="product">
-            <header class="product__header">
-              <a class="product__img-wrapper" href="single.html">
-                <img class="product__img" src="images/product-1.jpeg" alt="">
-              </a>
-            </header>
-            <h3 class="product__title">
-              <a class="product__title-link" href="single.html">Royal London</a>
-            </h3>
-            <div class="product__price-wrapper">
-              <span class="product__price">13 400 ₽</span>
-              <span class="product__price-old">21 100 ₽</span>
-            </div>
-            <button class="product__button">
-              Купить
-            </button>
-          </article>
-
-          <article class="product">
-            <header class="product__header">
-              <a class="product__img-wrapper" href="single.html">
-                <img class="product__img" src="images/product-1.jpeg" alt="">
-              </a>
-            </header>
-            <h3 class="product__title">
-              <a class="product__title-link" href="single.html">Royal London</a>
-            </h3>
-            <div class="product__price-wrapper">
-              <span class="product__price">13 400 ₽</span>
-              <span class="product__price-old">21 100 ₽</span>
-            </div>
-            <button class="product__button">
-              Купить
-            </button>
-          </article>
-
-          <article class="product">
-            <header class="product__header">
-              <a class="product__img-wrapper" href="single.html">
-                <img class="product__img" src="images/product-1.jpeg" alt="">
-              </a>
-            </header>
-            <h3 class="product__title">
-              <a class="product__title-link" href="single.html">Royal London</a>
-            </h3>
-            <div class="product__price-wrapper">
-              <span class="product__price">13 400 ₽</span>
-              <span class="product__price-old">21 100 ₽</span>
-            </div>
-            <button class="product__button">
-              Купить
-            </button>
-          </article>
-
-          <article class="product">
-            <header class="product__header">
-              <a class="product__img-wrapper" href="single.html">
-                <img class="product__img" src="images/product-1.jpeg" alt="">
-              </a>
-            </header>
-            <h3 class="product__title">
-              <a class="product__title-link" href="single.html">Royal London</a>
-            </h3>
-            <div class="product__price-wrapper">
-              <span class="product__price">13 400 ₽</span>
-              <span class="product__price-old">21 100 ₽</span>
-            </div>
-            <button class="product__button">
-              Купить
-            </button>
-          </article>
-
-          <article class="product">
-            <header class="product__header">
-              <a class="product__img-wrapper" href="single.html">
-                <img class="product__img" src="images/product-1.jpeg" alt="">
-              </a>
-            </header>
-            <h3 class="product__title">
-              <a class="product__title-link" href="single.html">Royal London</a>
-            </h3>
-            <div class="product__price-wrapper">
-              <span class="product__price">13 400 ₽</span>
-              <span class="product__price-old">21 100 ₽</span>
-            </div>
-            <button class="product__button">
-              Купить
-            </button>
-          </article>
+          </div>
         </div>
 
-        <footer class="products__footer">
-          <nav class="pagination">
-            <ul class="pagination__list">
-              <li class="pagination__item">
-                <a class="pagination__button" href="#">
-                  <svg class="pagination__button-icon" fill="currentColor" focusable="false" viewBox="0 0 24 24"
-                    aria-hidden="true">
-                    <path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"></path>
-                  </svg>
-                </a>
-              </li>
-              <li class="pagination__item">
-                <a class="pagination__button" href="#">1</a>
-              </li>
-              <li class="pagination__item">
-                <a class="pagination__button pagination__button--ellipsis" href="#">...</a>
-              </li>
-              <li class="pagination__item">
-                <a class="pagination__button" href="#">3</a>
-              </li>
-              <li class="pagination__item">
-                <a class="pagination__button pagination__button--active" href="#">4</a>
-              </li>
-              <li class="pagination__item">
-                <a class="pagination__button" href="#">5</a>
-              </li>
-              <li class="pagination__item">
-                <a class="pagination__button pagination__button--ellipsis" href="#">...</a>
-              </li>
-              <li class="pagination__item">
-                <a class="pagination__button" href="#">9</a>
-              </li>
-              <li class="pagination__item">
-                <a class="pagination__button" href="#">
-                  <svg class="pagination__button-icon" fill="currentColor" focusable="false" viewBox="0 0 24 24"
-                    aria-hidden="true">
-                    <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"></path>
-                  </svg>
-                </a>
-              </li>
-            </ul>
-          </nav>
+        <footer class="filters__footer">
+          <button class="filters__footer-button">Показать 157 товаров</button>
         </footer>
-      </section>
-    </main>
+      </aside>
+
+      <main class="main">
+        <section class="products">
+          <header class="products__header">
+            <div class="products__header-container-top">
+              <h2 class="products__title">Royal London</h2>
+              <span class="products__count">13</span>
+            </div>
+
+            <div class="products__header-container-bottom">
+              <div class="products__sort">
+                <button class="products__sort-button">
+                  Сначала дешевле
+                </button>
+                <div class="products__sort-overlay"></div>
+
+                <div class="products__sort-list">
+                  <ul class="products__sort-list-inner">
+                    <li class="products__sort-item">
+                      <buttom class="products__sort-item-buttom products__sort-button--active">
+                        Сначала дешевле
+                      </buttom>
+                    </li>
+                    <li class="products__sort-item">
+                      <buttom class="products__sort-item-buttom">
+                        Сначала дороже
+                      </buttom>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+
+
+              <button class="products__sort-button">
+                Фильтры
+              </button>
+            </div>
+          </header>
+
+          <div class="products__container">
+            <article class="product">
+              <header class="product__header">
+                <a class="product__img-wrapper" href="single.html">
+                  <img class="product__img" src="images/product-1.jpeg" alt="">
+                </a>
+              </header>
+              <h3 class="product__title">
+                <a class="product__title-link" href="single.html">Royal London 41156-02</a>
+              </h3>
+              <div class="product__price-wrapper">
+                <span class="product__price">13 400 ₽</span>
+                <span class="product__price-old">21 100 ₽</span>
+              </div>
+              <button class="product__button">
+                Купить
+              </button>
+            </article>
+
+            <article class="product">
+              <header class="product__header">
+                <a class="product__img-wrapper" href="single.html">
+                  <img class="product__img" src="images/product-1.jpeg" alt="">
+                </a>
+              </header>
+              <h3 class="product__title">
+                <a class="product__title-link" href="single.html">Royal London</a>
+              </h3>
+              <div class="product__price-wrapper">
+                <span class="product__price">13 400 ₽</span>
+                <span class="product__price-old">21 100 ₽</span>
+              </div>
+              <button class="product__button">
+                Купить
+              </button>
+            </article>
+
+            <article class="product">
+              <header class="product__header">
+                <a class="product__img-wrapper" href="single.html">
+                  <img class="product__img" src="images/product-1.jpeg" alt="">
+                </a>
+              </header>
+              <h3 class="product__title">
+                <a class="product__title-link" href="single.html">Royal London</a>
+              </h3>
+              <div class="product__price-wrapper">
+                <span class="product__price">13 400 ₽</span>
+                <span class="product__price-old">21 100 ₽</span>
+              </div>
+              <button class="product__button">
+                Купить
+              </button>
+            </article>
+
+            <article class="product">
+              <header class="product__header">
+                <a class="product__img-wrapper" href="single.html">
+                  <img class="product__img" src="images/product-1.jpeg" alt="">
+                </a>
+              </header>
+              <h3 class="product__title">
+                <a class="product__title-link" href="single.html">Royal London</a>
+              </h3>
+              <div class="product__price-wrapper">
+                <span class="product__price">13 400 ₽</span>
+                <span class="product__price-old">21 100 ₽</span>
+              </div>
+              <button class="product__button">
+                Купить
+              </button>
+            </article>
+
+            <article class="product">
+              <header class="product__header">
+                <a class="product__img-wrapper" href="single.html">
+                  <img class="product__img" src="images/product-1.jpeg" alt="">
+                </a>
+              </header>
+              <h3 class="product__title">
+                <a class="product__title-link" href="single.html">Royal London</a>
+              </h3>
+              <div class="product__price-wrapper">
+                <span class="product__price">13 400 ₽</span>
+                <span class="product__price-old">21 100 ₽</span>
+              </div>
+              <button class="product__button">
+                Купить
+              </button>
+            </article>
+
+            <article class="product">
+              <header class="product__header">
+                <a class="product__img-wrapper" href="single.html">
+                  <img class="product__img" src="images/product-1.jpeg" alt="">
+                </a>
+              </header>
+              <h3 class="product__title">
+                <a class="product__title-link" href="single.html">Royal London</a>
+              </h3>
+              <div class="product__price-wrapper">
+                <span class="product__price">13 400 ₽</span>
+                <span class="product__price-old">21 100 ₽</span>
+              </div>
+              <button class="product__button">
+                Купить
+              </button>
+            </article>
+
+            <article class="product">
+              <header class="product__header">
+                <a class="product__img-wrapper" href="single.html">
+                  <img class="product__img" src="images/product-1.jpeg" alt="">
+                </a>
+              </header>
+              <h3 class="product__title">
+                <a class="product__title-link" href="single.html">Royal London</a>
+              </h3>
+              <div class="product__price-wrapper">
+                <span class="product__price">13 400 ₽</span>
+                <span class="product__price-old">21 100 ₽</span>
+              </div>
+              <button class="product__button">
+                Купить
+              </button>
+            </article>
+
+            <article class="product">
+              <header class="product__header">
+                <a class="product__img-wrapper" href="single.html">
+                  <img class="product__img" src="images/product-1.jpeg" alt="">
+                </a>
+              </header>
+              <h3 class="product__title">
+                <a class="product__title-link" href="single.html">Royal London</a>
+              </h3>
+              <div class="product__price-wrapper">
+                <span class="product__price">13 400 ₽</span>
+                <span class="product__price-old">21 100 ₽</span>
+              </div>
+              <button class="product__button">
+                Купить
+              </button>
+            </article>
+          </div>
+
+          <footer class="products__footer">
+            <nav class="pagination">
+              <ul class="pagination__list">
+                <li class="pagination__item">
+                  <a class="pagination__button" href="#">
+                    <svg class="pagination__button-icon" fill="currentColor" focusable="false" viewBox="0 0 24 24"
+                      aria-hidden="true">
+                      <path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"></path>
+                    </svg>
+                  </a>
+                </li>
+                <li class="pagination__item">
+                  <a class="pagination__button" href="#">1</a>
+                </li>
+                <li class="pagination__item">
+                  <a class="pagination__button pagination__button--ellipsis" href="#">...</a>
+                </li>
+                <li class="pagination__item">
+                  <a class="pagination__button" href="#">3</a>
+                </li>
+                <li class="pagination__item">
+                  <a class="pagination__button pagination__button--active" href="#">4</a>
+                </li>
+                <li class="pagination__item">
+                  <a class="pagination__button" href="#">5</a>
+                </li>
+                <li class="pagination__item">
+                  <a class="pagination__button pagination__button--ellipsis" href="#">...</a>
+                </li>
+                <li class="pagination__item">
+                  <a class="pagination__button" href="#">9</a>
+                </li>
+                <li class="pagination__item">
+                  <a class="pagination__button" href="#">
+                    <svg class="pagination__button-icon" fill="currentColor" focusable="false" viewBox="0 0 24 24"
+                      aria-hidden="true">
+                      <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"></path>
+                    </svg>
+                  </a>
+                </li>
+              </ul>
+            </nav>
+          </footer>
+        </section>
+      </main>
+    </div>
   </div>
 
   <footer class="footer">

@@ -1,0 +1,204 @@
+.filters {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 15;
+  width: 100%;
+  height: 100vh;
+  overflow-y: auto;
+  background-color: var(--color-white);
+}
+
+.filters__header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  align-items: center;
+  padding: 0.8rem 1rem;
+  background-color: var(--color-white);
+  border-bottom: 1px solid var(--color-grey-lighter);
+}
+
+.filters__clear {
+  display: block;
+  justify-self: start;
+  line-height: 1;
+  background-color: transparent;
+  border: none;
+}
+
+.filter__close {
+  justify-self: end;
+  width: 2rem;
+  height: 2rem;
+  background-color: transparent;
+  background-image: url('../images/close.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  border: none;
+}
+
+/* =========================================================== */
+
+/* filters */
+.filters__inner {
+  padding: 0 1rem 2rem 1rem;
+}
+
+/* =========================================================== */
+
+/* filter */
+.filter {
+  border-bottom: 1px solid var(--color-grey-light);
+}
+
+.filter__header {
+  padding: 1.5rem 0;
+}
+
+.filter__title {
+  justify-self: center;
+  margin: 0;
+  font-size: 1.1rem;
+  line-height: 1;
+}
+
+.filter__toggle {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 0.2em 0;
+  line-height: 1;
+  text-align: start;
+  background-color: transparent;
+  border: none;
+}
+
+.filter__toggle-span {
+  display: none;
+  width: 10px;
+  height: 10px;
+  margin-right: auto;
+  margin-left: 1rem;
+  background-color: var(--color-blue-medium);
+  border-radius: 10px;
+}
+
+.filter--check .filter__toggle-span {
+  display: block;
+}
+
+.filter__toggle-icon {
+  width: 1.5rem;
+  height: 1.5rem;
+  color: var(--color-grey-megium);
+}
+
+.filter--hidden .filter__toggle-icon {
+  transform: rotate(180deg);
+}
+
+.filter__body {
+  display: none;
+  overflow: hidden;
+  transition: height 500ms ease;
+}
+
+.filter__body--opening {
+  display: block;
+  height: 0;
+  overflow: hidden;
+  transition-timing-function: ease-out;
+  transition-duration: 0.25s;
+  transition-property: height;
+}
+
+.filter__body--open {
+  display: block;
+}
+
+.filter__body-inner {
+  display: grid;
+  gap: 1rem;
+  padding-bottom: 1.5rem;
+}
+
+.filter__show-all {
+  justify-self: start;
+  font-weight: 500;
+  line-height: 1;
+  color: var(--color-blue-medium);
+  background: transparent;
+  border: none;
+}
+
+/* ========================================================== */
+
+/* footer  */
+.filters__footer {
+  position: sticky;
+  bottom: 1rem;
+  padding: 0 1rem;
+}
+
+.filters__footer-button {
+  width: 100%;
+  padding: 0.5rem 1rem;
+  color: var(--color-white);
+  background-color: var(--color-blue-medium);
+  border: none;
+  border-radius: 0.3rem;
+}
+
+/* ========================================================== */
+
+/* check */
+.check {
+  position: relative;
+  display: block;
+  padding: 0.1em 0;
+  padding-left: 2em;
+}
+
+.check--hidden {
+  display: none;
+  height: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+.check__input {
+  position: absolute;
+  appearance: none;
+}
+
+.check__box {
+  position: absolute;
+  top: 50%;
+  left: 0.1em;
+  width: 1.1em;
+  height: 1.1em;
+  overflow: hidden;
+  background-color: var(--color-white);
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  border-radius: 0.05em;
+  box-shadow: 0 0 0 0.1em var(--color-grey-light);
+  transform: translateY(-50%);
+}
+
+.check__input:checked + .check__box {
+  background-color: var(--color-blue-medium);
+  background-image: url('../images/check-filter.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  box-shadow: 0 0 0 0.1em var(--color-blue-medium);
+}
+
+.check__input:focus + .check__box {
+  box-shadow: 0 0 0 0.1em var(--color-blue-medium);
+}

@@ -65,10 +65,6 @@
   }
 }
 
-.product__title-link {
-  color: var(--color-black);
-}
-
 .product__price-wrapper {
   display: flex;
   grid-column: 2 / 3;
@@ -91,11 +87,9 @@
 .product__price {
   font-size: 1.5em;
   font-weight: 700;
-  color: var(--color-black);
 }
 
 .product__price-old {
-  color: var(--color-black);
   text-decoration: line-through;
 }
 
