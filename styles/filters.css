@@ -102,12 +102,11 @@
 }
 
 .filter__body {
-  display: none;
   overflow: hidden;
-  transition: height 500ms ease;
+  transition: height 300ms ease;
 }
 
-.filter__body--opening {
+/* .filter__body--opening {
   display: block;
   height: 0;
   overflow: hidden;
@@ -118,7 +117,7 @@
 
 .filter__body--open {
   display: block;
-}
+} */
 
 .filter__body-inner {
   display: grid;

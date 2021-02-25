@@ -7,19 +7,7 @@ sortProducts();
 
 const filterToggle = function filterToggle(button, filter) {
   const filterBody = filter.querySelector('.filter__body');
-  const eightToggle = new HeightToggle({
-    target: filterBody,
-    button,
-    opening: 'filter__body--opening',
-    open: 'filter__body--open',
-    beforeSlideDown() {
-      filter.classList.remove('filter--hidden');
-    },
-    beforeSlideUp() {
-      filter.classList.add('filter--hidden');
-    },
-  });
-  eightToggle.init();
+  heightToggle(button, filterBody, filter, 'filter--hidden');
 };
 
 const checkShow = (checks) => {
