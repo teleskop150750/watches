@@ -1,7 +1,5 @@
-import sortProducts from './scripts/sort-products.js';
+import sortProducts from './scripts/sortProducts.js';
 import filters from './scripts/filters.js';
-import filterPrice from './scripts/filter-price.js';
 
 sortProducts();
 filters();
-filterPrice();

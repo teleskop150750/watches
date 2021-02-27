@@ -29,7 +29,14 @@
   border: none;
 }
 
-.filter__close {
+.filters__title {
+  justify-self: center;
+  margin: 0;
+  font-size: 1.1rem;
+  line-height: 1;
+}
+
+.filters__close {
   justify-self: end;
   width: 2rem;
   height: 2rem;
@@ -205,6 +212,20 @@
 /* =========================================================== */
 
 /* price */
+
+.filter-price__header {
+  padding: 1.5rem 0;
+}
+
+.filter-price__title {
+  margin: 0;
+  font-size: 1.1rem;
+  line-height: 1;
+}
+
+.filter-price__slider {
+  margin-bottom: 1.5rem;
+}
 
 .filter-price__inputs {
   display: flex;

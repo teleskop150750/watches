@@ -9,7 +9,6 @@
   <link rel="shortcut icon" href="favicon.png" type="image/png">
   <link rel="stylesheet" href="core.css">
   <link rel="stylesheet" href="products.css">
-  <link rel="stylesheet" href="libs/noUiSlider/nouislider.css">
 </head>
 
 <body class="page__body page__body--lock">
@@ -22,14 +21,14 @@
             <option class="header__top-currency-option" value="USD">Доллары</option>
           </select>
         </label>
-        
+
         <div class="header__top-right">
           <div class="header__top-cart-wrapper">
             <a class="header__top-cart-link" href="#">
               <span class="header__top-cart-count">8</span>
             </a>
           </div>
-          
+
           <div class="header__top-user-wrapper">
             <div class="user-overlay"></div>
             <button class="header__top-user" aria-label="user"></button>
@@ -45,13 +44,13 @@
         </div>
       </div>
     </div>
-    
+
     <div class="header__logo-wrapper">
       <h1 class="logo">
         <a class="logo__link" href="index.html">Luxury Wacthes</a>
       </h1>
     </div>
-    
+
     <div class="header__bottom">
       <div class="search-overlay"></div>
       <div class="header__bottom-container">
@@ -60,7 +59,7 @@
           <span class="header__bottom-open-nav-liner"></span>
           <span class="header__bottom-open-nav-liner"></span>
         </button>
-        
+
         <div class="nav-mobile-overlay"></div>
         <div class="header__bottom-nav-mobile">
           <div class="header__bottom-nav-mobile-inner">
@@ -341,22 +340,24 @@
       <aside class="filters">
         <header class="filters__header">
           <button class="filters__clear">Сбросить</button>
-          <h2 class="filter__title">Фильтры</h2>
-          <button class="filter__close" aria-label="закрыть"></button>
+          <h2 class="filters__title">Фильтры</h2>
+          <button class="filters__close" aria-label="закрыть"></button>
         </header>
         <div class="filters__inner">
 
           <div class="filter-price filters__filter">
-            <h3 class="filter-price__title">Цена</h3>
+            <div class="filter-price__header">
+              <h3 class="filter-price__title">Цена</h3>
+            </div>
             <div class="filter-price__slider"></div>
             <div class="filter-price__inputs">
               <label class="filter-price__label">
                 <span class="filter-price__text">от</span>
-                <input class="filter-price__input" type="number" inputmode="numeric" placeholder="500">
+                <input class="filter-price__input" type="number" min="0" step="1000" max="50000" inputmode="numeric" placeholder="0">
               </label>
               <label class="filter-price__label">
                 <span class="filter-price__text">до</span>
-                <input class="filter-price__input" type="number" inputmode="numeric" placeholder="999999">
+                <input class="filter-price__input" type="number" min="0" step="1000" max="50000" inputmode="numeric" placeholder="999999">
               </label>
             </div>
           </div>

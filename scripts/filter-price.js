@@ -1,19 +1,18 @@
-import nouislider from '../libs/noUiSlider/nouislider.js';
+export const setRangeSlider = (slider, i, value) => {
+  const arr = [null, null];
+  arr[i] = value;
+  slider.noUiSlider.set(arr);
+};
 
-const noUiSlider = nouislider();
+export default (priceSlider, pticeInputs) => {
+  const inputs = pticeInputs;
+  priceSlider.noUiSlider.on('update', (values, handle) => {
+    inputs[handle].value = Math.round(values[handle]);
+  });
 
-export default () => {
-  const slider = document.querySelector('.filter-price__slider');
-  const inputs = document.querySelectorAll('.filter-price__input');
-
-  // eslint-disable-next-line no-undef
-  noUiSlider.create(slider, {
-    start: [500, 999999],
-    connect: true,
-    step: 0,
-    range: {
-      min: [500],
-      max: [999999],
-    },
+  inputs.forEach((input, index) => {
+    input.addEventListener('change', (e) => {
+      setRangeSlider(priceSlider, index, e.currentTarget.value);
+    });
   });
 };
