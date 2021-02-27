@@ -49,6 +49,15 @@ button {
   -webkit-tap-highlight-color: transparent;
 }
 
+input[type=text],
+input[type=number] {
+  display: block;
+  width: 100%;
+  font: inherit;
+  font-size: inherit;
+  color: inherit;
+}
+
 a {
   color: inherit;
   text-decoration: none;
