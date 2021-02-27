@@ -15,6 +15,7 @@ export default () => {
     pageLock(body);
     navMobile.classList.add('header__bottom-nav-mobile--active');
     navOverlay.classList.add('nav-mobile-overlay--active');
+    navMobileButtonClose.focus();
   };
 
   const navMobileClose = () => {
@@ -24,7 +25,7 @@ export default () => {
     menuActive.forEach((item) => {
       item.classList.remove('menu-mobile__list--active');
     });
-
+    navMobileButtonOpen.focus();
     pageUnlock(body);
   };
 

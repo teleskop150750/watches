@@ -1,12 +1,61 @@
-.filters {
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 15;
-  width: 100%;
-  height: 100vh;
-  overflow-y: auto;
-  background-color: var(--color-white);
+@media (max-width: 1189px) {
+  .filters {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 15;
+    width: 100%;
+    height: 100vh;
+    overflow-y: auto;
+    pointer-events: none;
+    opacity: 0;
+  }
+
+  .filters--active {
+    pointer-events: all;
+    opacity: 1;
+  }
+}
+
+@media (max-width: 1189px) {
+  .filters-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    display: none;
+    width: 100%;
+    height: 100vh;
+    pointer-events: none;
+    background-color: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    transition: opacity 0.2s linear;
+  }
+
+  .filters-overlay--active {
+    pointer-events: all;
+    opacity: 1;
+  }
+}
+
+@media (min-width: 400px) {
+  .filters-overlay {
+    display: block;
+  }
+}
+
+@media (max-width: 1189px) {
+  .filters__inner {
+    max-width: 400px;
+    min-height: 100vh;
+    background-color: var(--color-white);
+    transition: transform 0.4s ease-in-out;
+    transform: translateX(-100%);
+  }
+
+  .filters__inner--active {
+    transform: translateX(0);
+  }
 }
 
 .filters__header {
@@ -19,6 +68,12 @@
   padding: 0.8rem 1rem;
   background-color: var(--color-white);
   border-bottom: 1px solid var(--color-grey-lighter);
+}
+
+@media (min-width: 1190px) {
+  .filters__header {
+    display: none;
+  }
 }
 
 .filters__clear {
@@ -50,8 +105,17 @@
 /* =========================================================== */
 
 /* filters */
-.filters__inner {
-  padding: 0 1rem 2rem 1rem;
+.filters__body {
+  display: grid;
+  gap: 1.5rem;
+  padding: 2rem 1rem;
+}
+
+@media (min-width: 1190px) {
+  .filters__body {
+    padding: 0;
+    padding-bottom: 2rem;
+  }
 }
 
 /* =========================================================== */
@@ -62,7 +126,7 @@
 }
 
 .filter__header {
-  padding: 1.5rem 0;
+  padding-bottom: 1.5rem;
 }
 
 .filter__title {
@@ -113,19 +177,6 @@
   transition: height 300ms ease;
 }
 
-/* .filter__body--opening {
-  display: block;
-  height: 0;
-  overflow: hidden;
-  transition-timing-function: ease-out;
-  transition-duration: 0.25s;
-  transition-property: height;
-}
-
-.filter__body--open {
-  display: block;
-} */
-
 .filter__body-inner {
   display: grid;
   gap: 1rem;
@@ -159,6 +210,20 @@
   border-radius: 0.3rem;
 }
 
+.filters__footer-button--cleaer {
+  display: none;
+}
+
+@media (min-width: 1190px) {
+  .filters__footer-button {
+    display: none;
+  }
+
+  .filters__footer-button--cleaer {
+    display: block;
+  }
+}
+
 /* ========================================================== */
 
 /* check */
@@ -188,11 +253,10 @@
   width: 1.1em;
   height: 1.1em;
   overflow: hidden;
-  background-color: var(--color-white);
   background-repeat: no-repeat;
   background-position: 50% 50%;
   border-radius: 0.05em;
-  box-shadow: 0 0 0 0.1em var(--color-grey-light);
+  box-shadow: 0 0 0 1px var(--color-grey-light);
   transform: translateY(-50%);
 }
 
@@ -202,11 +266,11 @@
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
-  box-shadow: 0 0 0 0.1em var(--color-blue-medium);
+  box-shadow: 0 0 0 1px var(--color-blue-medium);
 }
 
 .check__input:focus + .check__box {
-  box-shadow: 0 0 0 0.1em var(--color-blue-medium);
+  box-shadow: 0 0 0 1px var(--color-blue-medium);
 }
 
 /* =========================================================== */
@@ -214,7 +278,7 @@
 /* price */
 
 .filter-price__header {
-  padding: 1.5rem 0;
+  padding-bottom: 1.5rem;
 }
 
 .filter-price__title {
@@ -237,12 +301,22 @@
   flex-grow: 1;
   align-items: center;
   padding: 0.5em;
+  background-color: var(--color-white);
   border: 1px solid var(--color-grey-light);
   border-radius: 0.4rem;
 }
 
 .filter-price__input {
+  background-color: transparent;
   border: none;
   outline: none;
+  -moz-appearance: textfield;
   appearance: none;
+}
+
+.filter-price__input::-webkit-outer-spin-button,
+.filter-price__input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  appearance: none;
+  margin: 0;
 }

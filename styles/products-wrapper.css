@@ -1,0 +1,13 @@
+.products-wrapper {
+  display: grid;
+  max-width: var(--max-width);
+  padding: 1rem;
+  margin: 0 auto;
+}
+
+@media (min-width: 1190px) {
+  .products-wrapper {
+    grid-template-columns: 320px 1fr;
+    gap: 2rem;
+  }
+}

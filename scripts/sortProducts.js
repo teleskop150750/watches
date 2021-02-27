@@ -1,38 +1,37 @@
 export default () => {
-  const sortButtonOpen = document.querySelector('.products__sort-button');
+  const sortButtonOpen = document.querySelector('.products__header-button--sort');
   const sortList = document.querySelector('.products__sort-list');
-  const sortItems = document.querySelectorAll('.products__sort-item-buttom');
+  const sortItems = document.querySelectorAll('.products__sort-item-button');
   const sortOverlay = document.querySelector('.products__sort-overlay');
 
-  const userListOpen = () => {
+  const sortListOpen = () => {
     sortList.classList.add('products__sort-list--active');
     sortOverlay.classList.add('products__sort-overlay--active');
-    sortItems.focus();
+    sortItems[0].focus();
   };
 
-  const userListClose = () => {
+  const sortListClose = () => {
     sortList.classList.remove('products__sort-list--active');
     sortOverlay.classList.remove('products__sort-overlay--active');
-    sortList.querySelector('.products__sort-item-buttom').blur();
+    sortList.querySelector('.products__sort-item-button').blur();
+    sortButtonOpen.focus();
   };
 
   sortButtonOpen.addEventListener('click', () => {
-    userListOpen();
+    sortListOpen();
   });
 
-  sortOverlay.addEventListener('click', userListClose);
+  sortOverlay.addEventListener('click', sortListClose);
 
   // -------------------------------
   sortItems.forEach((item, i, array) => {
     item.addEventListener('click', (e) => {
-      if (!e.target.classList.contains('products__sort-button--active')) {
-        array.forEach((el) => {
-          el.classList.remove('products__sort-button--active');
-        });
-        e.target.classList.add('products__sort-button--active');
-        userListClose();
-        sortButtonOpen.textContent = e.target.textContent;
-      }
+      array.forEach((el) => {
+        el.classList.remove('products__sort-button--active');
+      });
+      e.target.classList.add('products__sort-button--active');
+      sortListClose();
+      sortButtonOpen.textContent = e.target.textContent;
     });
   });
 };

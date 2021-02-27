@@ -18,9 +18,10 @@
   }
 }
 
-@media (min-width: 1000px) {
+@media (min-width: 1050px) {
   .hits__container {
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: repeat(4, minmax(215px, 300px));
     gap: 1.5em;
+    justify-content: space-between;
   }
 }

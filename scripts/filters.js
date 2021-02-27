@@ -1,7 +1,10 @@
+import { body } from './globalVars.js';
 import heightToggle from './heightToggle.js';
 import nouislider from '../libs/noUiSlider/nouislider.js';
 import createRandeSlider from './createRandeSlider.js';
 import filterPrice, { setRangeSlider } from './filter-price.js';
+import pageLock from './pageLock.js';
+import pageUnlock from './pageUnlock.js';
 
 const clearPriceSlider = (slider, inputsArr) => {
   const inputs = inputsArr;
@@ -12,6 +15,38 @@ const clearPriceSlider = (slider, inputsArr) => {
 };
 
 export default () => {
+  const filtersOpenButton = document.querySelector('.products__header-button--filters');
+  const filtersCloseButton = document.querySelector('.filters__close');
+  const filtersWrapper = document.querySelector('.filters');
+  const filtersInner = document.querySelector('.filters__inner');
+  const filtersOverlay = document.querySelector('.filters-overlay');
+
+  const filtersOpen = () => {
+    pageLock(body);
+    filtersWrapper.classList.add('filters--active');
+    filtersInner.classList.add('filters__inner--active');
+    filtersOverlay.classList.add('filters-overlay--active');
+    filtersCloseButton.focus();
+  };
+
+  const filtersClose = () => {
+    filtersInner.classList.remove('filters__inner--active');
+    filtersOverlay.classList.remove('filters-overlay--active');
+
+    const transitionendHandler = () => {
+      filtersOpenButton.focus();
+      filtersWrapper.classList.remove('filters--active');
+      pageUnlock(body);
+      filtersInner.removeEventListener('transitionend', transitionendHandler);
+    };
+
+    filtersInner.addEventListener('transitionend', transitionendHandler);
+  };
+
+  filtersOpenButton.addEventListener('click', filtersOpen);
+  filtersOverlay.addEventListener('click', filtersClose);
+  filtersCloseButton.addEventListener('click', filtersClose);
+
   let priceSlider = document.querySelector('.filter-price__slider');
   const filterPriceInputs = [...document.querySelectorAll('.filter-price__input')];
   const noUiSlider = nouislider();
@@ -83,17 +118,22 @@ export default () => {
     });
   });
 
-  const clearButton = document.querySelector('.filters__clear');
-  clearButton.addEventListener('click', () => {
-    clearPriceSlider(priceSlider, filterPriceInputs);
+  const clearButtons = [];
+  clearButtons.push(document.querySelector('.filters__clear'));
+  clearButtons.push(document.querySelector('.filters__footer-button--cleaer'));
 
-    filters.forEach((filter) => {
-      filter.classList.remove('filter--check');
-      const checksInput = [...filter.querySelectorAll('.check__input')];
+  clearButtons.forEach((clearButton) => {
+    clearButton.addEventListener('click', () => {
+      clearPriceSlider(priceSlider, filterPriceInputs);
 
-      checksInput.forEach((checkInput) => {
-        const input = checkInput;
-        input.checked = false;
+      filters.forEach((filter) => {
+        filter.classList.remove('filter--check');
+        const checksInput = [...filter.querySelectorAll('.check__input')];
+
+        checksInput.forEach((checkInput) => {
+          const input = checkInput;
+          input.checked = false;
+        });
       });
     });
   });

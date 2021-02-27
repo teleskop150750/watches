@@ -1,11 +1,4 @@
-.products {
-  padding: 1rem 0;
-}
-
 .products__header {
-  max-width: var(--max-width);
-  padding: 0 1rem;
-  margin: 0 auto;
   margin-bottom: 1rem;
 }
 
@@ -36,10 +29,34 @@
   padding: 1.5rem 0;
 }
 
+@media (min-width: 1190px) {
+  .products__header-container-bottom {
+    display: none;
+  }
+}
+
+.products__header-button {
+  display: grid;
+  grid-template-columns: min-content max-content;
+  gap: 0.5rem;
+  align-items: center;
+  padding: 0.3em 0 0.3em;
+  line-height: 1;
+  background-color: transparent;
+  border: none;
+}
+
+.products__header-button::before {
+  display: block;
+  width: 1.5em;
+  height: 1.5em;
+  font-size: 1rem;
+  content: '';
+}
+
 /* ========================================== */
 
 /* products sort */
-
 .products__sort-overlay {
   position: fixed;
   top: 0;
@@ -56,29 +73,12 @@
   opacity: 1;
 }
 
-.products__sort {
+.products__sort-wrapper {
   position: relative;
 }
 
-.products__sort-button {
-  position: relative;
-  display: block;
-  padding: 0.3em 0 0.3em 2rem;
-  line-height: 1;
-  background-color: transparent;
-  border: none;
-}
-
-.products__sort-button::before {
-  position: absolute;
-  top: 50%;
-  left: 0;
-  width: 1.5em;
-  height: 1.5em;
-  font-size: 1rem;
-  content: '';
+.products__header-button--sort::before {
   background-image: url('../images/sort.svg');
-  transform: translateY(-50%);
 }
 
 .products__sort-list {
@@ -87,7 +87,7 @@
   left: -0.5rem;
   z-index: 15;
   width: 220px;
-  padding: 1rem;
+  padding: 1rem 1.5rem;
   pointer-events: none;
   background-color: var(--color-white);
   border-radius: 0.5rem;
@@ -108,21 +108,25 @@
   list-style: none;
 }
 
-.products__sort-item-buttom {
-  display: block;
-  padding: 0.5rem 2rem 0.5rem 0.5rem;
+.products__sort-item-button {
+  display: grid;
+  grid-template-columns: 1fr min-content;
+  align-items: center;
+  justify-items: start;
+  width: 100%;
+  min-height: 2rem;
   line-height: 1;
+  background-color: transparent;
+  border: none;
 }
 
 .products__sort-button--active {
-  position: relative;
   color: var(--color-blue-medium);
 }
 
 .products__sort-button--active::after {
-  position: absolute;
-  top: 50%;
-  right: 0;
+  display: block;
+  align-self: center;
   width: 1.8em;
   height: 1.8em;
   content: '';
@@ -130,38 +134,43 @@
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
-  transform: translateY(-50%);
+}
+
+/* ========================================== */
+.products__header-button--filters::before {
+  background-image: url('../images/filters.svg');
 }
 
 /* ========================================== */
 .products__container {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 0.9em;
+  gap: 1.5rem;
   justify-items: center;
-  max-width: var(--max-width);
-  padding: 0 1rem;
-  margin: 0 auto;
   margin-bottom: 1rem;
 }
 
 @media (min-width: 750px) {
   .products__container {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(2, minmax(215px, 1fr));
   }
 }
 
-@media (min-width: 1000px) {
+@media (min-width: 1050px) {
   .products__container {
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    gap: 1.5em;
+    grid-template-columns: repeat(4, minmax(215px, 1fr));
+  }
+}
+
+@media (min-width: 1190px) {
+  .products__container {
+    grid-template-columns: repeat(3, minmax(215px, 300px));
   }
 }
 
 /* ========================================== */
 
 /* footer */
-
 .products__footer {
   display: flex;
   justify-content: center;
@@ -170,6 +179,23 @@
 /* ========================================== */
 
 /* pagination */
+
+.pagination {
+  font-size: 1rem;
+}
+
+@media (min-width: 370px) {
+  .pagination {
+    font-size: 1.2rem;
+  }
+}
+
+@media (min-width: 470px) {
+  .pagination {
+    font-size: 1.4rem;
+  }
+}
+
 .pagination__list {
   display: flex;
   padding: 0;
@@ -180,9 +206,9 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 2rem;
-  height: 2rem;
-  font-size: 0.875rem;
+  width: 2em;
+  height: 2em;
+  font-size: 0.875em;
   background-color: transparent;
   border: none;
 }
@@ -193,7 +219,7 @@
 
 .pagination__button--active {
   border: 1px solid currentColor;
-  border-radius: 0.4em;
+  border-radius: 0.3em;
 }
 
 .pagination__button-icon {

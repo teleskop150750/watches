@@ -1,5 +1,6 @@
 @import 'styles/breadcrumbs.css';
-@import 'styles/products.css';
+@import 'styles/products-wrapper.css';
 @import 'libs/noUiSlider/nouislider.css';
 @import 'styles/filters.css';
+@import 'styles/products.css';
 @import 'styles/product.css';
