@@ -1,0 +1,749 @@
+<!DOCTYPE html>
+<html class="page" lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Главная</title>
+  <link rel="shortcut icon" href="favicon.png" type="image/png">
+  <link rel="stylesheet" href="core.css">
+  <link rel="stylesheet" href="single.css">
+</head>
+
+<body class="page__body">
+  <header class="header">
+    <div class="header__top">
+      <div class="header__top-container">
+        <label class="header__top-currency-wrapper">
+          <select class="header__top-currency">
+            <option class="header__top-currency-option" value="RUB">Рубли</option>
+            <option class="header__top-currency-option" value="USD">Доллары</option>
+          </select>
+        </label>
+
+        <div class="header__top-right">
+          <div class="header__top-cart-wrapper">
+            <a class="header__top-cart-link" href="#">
+              <span class="header__top-cart-count">8</span>
+            </a>
+          </div>
+
+          <div class="header__top-user-wrapper">
+            <div class="user-overlay"></div>
+            <button class="header__top-user" aria-label="user"></button>
+            <ul class="header__top-user-list">
+              <li class="header__top-user-list-item">
+                <a class="header__top-user-list-item-link" href="#">Войти</a>
+              </li>
+              <li class="header__top-user-list-item">
+                <a class="header__top-user-list-item-link" href="#">Зарегистрироваться</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="header__logo-wrapper">
+      <h1 class="logo">
+        <a class="logo__link" href="index.html">Luxury Wacthes</a>
+      </h1>
+    </div>
+
+    <div class="header__bottom">
+      <div class="search-overlay"></div>
+      <div class="header__bottom-container">
+        <button class="header__bottom-open-nav" aria-label="menu">
+          <span class="header__bottom-open-nav-liner"></span>
+          <span class="header__bottom-open-nav-liner"></span>
+          <span class="header__bottom-open-nav-liner"></span>
+        </button>
+
+        <div class="nav-mobile-overlay"></div>
+        <div class="header__bottom-nav-mobile">
+          <div class="header__bottom-nav-mobile-inner">
+            <div class="header__bottom-nav-mobile-header">
+              <h3 class="header__bottom-nav-mobile-header-title">
+                Категории
+              </h3>
+              <button class="header__bottom-nav-mobile-header-back" aria-label="закрыть меню"></button>
+            </div>
+            <nav class="menu-mobile header__bottom-nav-mobile-list-wrapper">
+              <ul class="menu-mobile__list">
+                <li class="menu-mobile__item">
+                  <a href="#" class="menu-mobile__link menu-mobile__link-submenu">
+                    Мужские
+                  </a>
+                  <ul class="menu-mobile__list menu-mobile__list--hidden">
+                    <li class="menu-mobile__item">
+                      <button class="menu-mobile__back">
+                        Назад
+                      </button>
+                    </li>
+                    <li class="menu-mobile__item">
+                      <a class="menu-mobile__link menu-mobile__link-submenu">
+                        Электронные
+                      </a>
+                      <ul class="menu-mobile__list menu-mobile__list--hidden">
+                        <li class="menu-mobile__item">
+                          <button class="menu-mobile__back">
+                            Назад
+                          </button>
+                        </li>
+                        <li class="menu-mobile__item">
+                          <a class="menu-mobile__link" href="products.html">
+                            Casio
+                          </a>
+                        </li>
+                        <li class="menu-mobile__item">
+                          <a class="menu-mobile__link" href="products.html">
+                            Citizen
+                          </a>
+                        </li>
+                        <li class="menu-mobile__item">
+                          <a class="menu-mobile__link menu-mobile__link--all" href="products.html">
+                            Показать все
+                          </a>
+                        </li>
+                      </ul>
+                    </li>
+                    <li class="menu-mobile__item">
+                      <a class="menu-mobile__link menu-mobile__link-submenu">
+                        Механические
+                      </a>
+                      <ul class="menu-mobile__list menu-mobile__list--hidden">
+                        <li class="menu-mobile__item">
+                          <button class="menu-mobile__back">
+                            Назад
+                          </button>
+                        </li>
+                        <li class="menu-mobile__item">
+                          <a class="menu-mobile__link" href="products.html">
+                            Royal London
+                          </a>
+                        </li>
+                        <li class="menu-mobile__item">
+                          <a class="menu-mobile__link" href="products.html">
+                            Seiko
+                          </a>
+                        </li>
+                        <li class="menu-mobile__item">
+                          <a class="menu-mobile__link" href="products.html">
+                            Epos
+                          </a>
+                        </li>
+                        <li class="menu-mobile__item">
+                          <a class="menu-mobile__link menu-mobile__link--all" href="products.html">
+                            Показать все
+                          </a>
+                        </li>
+                      </ul>
+                    </li>
+                    <li class="menu-mobile__item">
+                      <a class="menu-mobile__link menu-mobile__link--all" href="products.html">
+                        Показать все
+                      </a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="menu-mobile__item">
+                  <a class="menu-mobile__link menu-mobile__link-submenu">
+                    Женские
+                  </a>
+                  <ul class="menu-mobile__list menu-mobile__list--hidden">
+                    <li class="menu-mobile__item">
+                      <button class="menu-mobile__back">
+                        Назад
+                      </button>
+                    </li>
+                    <li class="menu-mobile__item">
+                      <a class="menu-mobile__link menu-mobile__link-submenu">
+                        Электронные
+                      </a>
+                      <ul class="menu-mobile__list menu-mobile__list--hidden">
+                        <li class="menu-mobile__item">
+                          <button class="menu-mobile__back">
+                            Назад
+                          </button>
+                        </li>
+                        <li class="menu-mobile__item">
+                          <a class="menu-mobile__link" href="products.html">
+                            Adriatica
+                          </a>
+                        </li>
+                        <li class="menu-mobile__item">
+                          <a class="menu-mobile__link menu-mobile__link--all" href="products.html">
+                            Показать все
+                          </a>
+                        </li>
+                      </ul>
+                    </li>
+                    <li class="menu-mobile__item">
+                      <a class="menu-mobile__link menu-mobile__link-submenu">
+                        Механические
+                      </a>
+                      <ul class="menu-mobile__list menu-mobile__list--hidden">
+                        <li class="menu-mobile__item">
+                          <button class="menu-mobile__back">
+                            Назад
+                          </button>
+                        </li>
+                        <li class="menu-mobile__item">
+                          <a class="menu-mobile__link" href="products.html">
+                            Anne Klein
+                          </a>
+                        </li>
+                        <li class="menu-mobile__item">
+                          <a class="menu-mobile__link  menu-mobile__link--all" href="products.html">
+                            Показать все
+                          </a>
+                        </li>
+                      </ul>
+                    </li>
+                    <li class="menu-mobile__item">
+                      <a class="menu-mobile__link menu-mobile__link--all" href="products.html">
+                        Показать все
+                      </a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="menu-mobile__item">
+                  <a class="menu-mobile__link" href="products.html">
+                    Детские
+                  </a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+
+        <div class="header__bottom-logo-wrapper">
+          <h1 class="logo">
+            <a class="logo__link" href="index.html">Luxury Wacthes</a>
+          </h1>
+        </div>
+
+        <div class="header__bottom-nav">
+          <nav class="menu">
+            <ul class="menu__list">
+              <li class="menu__item">
+                <a class="menu__link" href="products.html">Мужские</a>
+                <ul class="submenu">
+                  <li class="submenu__item">
+                    <a class="submenu__link" href="products.html">
+                      Электронные
+                    </a>
+                    <ul class="submenu__list">
+                      <li class="submenu__list-item">
+                        <a class="submenu__list-link" href="products.html">
+                          Casio
+                        </a>
+                      </li>
+                      <li class="submenu__list-item">
+                        <a class="submenu__list-link" href="products.html">
+                          Citizen
+                        </a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li class="submenu__item">
+                    <a class="submenu__link" href="products.html">
+                      Механические
+                    </a>
+                    <ul class="submenu__list">
+                      <li class="submenu__list-item">
+                        <a class="submenu__list-link" href="products.html">
+                          Royal London
+                        </a>
+                      </li>
+                      <li class="submenu__list-item">
+                        <a class="submenu__list-link" href="products.html">
+                          Seiko
+                        </a>
+                      </li>
+                      <li class="submenu__list-item">
+                        <a class="submenu__list-link" href="products.html">
+                          Epos
+                        </a>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+              <li class="menu__item">
+                <a class="menu__link" href="products.html">Женские</a>
+                <ul class="submenu">
+                  <li class="submenu__item">
+                    <a class="submenu__link" href="products.html">
+                      Электронные
+                    </a>
+                    <ul class="submenu__list">
+                      <li class="submenu__list-item">
+                        <a class="submenu__list-link" href="products.html">
+                          Adriatica
+                        </a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li class="submenu__item">
+                    <a class="submenu__link" href="products.html">
+                      Механические
+                    </a>
+                    <ul class="submenu__list">
+                      <li class="submenu__list-item">
+                        <a class="submenu__list-link" href="products.html">
+                          Anne Klein
+                        </a>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+              <li class="menu__item">
+                <a class="menu__link" href="products.html">Детские</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+
+        <button class="search-button header__bottom-search-button" aria-label="search"></button>
+
+        <form class="header__bottom-search">
+          <input class="header__bottom-search-input" type="search" name="search" autocomplete="off" placeholder="Поиск">
+          <button class="search-button header__bottom-search-submit" type="submit"></button>
+        </form>
+      </div>
+    </div>
+  </header>
+
+  <div class="content">
+    <main class="main">
+      <div class="product">
+        <div class="product__header">
+          <div class="product__header-slider-wrapper">
+            <div class="product__header-slider"></div>
+          </div>
+          <div class="product__header-price-wrapper">
+            <span class="product__header-price">13 400 ₽</span>
+            <span class="product__header-price-old">21 100 ₽</span>
+          </div>
+          <div class="product__header-add-to-cart-wrapper">
+            <button class="product__header-add-to-cart">
+              В корзину
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <section class="single-slider">
+        <div class="single-slider__inner">
+          <h2 class="single-slider__title">
+            Просмотренные товары
+          </h2>
+          <div class="single-slider__container slider-viewed">
+            <div class="single-slider__wrapper">
+              <div class="single-slider__slide">
+                <article class="single-product">
+                  <header class="single-product__header">
+                    <a class="single-product__img-wrapper" href="single.html">
+                      <img class="single-product__img" src="images/product-1.jpeg" alt="">
+                    </a>
+                  </header>
+                  <h3 class="single-product__title">
+                    <a class="single-product__title-link" href="single.html">Royal London 34534-345345</a>
+                  </h3>
+                  <div class="single-product__price-wrapper">
+                    <span class="single-product__price">13 400 ₽</span>
+                    <span class="single-product__price-old">21 100 ₽</span>
+                  </div>
+                  <button class="single-product__button">
+                    Купить
+                  </button>
+                </article>
+              </div>
+              <div class="single-slider__slide">
+                <article class="single-product">
+                  <header class="single-product__header">
+                    <a class="single-product__img-wrapper" href="single.html">
+                      <img class="single-product__img" src="images/product-1.jpeg" alt="">
+                    </a>
+                  </header>
+                  <h3 class="single-product__title">
+                    <a class="single-product__title-link" href="single.html">Royal London</a>
+                  </h3>
+                  <div class="single-product__price-wrapper">
+                    <span class="single-product__price">143 400 ₽</span>
+                    <span class="single-product__price-old">221 100 ₽</span>
+                  </div>
+                  <button class="single-product__button">
+                    Купить
+                  </button>
+                </article>
+              </div>
+              <div class="single-slider__slide">
+                <article class="single-product">
+                  <header class="single-product__header">
+                    <a class="single-product__img-wrapper" href="single.html">
+                      <img class="single-product__img" src="images/product-1.jpeg" alt="">
+                    </a>
+                  </header>
+                  <h3 class="single-product__title">
+                    <a class="single-product__title-link" href="single.html">Royal London</a>
+                  </h3>
+                  <div class="single-product__price-wrapper">
+                    <span class="single-product__price">143 400 ₽</span>
+                    <span class="single-product__price-old">221 100 ₽</span>
+                  </div>
+                  <button class="single-product__button">
+                    Купить
+                  </button>
+                </article>
+              </div>
+              <div class="single-slider__slide">
+                <article class="single-product">
+                  <header class="single-product__header">
+                    <a class="single-product__img-wrapper" href="single.html">
+                      <img class="single-product__img" src="images/product-1.jpeg" alt="">
+                    </a>
+                  </header>
+                  <h3 class="single-product__title">
+                    <a class="single-product__title-link" href="single.html">Royal London</a>
+                  </h3>
+                  <div class="single-product__price-wrapper">
+                    <span class="single-product__price">143 400 ₽</span>
+                    <span class="single-product__price-old">221 100 ₽</span>
+                  </div>
+                  <button class="single-product__button">
+                    Купить
+                  </button>
+                </article>
+              </div>
+              <div class="single-slider__slide">
+                <article class="single-product">
+                  <header class="single-product__header">
+                    <a class="single-product__img-wrapper" href="single.html">
+                      <img class="single-product__img" src="images/product-1.jpeg" alt="">
+                    </a>
+                  </header>
+                  <h3 class="single-product__title">
+                    <a class="single-product__title-link" href="single.html">Royal London</a>
+                  </h3>
+                  <div class="single-product__price-wrapper">
+                    <span class="single-product__price">143 400 ₽</span>
+                    <span class="single-product__price-old">221 100 ₽</span>
+                  </div>
+                  <button class="single-product__button">
+                    Купить
+                  </button>
+                </article>
+              </div>
+              <div class="single-slider__slide">
+                <article class="single-product">
+                  <header class="single-product__header">
+                    <a class="single-product__img-wrapper" href="single.html">
+                      <img class="single-product__img" src="images/product-1.jpeg" alt="">
+                    </a>
+                  </header>
+                  <h3 class="single-product__title">
+                    <a class="single-product__title-link" href="single.html">Royal London</a>
+                  </h3>
+                  <div class="single-product__price-wrapper">
+                    <span class="single-product__price">143 400 ₽</span>
+                    <span class="single-product__price-old">221 100 ₽</span>
+                  </div>
+                  <button class="single-product__button">
+                    Купить
+                  </button>
+                </article>
+              </div>
+              <div class="single-slider__slide">
+                <article class="single-product">
+                  <header class="single-product__header">
+                    <a class="single-product__img-wrapper" href="single.html">
+                      <img class="single-product__img" src="images/product-1.jpeg" alt="">
+                    </a>
+                  </header>
+                  <h3 class="single-product__title">
+                    <a class="single-product__title-link" href="single.html">Royal London</a>
+                  </h3>
+                  <div class="single-product__price-wrapper">
+                    <span class="single-product__price">143 400 ₽</span>
+                    <span class="single-product__price-old">221 100 ₽</span>
+                  </div>
+                  <button class="single-product__button">
+                    Купить
+                  </button>
+                </article>
+              </div>
+              <div class="single-slider__slide">
+                <article class="single-product">
+                  <header class="single-product__header">
+                    <a class="single-product__img-wrapper" href="single.html">
+                      <img class="single-product__img" src="images/product-1.jpeg" alt="">
+                    </a>
+                  </header>
+                  <h3 class="single-product__title">
+                    <a class="single-product__title-link" href="single.html">Royal London</a>
+                  </h3>
+                  <div class="single-product__price-wrapper">
+                    <span class="single-product__price">143 400 ₽</span>
+                    <span class="single-product__price-old">221 100 ₽</span>
+                  </div>
+                  <button class="single-product__button">
+                    Купить
+                  </button>
+                </article>
+              </div>
+              <div class="single-slider__slide">
+                <article class="single-product">
+                  <header class="single-product__header">
+                    <a class="single-product__img-wrapper" href="single.html">
+                      <img class="single-product__img" src="images/product-1.jpeg" alt="">
+                    </a>
+                  </header>
+                  <h3 class="single-product__title">
+                    <a class="single-product__title-link" href="single.html">Royal London</a>
+                  </h3>
+                  <div class="single-product__price-wrapper">
+                    <span class="single-product__price">143 400 ₽</span>
+                    <span class="single-product__price-old">221 100 ₽</span>
+                  </div>
+                  <button class="single-product__button">
+                    Купить
+                  </button>
+                </article>
+              </div>
+            </div>
+
+            <div class="single-slider__button-prev">
+              <svg class="single-slider__button-prev-icon single-slider__button-icon" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 268.8 268.8">
+                <path
+                  d="M265.2 125.6l-80-80a12.5 12.5 0 00-17.7 17.7l58.7 58.6H12.5a12.5 12.5 0 000 25h213.7l-58.7 58.7a12.5 12.5 0 1017.7 17.7l80-80a12.5 12.5 0 000-17.7z"
+                  fill="currentColor" />
+              </svg>
+            </div>
+            <div class="single-slider__button-next">
+              <svg class="single-slider__button-next-icon single-slider__button-icon" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 268.8 268.8">
+                <path
+                  d="M265.2 125.6l-80-80a12.5 12.5 0 00-17.7 17.7l58.7 58.6H12.5a12.5 12.5 0 000 25h213.7l-58.7 58.7a12.5 12.5 0 1017.7 17.7l80-80a12.5 12.5 0 000-17.7z"
+                  fill="currentColor" />
+              </svg>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="single-slider">
+        <div class="single-slider__inner">
+          <h2 class="single-slider__title">
+            Связанные товары
+          </h2>
+          <div class="single-slider__container slider-related">
+            <div class="single-slider__wrapper">
+              <div class="single-slider__slide">
+                <article class="single-product">
+                  <header class="single-product__header">
+                    <a class="single-product__img-wrapper" href="single.html">
+                      <img class="single-product__img" src="images/product-1.jpeg" alt="">
+                    </a>
+                  </header>
+                  <h3 class="single-product__title">
+                    <a class="single-product__title-link" href="single.html">Royal London 34534-345345</a>
+                  </h3>
+                  <div class="single-product__price-wrapper">
+                    <span class="single-product__price">13 400 ₽</span>
+                    <span class="single-product__price-old">21 100 ₽</span>
+                  </div>
+                  <button class="single-product__button">
+                    Купить
+                  </button>
+                </article>
+              </div>
+              <div class="single-slider__slide">
+                <article class="single-product">
+                  <header class="single-product__header">
+                    <a class="single-product__img-wrapper" href="single.html">
+                      <img class="single-product__img" src="images/product-1.jpeg" alt="">
+                    </a>
+                  </header>
+                  <h3 class="single-product__title">
+                    <a class="single-product__title-link" href="single.html">Royal London</a>
+                  </h3>
+                  <div class="single-product__price-wrapper">
+                    <span class="single-product__price">143 400 ₽</span>
+                    <span class="single-product__price-old">221 100 ₽</span>
+                  </div>
+                  <button class="single-product__button">
+                    Купить
+                  </button>
+                </article>
+              </div>
+              <div class="single-slider__slide">
+                <article class="single-product">
+                  <header class="single-product__header">
+                    <a class="single-product__img-wrapper" href="single.html">
+                      <img class="single-product__img" src="images/product-1.jpeg" alt="">
+                    </a>
+                  </header>
+                  <h3 class="single-product__title">
+                    <a class="single-product__title-link" href="single.html">Royal London</a>
+                  </h3>
+                  <div class="single-product__price-wrapper">
+                    <span class="single-product__price">143 400 ₽</span>
+                    <span class="single-product__price-old">221 100 ₽</span>
+                  </div>
+                  <button class="single-product__button">
+                    Купить
+                  </button>
+                </article>
+              </div>
+              <div class="single-slider__slide">
+                <article class="single-product">
+                  <header class="single-product__header">
+                    <a class="single-product__img-wrapper" href="single.html">
+                      <img class="single-product__img" src="images/product-1.jpeg" alt="">
+                    </a>
+                  </header>
+                  <h3 class="single-product__title">
+                    <a class="single-product__title-link" href="single.html">Royal London</a>
+                  </h3>
+                  <div class="single-product__price-wrapper">
+                    <span class="single-product__price">143 400 ₽</span>
+                    <span class="single-product__price-old">221 100 ₽</span>
+                  </div>
+                  <button class="single-product__button">
+                    Купить
+                  </button>
+                </article>
+              </div>
+              <div class="single-slider__slide">
+                <article class="single-product">
+                  <header class="single-product__header">
+                    <a class="single-product__img-wrapper" href="single.html">
+                      <img class="single-product__img" src="images/product-1.jpeg" alt="">
+                    </a>
+                  </header>
+                  <h3 class="single-product__title">
+                    <a class="single-product__title-link" href="single.html">Royal London</a>
+                  </h3>
+                  <div class="single-product__price-wrapper">
+                    <span class="single-product__price">143 400 ₽</span>
+                    <span class="single-product__price-old">221 100 ₽</span>
+                  </div>
+                  <button class="single-product__button">
+                    Купить
+                  </button>
+                </article>
+              </div>
+              <div class="single-slider__slide">
+                <article class="single-product">
+                  <header class="single-product__header">
+                    <a class="single-product__img-wrapper" href="single.html">
+                      <img class="single-product__img" src="images/product-1.jpeg" alt="">
+                    </a>
+                  </header>
+                  <h3 class="single-product__title">
+                    <a class="single-product__title-link" href="single.html">Royal London</a>
+                  </h3>
+                  <div class="single-product__price-wrapper">
+                    <span class="single-product__price">143 400 ₽</span>
+                    <span class="single-product__price-old">221 100 ₽</span>
+                  </div>
+                  <button class="single-product__button">
+                    Купить
+                  </button>
+                </article>
+              </div>
+              <div class="single-slider__slide">
+                <article class="single-product">
+                  <header class="single-product__header">
+                    <a class="single-product__img-wrapper" href="single.html">
+                      <img class="single-product__img" src="images/product-1.jpeg" alt="">
+                    </a>
+                  </header>
+                  <h3 class="single-product__title">
+                    <a class="single-product__title-link" href="single.html">Royal London</a>
+                  </h3>
+                  <div class="single-product__price-wrapper">
+                    <span class="single-product__price">143 400 ₽</span>
+                    <span class="single-product__price-old">221 100 ₽</span>
+                  </div>
+                  <button class="single-product__button">
+                    Купить
+                  </button>
+                </article>
+              </div>
+              <div class="single-slider__slide">
+                <article class="single-product">
+                  <header class="single-product__header">
+                    <a class="single-product__img-wrapper" href="single.html">
+                      <img class="single-product__img" src="images/product-1.jpeg" alt="">
+                    </a>
+                  </header>
+                  <h3 class="single-product__title">
+                    <a class="single-product__title-link" href="single.html">Royal London</a>
+                  </h3>
+                  <div class="single-product__price-wrapper">
+                    <span class="single-product__price">143 400 ₽</span>
+                    <span class="single-product__price-old">221 100 ₽</span>
+                  </div>
+                  <button class="single-product__button">
+                    Купить
+                  </button>
+                </article>
+              </div>
+              <div class="single-slider__slide">
+                <article class="single-product">
+                  <header class="single-product__header">
+                    <a class="single-product__img-wrapper" href="single.html">
+                      <img class="single-product__img" src="images/product-1.jpeg" alt="">
+                    </a>
+                  </header>
+                  <h3 class="single-product__title">
+                    <a class="single-product__title-link" href="single.html">Royal London</a>
+                  </h3>
+                  <div class="single-product__price-wrapper">
+                    <span class="single-product__price">143 400 ₽</span>
+                    <span class="single-product__price-old">221 100 ₽</span>
+                  </div>
+                  <button class="single-product__button">
+                    Купить
+                  </button>
+                </article>
+              </div>
+            </div>
+
+            <div class="single-slider__button-prev">
+              <svg class="single-slider__button-prev-icon single-slider__button-icon" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 268.8 268.8">
+                <path
+                  d="M265.2 125.6l-80-80a12.5 12.5 0 00-17.7 17.7l58.7 58.6H12.5a12.5 12.5 0 000 25h213.7l-58.7 58.7a12.5 12.5 0 1017.7 17.7l80-80a12.5 12.5 0 000-17.7z"
+                  fill="currentColor" />
+              </svg>
+            </div>
+            <div class="single-slider__button-next">
+              <svg class="single-slider__button-next-icon single-slider__button-icon" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 268.8 268.8">
+                <path
+                  d="M265.2 125.6l-80-80a12.5 12.5 0 00-17.7 17.7l58.7 58.6H12.5a12.5 12.5 0 000 25h213.7l-58.7 58.7a12.5 12.5 0 1017.7 17.7l80-80a12.5 12.5 0 000-17.7z"
+                  fill="currentColor" />
+              </svg>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <footer class="footer">
+    <div class="footer__container">
+      <p class="footer__copy">
+        © 2021 ГПОУ ТО "Донской колледж информационных технологий" Куликов&#160;Денис 4&#8209;П-1
+      </p>
+    </div>
+  </footer>
+
+  <script src="core.js" type="module"></script>
+  <script src="single.js" type="module"></script>
+</body>
+
+</html>

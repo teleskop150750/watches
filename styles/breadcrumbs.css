@@ -11,11 +11,10 @@
 
 .breadcrumbs__list {
   display: flex;
+  flex-wrap: wrap;
   gap: 0.5rem;
   padding: 0;
   margin: 0;
-  overflow: hidden;
-  overflow-x: auto;
   color: var(--color-grey-light);
   white-space: nowrap;
   list-style: none;
