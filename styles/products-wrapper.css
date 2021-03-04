@@ -7,7 +7,7 @@
 
 @media (min-width: 1190px) {
   .products-wrapper {
-    grid-template-columns: 320px 1fr;
+    grid-template-columns: 280px 1fr;
     gap: 2rem;
   }
 }

@@ -146,6 +146,7 @@
   display: grid;
   grid-template-columns: 1fr;
   gap: 1.5rem;
+justify-content: space-around   ;
   justify-items: center;
   margin-bottom: 1rem;
 }
@@ -174,54 +175,4 @@
 .products__footer {
   display: flex;
   justify-content: center;
-}
-
-/* ========================================== */
-
-/* pagination */
-
-.pagination {
-  font-size: 1rem;
-}
-
-@media (min-width: 370px) {
-  .pagination {
-    font-size: 1.2rem;
-  }
-}
-
-@media (min-width: 470px) {
-  .pagination {
-    font-size: 1.4rem;
-  }
-}
-
-.pagination__list {
-  display: flex;
-  padding: 0;
-  list-style: none;
-}
-
-.pagination__button {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 2em;
-  height: 2em;
-  font-size: 0.875em;
-  background-color: transparent;
-  border: none;
-}
-
-.pagination__button--ellipsis {
-  width: auto;
-}
-
-.pagination__button--active {
-  border: 1px solid currentColor;
-  border-radius: 0.3em;
-}
-
-.pagination__button-icon {
-  height: 1.5em;
 }
