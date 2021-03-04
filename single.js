@@ -1,3 +1,4 @@
+import quantity from './scripts/quantity.js';
 import tabbed from './scripts/tabbed.js';
 import review from './scripts/review.js';
 // eslint-disable-next-line import/no-named-as-default
@@ -11,3 +12,5 @@ const viewed = new Swiper('.slider-viewed', singleSlider);
 const related = new Swiper('.slider-related', singleSlider);
 viewed.init();
 related.init();
+
+quantity( );

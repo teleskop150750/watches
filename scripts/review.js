@@ -20,11 +20,15 @@ export default () => {
   const addReviewSubmitHandler = (e) => {
     e.preventDefault();
     const form = e.target;
-    form.reset();
-    const footer = form.querySelector('.add-review__footer');
-    const content = form.querySelector('.add-review__content');
-    removeFormFooter(content, footer);
-    addPeviewText.addEventListener('focus', addPeviewTextFocusHandler);
+    const textarea = form.querySelector('.add-review__text');
+    textarea.value = textarea.value.trim();
+    if (textarea.value !== '') {
+      form.reset();
+      const footer = form.querySelector('.add-review__footer');
+      const content = form.querySelector('.add-review__content');
+      removeFormFooter(content, footer);
+      addPeviewText.addEventListener('focus', addPeviewTextFocusHandler);
+    }
   };
 
   addReviewForm.addEventListener('submit', addReviewSubmitHandler);

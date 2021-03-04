@@ -146,7 +146,7 @@
   display: grid;
   grid-template-columns: 1fr;
   gap: 1.5rem;
-justify-content: space-around   ;
+  justify-content: space-around;
   justify-items: center;
   margin-bottom: 1rem;
 }

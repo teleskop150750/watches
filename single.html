@@ -21,14 +21,14 @@
             <option class="header__top-currency-option" value="USD">Доллары</option>
           </select>
         </label>
-        
+
         <div class="header__top-right">
           <div class="header__top-cart-wrapper">
             <a class="header__top-cart-link" href="#">
               <span class="header__top-cart-count">8</span>
             </a>
           </div>
-          
+
           <div class="header__top-user-wrapper">
             <div class="user-overlay"></div>
             <button class="header__top-user" type="button" aria-label="user"></button>
@@ -44,13 +44,13 @@
         </div>
       </div>
     </div>
-    
+
     <div class="header__logo-wrapper">
       <h1 class="logo">
         <a class="logo__link" href="index.html">Luxury Wacthes</a>
       </h1>
     </div>
-    
+
     <div class="header__bottom">
       <div class="search-overlay"></div>
       <div class="header__bottom-container">
@@ -59,7 +59,7 @@
           <span class="header__bottom-open-nav-liner"></span>
           <span class="header__bottom-open-nav-liner"></span>
         </button>
-        
+
         <div class="nav-mobile-overlay"></div>
         <div class="header__bottom-nav-mobile">
           <div class="header__bottom-nav-mobile-inner">
@@ -322,17 +322,30 @@
       <div class="product">
         <div class="product__header">
           <div class="product__header-slider-wrapper">
-            <div class="product__header-slider"></div>
+            <div class="product__header-slider-inner">
+              <div class="product__header-slider"></div>
+            </div>
           </div>
-          <div class="product__header-price-wrapper">
-            <span class="product__header-price">13 400 ₽</span>
-            <span class="product__header-price-old">21 100 ₽</span>
+        </div>
+        <div class="product__title-wrapper">
+          <h1 class="product__title">
+            Royal London
+          </h1>
+        </div>
+        <div class="product__price-wrapper">
+          <span class="product__price">13 400 ₽</span>
+          <span class="product__price-old">21 100 ₽</span>
+        </div>
+        <div class="product__add-to-cart-wrapper">
+          <div class="product__quantity">
+            <button class="product__quantity-button" type="button">–</button>
+            <input class="product__quantity-input" type="number" name="quantity" value="1" min="1" max="10">
+            <button class="product__quantity-button" type="button">+</button>
           </div>
-          <div class="product__header-add-to-cart-wrapper">
-            <button class="product__header-add-to-cart" type="button">
-              В корзину
-            </button>
-          </div>
+
+          <button class="product__add-to-cart" type="button">
+            В корзину
+          </button>
         </div>
       </div>
 
@@ -367,7 +380,7 @@
               </div>
               <form class="add-review__form" method="POST">
                 <label class="add-review__content">
-                  <textarea class="add-review__text" name="review" minlength="1"></textarea>
+                  <textarea class="add-review__text" name="review"></textarea>
                 </label>
               </form>
             </div>
@@ -389,36 +402,12 @@
                     <div class="review__menu-overlay"></div>
                     <ul class="review__menu-list">
                       <li class="review__menu-item">
-                        <button class="review__menu-list-button review__menu-list-button--edit" type="button">Изменить</button>
+                        <button class="review__menu-list-button review__menu-list-button--edit"
+                          type="button">Изменить</button>
                       </li>
                       <li class="review__menu-item">
-                        <button class="review__menu-list-button review__menu-list-button--delete" type="button">Удалить</button>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-              </article>
-              <article class="review">
-                <div class="review__avatar-wrapper">
-                  <img class="review__avatar" src="./images/avatar.jpg" alt="аватар" width="40" height="40">
-                </div>
-                <div class="review__heading">
-                  <h3 class="review__name">teleskop teleskop</h3>
-                  <time class="review__date" datetime="2021-02-10T00:00:00.000Z">10 февраля 2021 </time>
-                </div>
-                <div class="review__content">
-                  <div class="review__content-text" contenteditable="false">
-                    Лимитированные серии - каждая модель выпускается тиражом от 75 до 500 штук, что придаёт уникальность
-                  </div>
-                  <div class="review__menu-wrapper">
-                    <button class="review__menu-button" type="button" aria-label="меню"></button>
-                    <div class="review__menu-overlay"></div>
-                    <ul class="review__menu-list">
-                      <li class="review__menu-item">
-                        <button class="review__menu-list-button review__menu-list-button--edit" type="button">Изменить</button>
-                      </li>
-                      <li class="review__menu-item">
-                        <button class="review__menu-list-button review__menu-list-button--delete" type="button">Удалить</button>
+                        <button class="review__menu-list-button review__menu-list-button--delete"
+                          type="button">Удалить</button>
                       </li>
                     </ul>
                   </div>
@@ -441,10 +430,40 @@
                     <div class="review__menu-overlay"></div>
                     <ul class="review__menu-list">
                       <li class="review__menu-item">
-                        <button class="review__menu-list-button review__menu-list-button--edit" type="button">Изменить</button>
+                        <button class="review__menu-list-button review__menu-list-button--edit"
+                          type="button">Изменить</button>
                       </li>
                       <li class="review__menu-item">
-                        <button class="review__menu-list-button review__menu-list-button--delete" type="button">Удалить</button>
+                        <button class="review__menu-list-button review__menu-list-button--delete"
+                          type="button">Удалить</button>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </article>
+              <article class="review">
+                <div class="review__avatar-wrapper">
+                  <img class="review__avatar" src="./images/avatar.jpg" alt="аватар" width="40" height="40">
+                </div>
+                <div class="review__heading">
+                  <h3 class="review__name">teleskop teleskop</h3>
+                  <time class="review__date" datetime="2021-02-10T00:00:00.000Z">10 февраля 2021 </time>
+                </div>
+                <div class="review__content">
+                  <div class="review__content-text" contenteditable="false">
+                    Лимитированные серии - каждая модель выпускается тиражом от 75 до 500 штук, что придаёт уникальность
+                  </div>
+                  <div class="review__menu-wrapper">
+                    <button class="review__menu-button" type="button" aria-label="меню"></button>
+                    <div class="review__menu-overlay"></div>
+                    <ul class="review__menu-list">
+                      <li class="review__menu-item">
+                        <button class="review__menu-list-button review__menu-list-button--edit"
+                          type="button">Изменить</button>
+                      </li>
+                      <li class="review__menu-item">
+                        <button class="review__menu-list-button review__menu-list-button--delete"
+                          type="button">Удалить</button>
                       </li>
                     </ul>
                   </div>
