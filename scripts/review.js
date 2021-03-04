@@ -1,6 +1,11 @@
 export default () => {
   const addPeviewText = document.querySelector('.add-review__text');
 
+  const removeFormFooter = (content, footer) => {
+    content.classList.remove('add-review__content--active');
+    footer.remove();
+  };
+
   const addFormFooter = (form) => {
     let html = '';
     html = `<div class="add-review__footer">
@@ -10,15 +15,45 @@ export default () => {
     form.insertAdjacentHTML('beforeend', html);
   };
 
+  const addReviewForm = document.querySelector('.add-review__form');
+
+  const addReviewSubmitHandler = (e) => {
+    e.preventDefault();
+    const form = e.target;
+    form.reset();
+    const footer = form.querySelector('.add-review__footer');
+    const content = form.querySelector('.add-review__content');
+    removeFormFooter(content, footer);
+    addPeviewText.addEventListener('focus', addPeviewTextFocusHandler);
+  };
+
+  addReviewForm.addEventListener('submit', addReviewSubmitHandler);
+
+  const addReviewCancelButtonHandler = (e) => {
+    const cancelButton = e.target;
+    const form = cancelButton.closest('.add-review__form');
+    form.reset();
+    const footer = cancelButton.closest('.add-review__footer');
+    const content = form.querySelector('.add-review__content');
+    removeFormFooter(content, footer);
+    cancelButton.removeEventListener('click', addReviewCancelButtonHandler);
+    addPeviewText.addEventListener('focus', addPeviewTextFocusHandler);
+  };
+
   const addPeviewTextFocusHandler = (e) => {
     const textarea = e.target;
     const form = textarea.closest('.add-review__form');
+    const content = textarea.closest('.add-review__content');
+    content.classList.add('add-review__content--active');
     addFormFooter(form);
+    const cancelButton = form.querySelector('.add-review__footer-button--cancel');
+    cancelButton.addEventListener('click', addReviewCancelButtonHandler);
     addPeviewText.removeEventListener('focus', addPeviewTextFocusHandler);
   };
 
   addPeviewText.addEventListener('focus', addPeviewTextFocusHandler);
 
+  // ================================================================
   const menuButtons = document.querySelectorAll('.review__menu-button');
 
   const closeMenu = (menuOverlay, menu) => {
