@@ -1,3 +1,4 @@
+import productSlider, { productSliderHandler } from './scripts/productSlider.js';
 import quantity from './scripts/quantity.js';
 import tabbed from './scripts/tabbed.js';
 import review from './scripts/review.js';
@@ -5,7 +6,10 @@ import review from './scripts/review.js';
 import Swiper from './libs/swiper/swiper.js';
 import singleSlider from './scripts/singleSlider.js';
 
-const productSlider = new Swiper('.product-slider', {
+productSlider.init();
+productSliderHandler();
+
+const zoomSlider = new Swiper('.zoom-slider', {
   init: false,
   slidesPerView: 1,
 
@@ -24,7 +28,7 @@ const productSlider = new Swiper('.product-slider', {
     clickable: true,
   },
 });
-productSlider.init();
+zoomSlider.init();
 
 tabbed();
 review();
