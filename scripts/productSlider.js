@@ -29,6 +29,7 @@ export default productSlider;
 export const productSliderHandler = () => {
   const imageHandler = (e) => {
     sliderObject.initialSlide = productSlider.activeIndex;
+    sliderObject.zoom = true;
 
     const image = e.target;
     const sliderWrapper = image.closest('.product-slider__wrapper').cloneNode(true);
@@ -44,6 +45,7 @@ export const productSliderHandler = () => {
     zoomSlider.append(sliderWrapper);
     zoomSlider.insertAdjacentHTML('beforeend', pagination);
     body.append(zoomSlider);
+    body.classList.add('page__body--lock');
 
     const slider = new Swiper('.zoom-slider', sliderObject);
     slider.init();
@@ -52,6 +54,7 @@ export const productSliderHandler = () => {
     zoomSliderButtonClose.addEventListener('click', () => {
       slider.destroy();
       zoomSlider.remove();
+      body.classList.remove('page__body--lock');
     });
   };
 
