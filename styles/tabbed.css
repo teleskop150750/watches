@@ -31,7 +31,14 @@
   padding: 1rem 0 0 0;
 }
 
-.tabbed__section-text {
+.description p {
   margin: 0;
   margin-bottom: 1rem;
+  font-size: 1.1rem;
+}
+
+@media (min-width: 650px) {
+  .description p {
+    font-size: 1.2rem;
+  }
 }
