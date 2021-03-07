@@ -5,6 +5,7 @@ import { body } from './globalVars.js';
 const sliderObject = {
   init: false,
   slidesPerView: 1,
+  loop: true,
 
   wrapperClass: 'product-slider__wrapper',
   slideClass: 'product-slider__slide',
@@ -20,6 +21,12 @@ const sliderObject = {
     bulletActiveClass: 'product-slider__pagination-bullet--active',
     clickable: true,
   },
+
+  breakpoints: {
+    900: {
+      slidesPerView: 2,
+    },
+  },
 };
 
 const productSlider = new Swiper('.product-slider', sliderObject);
@@ -30,6 +37,7 @@ export const productSliderHandler = () => {
   const imageHandler = (e) => {
     sliderObject.initialSlide = productSlider.activeIndex;
     sliderObject.zoom = true;
+    sliderObject.breakpoints = {};
 
     const image = e.target;
     const sliderWrapper = image.closest('.product-slider__wrapper').cloneNode(true);
