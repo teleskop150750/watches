@@ -11,13 +11,21 @@
 
 .breadcrumbs__list {
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   gap: 0.5rem;
   padding: 0;
   margin: 0;
+  overflow-x: auto;
+  overflow-y: hidden;
   color: var(--color-grey-light);
   white-space: nowrap;
   list-style: none;
+  scrollbar-width: none;
+}
+
+.breadcrumbs__list::-webkit-scrollbar { /* chrome based */
+  width: 0;  /* ширина scrollbar'a */
+  background: transparent;  /* опционально */
 }
 
 .breadcrumbs__item + .breadcrumbs__item {

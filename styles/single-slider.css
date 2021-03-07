@@ -93,10 +93,6 @@
   border-radius: 0.5rem;
 }
 
-.single-product * {
-  user-select: none;
-}
-
 .single-product__img-wrapper {
   position: relative;
   display: block;

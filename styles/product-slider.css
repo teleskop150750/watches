@@ -13,10 +13,6 @@
   user-select: none;
 }
 
-.product-slider * {
-  user-select: none;
-}
-
 .product-slider__wrapper {
   position: relative;
   z-index: 1;
@@ -138,10 +134,6 @@
   touch-action: pan-y;
   user-select: none;
   background-color: var(--color-grey-lightest);
-}
-
-.zoom-slider * {
-  user-select: none;
 }
 
 .zoom-slider__close {
