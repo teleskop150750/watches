@@ -56,6 +56,46 @@
 }
 
 /* ================================================ */
+.product-slider__button-prev,
+.product-slider__button-next {
+  --box-shadow: 0 0 1.5rem 0 rgba(0, 0, 0, 0.15);
+  position: absolute;
+  top: 50%;
+  z-index: 1;
+  display: none;
+  width: 2.5rem;
+  height: 2.5rem;
+  padding: 0.55rem;
+  color: var(--color-blue-medium);
+  cursor: pointer;
+  background-color: var(--color-white);
+  border-radius: 3rem;
+  box-shadow: var(--box-shadow);
+  transform: translateY(-50%);
+}
+
+@media (min-width: 768px) {
+  .product-slider__button-prev,
+  .product-slider__button-next {
+    display: block;
+  }
+}
+
+.product-slider__button-prev {
+  left: 0.7rem;
+  padding: 0.55rem;
+}
+
+.product-slider__button-next {
+  right: 0.7rem;
+  padding: 0.55rem;
+}
+
+.product-slider__button-prev-icon {
+  transform: rotate(180deg);
+}
+
+/* ================================================ */
 .product-slider__pagination {
   position: absolute;
   bottom: 1.5rem;

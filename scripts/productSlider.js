@@ -22,6 +22,11 @@ const sliderObject = {
     clickable: true,
   },
 
+  navigation: {
+    prevEl: '.product-slider__button-prev',
+    nextEl: '.product-slider__button-next',
+  },
+
   breakpoints: {
     900: {
       slidesPerView: 2,
@@ -38,6 +43,7 @@ export const productSliderHandler = () => {
     sliderObject.initialSlide = productSlider.activeIndex;
     sliderObject.zoom = true;
     sliderObject.breakpoints = {};
+    sliderObject.navigation = {};
 
     const image = e.target;
     const sliderWrapper = image.closest('.product-slider__wrapper').cloneNode(true);
