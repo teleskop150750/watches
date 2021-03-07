@@ -43,7 +43,7 @@
 
 .single-slider__button-prev,
 .single-slider__button-next {
-  --box-shadow: 0 0 2rem 0.2rem rgba(0, 0, 0, 0.15);
+  --box-shadow: 0 0 1.5rem 0 rgba(0, 0, 0, 0.15);
   position: absolute;
   top: 50%;
   z-index: 1;

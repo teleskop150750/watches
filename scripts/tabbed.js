@@ -2,7 +2,7 @@
 export default () => {
   const tabbed = document.querySelector('.tabbed');
   const tablist = tabbed.querySelector('.tabbed__list');
-  const tabs = [...tablist.querySelectorAll('.tabbed__link')];
+  const tabs = [...tablist.querySelectorAll('.tabbed__button')];
   const panels = [...tabbed.querySelectorAll('.tabbed__section')];
 
   const switchTab = (oldTab, newTab) => {

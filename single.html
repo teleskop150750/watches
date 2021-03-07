@@ -323,7 +323,20 @@
         <div class="product__header">
           <div class="product__header-slider-wrapper">
             <div class="product__header-slider-inner">
-              <div class="product__header-slider"></div>
+              <div class="product-slider">
+                <div class="product-slider__wrapper">
+                  <div class="product-slider__slide">
+                    <img class="product-slider__slide-img" src="./images/product-1.png" alt="">
+                  </div>
+                  <div class="product-slider__slide">
+                    <img class="product-slider__slide-img" src="./images/watch-2.jpg" alt="">
+                  </div>
+                  <div class="product-slider__slide">
+                    <img class="product-slider__slide-img" src="./images/watch-3.jpg" alt="">
+                  </div>
+                </div>
+                <div class="product-slider__pagination"></div>
+              </div>
             </div>
           </div>
         </div>
@@ -354,13 +367,13 @@
           <h2 class="visually-hidden">Вкладки</h2>
           <ul class="tabbed__list">
             <li class="tabbed__item">
-              <a class="tabbed__link" href="#description">Описание</a>
+              <button class="tabbed__button" >Описание</button>
             </li>
             <li class="tabbed__item">
-              <a class="tabbed__link" href="#reviews">Отзывы</a>
+              <button class="tabbed__button">Отзывы</button>
             </li>
           </ul>
-          <section class="tabbed__section" id="description">
+          <section class="tabbed__section">
             <h2 class="visually-hidden">Описание</h2>
             <p class="tabbed__section-text">
               Лимитированные серии - каждая модель выпускается тиражом от 75 до 500 штук, что придаёт уникальность
@@ -372,7 +385,7 @@
               месяца; Размеры: диаметр 41 мм, толщина 11 мм.
             </p>
           </section>
-          <section class="tabbed__section" id="reviews">
+          <section class="tabbed__section">
             <h2 class="visually-hidden">Отзывы</h2>
             <div class="add-review">
               <div class="add-review__avatar-wrapper">
