@@ -9,40 +9,47 @@
   margin: 0 auto;
 }
 
+.breadcrumbs__wrapper {
+  position: relative;
+  width: 100%;
+  height: 26px;
+  overflow: hidden;
+  touch-action: pan-y;
+  user-select: none;
+}
+
 .breadcrumbs__list {
   display: flex;
   flex-wrap: nowrap;
-  gap: 0.5rem;
+  gap: 8px;
+  width: 100%;
+  height: 100%;
   padding: 0;
   margin: 0;
-  overflow-x: auto;
-  overflow-y: hidden;
   color: var(--color-grey-light);
   white-space: nowrap;
   list-style: none;
-  scrollbar-width: none;
 }
 
-.breadcrumbs__list::-webkit-scrollbar { /* chrome based */
-  width: 0;  /* ширина scrollbar'a */
-  background: transparent;  /* опционально */
+.breadcrumbs__list.grab {
+  transition: transform 0.3s;
 }
 
-.breadcrumbs__item + .breadcrumbs__item {
+.breadcrumbs__item {
   position: relative;
-  padding-left: 0.8rem;
+  display: flex;
+  flex-shrink: 0;
+  gap: 0.4rem;
+  align-items: center;
 }
 
 .breadcrumbs__item + .breadcrumbs__item::before {
-  position: absolute;
-  top: 50%;
-  left: 0;
+  display: block;
   width: 6px;
   height: 6px;
   content: '';
   background-color: var(--color-grey-lighter);
   border-radius: 5px;
-  transform: translateY(-50%);
 }
 
 .breadcrumbs__link {
