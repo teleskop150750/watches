@@ -40,8 +40,11 @@ export default productSlider;
 
 export const productSliderHandler = () => {
   const imageHandler = (e) => {
-    sliderObject.initialSlide = productSlider.activeIndex;
-    sliderObject.zoom = true;
+    sliderObject.initialSlide = productSlider.activeIndex - 1;
+    sliderObject.zoom = {
+      zoomedSlideClass: 'slide-zoomed',
+      containerClass: 'product-slider__slide-zoom',
+    };
     sliderObject.breakpoints = {};
     sliderObject.navigation = {};
 
