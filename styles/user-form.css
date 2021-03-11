@@ -1,0 +1,25 @@
+.user-form-section__container {
+  max-width: var(--max-width);
+  padding: 0 1rem;
+  margin: 0 auto;
+}
+
+.user-form__group {
+  margin-bottom: 1.4rem;
+}
+
+.user-form__label {
+  display: block;
+  margin-bottom: 0.4em;
+  text-transform: uppercase;
+}
+
+.user-form__input {
+  width: 100%;
+  /* height: 35px; */
+  padding: 0.62rem 1rem;
+  background-color: var(--color-grey-lightest-55a);
+  border: none;
+  border-radius: 0;
+  box-shadow: none;
+}
