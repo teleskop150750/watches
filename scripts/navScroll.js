@@ -5,7 +5,7 @@ export default () => {
   let headerHeight = header.offsetHeight;
   let headerTop = document.querySelector('.header__top').offsetHeight;
   let headerLogo = document.querySelector('.header__logo-wrapper').offsetHeight || 0;
-  const navbar = document.querySelector('.header__bottom');
+  const navbar = document.querySelector('.header__bottom-container');
   let navbarHeight = navbar.offsetHeight;
   let navbarOffset = headerTop + headerLogo;
 
