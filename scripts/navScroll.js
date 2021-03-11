@@ -5,7 +5,8 @@ export default () => {
   let headerHeight = header.offsetHeight;
   let headerTop = document.querySelector('.header__top').offsetHeight;
   let headerLogo = document.querySelector('.header__logo-wrapper').offsetHeight || 0;
-  const navbar = document.querySelector('.header__bottom-container');
+  const navbar = document.querySelector('.header__bottom');
+  const navbarContainer = document.querySelector('.header__bottom-container');
   let navbarHeight = navbar.offsetHeight;
   let navbarOffset = headerTop + headerLogo;
 
@@ -70,13 +71,13 @@ export default () => {
     navbar.classList.remove('header__bottom--fixed');
     navbar.classList.remove('header__bottom--hide');
     navbar.classList.remove('header__bottom--show');
-    navbar.classList.remove('js-scroll');
+    navbarContainer.classList.remove('js-scroll');
   };
 
   const show = () => {
     if (!navbar.classList.contains('header__bottom--show')) {
       navbar.classList.add('header__bottom--show');
-      navbar.classList.add('js-scroll');
+      navbarContainer.classList.add('js-scroll');
     } else {
       navbar.classList.remove('header__bottom--hide');
     }
@@ -116,11 +117,11 @@ export default () => {
       && scrolled < scrollPrev
       && !navbar.classList.contains('header__bottom--show')
     ) || (
-      scrolled > headerHeight + 300
+        scrolled > headerHeight + 300
         && scrolled < scrollPrev
         && navbar.classList.contains('header__bottom--show')
         && navbar.classList.contains('header__bottom--hide')
-    )
+      )
     ) {
       if (!isUp) {
         timeStart = new Date().getTime();
