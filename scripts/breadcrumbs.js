@@ -22,7 +22,6 @@ const trfRegExp = /([-0-9.]+(?=px))/;
 let updateVars = () => {
   sliderTrackWidth = sliderTrack.offsetWidth;
   lastTrf = slidesWidth - sliderTrackWidth;
-  console.log(sliderTrackWidth);
 
   if (sliderTrackWidth < slidesWidth) {
     sliderTrack.style.transform = `translate3d(${-lastTrf}px, 0px, 0px)`;
