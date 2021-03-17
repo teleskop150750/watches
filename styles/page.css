@@ -1,8 +1,8 @@
-/* Variables */
 /* Page */
 
 .page {
   background-color: var(--color-grey-lightest);
+  background-color: var(--color-white-dark);
 }
 
 .page__body {

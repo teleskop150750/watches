@@ -1,4 +1,4 @@
-
+/* Variables */
 :root {
   --color-grey-lightest: #f6f6f6;
   --color-grey-lightest-55a: #edebeb;
@@ -14,9 +14,8 @@
   --color-blue-lightest: #def3f6;
   --color-blue-lightest-0a: rgba(222, 243, 246, 0);
   --color-blue-light: #32adfd; */
-  --color-blue-light: #7089f5;
-  --color-blue-medium: #5c7aff;
   --color-blue-medium: #7089f5;
+  --color-red-lightest: #f9826c;
   --color-red-medium: #ea184e;
 
   /* --color-green-light: #ddf2ea;
@@ -28,6 +27,7 @@
   --color-moss: #69bb72;
   --color-grass: #95d445; */
   --color-black: #252525;
+  --color-white-dark: #f8f8f8;
   --color-white: #fefefe;
   --max-width: 1372px;
   --box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
