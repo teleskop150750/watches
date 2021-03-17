@@ -317,7 +317,7 @@
     </div>
   </header>
 
-  <main class="main">
+  <div class="content">
     <section class="breadcrumbs">
       <div class="breadcrumbs__container">
         <h2 class="visually-hidden">Хлебные крошки</h2>
@@ -333,497 +333,500 @@
         </div>
       </div>
     </section>
-    <section class="product">
-      <div class="product__header">
-        <div class="product__header-slider-wrapper">
-          <div class="product__header-slider-inner">
-            <div class="product-slider">
-              <div class="product-slider__wrapper">
-                <div class="product-slider__slide slide-zoomed">
-                  <div class="product-slider__slide-zoom">
-                    <img class="product-slider__slide-img" src="./images/watch-1.jpg" alt="">
+
+    <main class="main">
+      <section class="product">
+        <div class="product__header">
+          <div class="product__header-slider-wrapper">
+            <div class="product__header-slider-inner">
+              <div class="product-slider">
+                <div class="product-slider__wrapper">
+                  <div class="product-slider__slide slide-zoomed">
+                    <div class="product-slider__slide-zoom">
+                      <img class="product-slider__slide-img" src="./images/watch-1.jpg" alt="">
+                    </div>
+                  </div>
+                  <div class="product-slider__slide slide-zoomed">
+                    <div class="product-slider__slide-zoom">
+                      <img class="product-slider__slide-img" src="./images/watch-2.jpg" alt="">
+                    </div>
+                  </div>
+                  <div class="product-slider__slide slide-zoomed">
+                    <div class="product-slider__slide-zoom">
+                      <img class="product-slider__slide-img" src="./images/watch-3.jpg" alt="">
+                    </div>
                   </div>
                 </div>
-                <div class="product-slider__slide slide-zoomed">
-                  <div class="product-slider__slide-zoom">
-                    <img class="product-slider__slide-img" src="./images/watch-2.jpg" alt="">
+                <div class="product-slider__pagination"></div>
+
+                <div class="product-slider__button-prev">
+                  <svg class="product-slider__button-prev-icon product-slider__button-icon" fill="currentColor"
+                    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 268.8 268.8">
+                    <path
+                      d="M265.2 125.6l-80-80a12.5 12.5 0 00-17.7 17.7l58.7 58.6H12.5a12.5 12.5 0 000 25h213.7l-58.7 58.7a12.5 12.5 0 1017.7 17.7l80-80a12.5 12.5 0 000-17.7z"
+                      fill="currentColor" />
+                  </svg>
+                </div>
+                <div class="product-slider__button-next">
+                  <svg class="product-slider__button-next-icon product-slider__button-icon" fill="currentColor"
+                    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 268.8 268.8">
+                    <path
+                      d="M265.2 125.6l-80-80a12.5 12.5 0 00-17.7 17.7l58.7 58.6H12.5a12.5 12.5 0 000 25h213.7l-58.7 58.7a12.5 12.5 0 1017.7 17.7l80-80a12.5 12.5 0 000-17.7z"
+                      fill="currentColor" />
+                  </svg>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="product__body">
+          <h1 class="product__title">
+            Royal London 2353453 -34534
+          </h1>
+          <div class="product__price-wrapper">
+            <span class="product__price">13 400 ₽</span>
+            <span class="product__price-old">21 100 ₽</span>
+          </div>
+          <div class="product__add-to-cart-wrapper">
+            <div class="quantity product__quantity">
+              <button class="quantity__button" type="button">–</button>
+              <input class="quantity__input" type="number" name="quantity" value="1" min="1" max="10">
+              <button class="quantity__button" type="button">+</button>
+            </div>
+
+            <button class="product__add-to-cart" type="button">
+              В корзину
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <section class="tabbed">
+        <div class="tabbed__container">
+          <h2 class="visually-hidden">Вкладки</h2>
+          <ul class="tabbed__list">
+            <li class="tabbed__item">
+              <button class="tabbed__button">Описание</button>
+            </li>
+            <li class="tabbed__item">
+              <button class="tabbed__button">Отзывы</button>
+            </li>
+          </ul>
+          <section class="tabbed__section description">
+            <h2 class="visually-hidden">Описание</h2>
+            <p class="tabbed__section-text">
+              Лимитированные серии - каждая модель выпускается тиражом от 75 до 500 штук, что придаёт уникальность
+              каждым часам. Серии часов посвящаются популярным самолётам, вертолётам, лётчикам-асам и талантливым
+              конструкторам, а так же важным событиям мира авиации. Страна-производитель: Россия; Страна-изготовитель:
+              Россия; Модель: H0959E02-05B; Пол: мужские; Механизм: кварцевый; Тип крепления: ремешок; Материал
+              крепления: кожа; Цвет крепления: синий; Материал корпуса: сталь; Покрытие корпуса: полированная сталь;
+              Стекло: минеральное; Цвет циферблата: синий; Индикация: арабские цифры; Водозащита: 5 АТМ; Гарантия: 24
+              месяца; Размеры: диаметр 41 мм, толщина 11 мм.
+            </p>
+          </section>
+          <section class="tabbed__section reviews">
+            <h2 class="visually-hidden">Отзывы</h2>
+            <div class="add-review">
+              <div class="add-review__avatar-wrapper">
+                <img class="add-review__avatar" src="./images/avatar.jpg" alt="аватар" width="40" height="40">
+              </div>
+              <form class="add-review__form" method="POST">
+                <label class="add-review__content">
+                  <textarea class="add-review__text" name="review"></textarea>
+                </label>
+              </form>
+            </div>
+            <div class="reviews__list">
+              <article class="review">
+                <div class="review__avatar-wrapper">
+                  <img class="review__avatar" src="./images/avatar.jpg" alt="аватар" width="40" height="40">
+                </div>
+                <div class="review__heading">
+                  <h3 class="review__name">teleskop teleskop</h3>
+                  <time class="review__date" datetime="2021-02-10T00:00:00.000Z">10 февраля 2021 </time>
+                </div>
+                <div class="review__content">
+                  <div class="review__content-text" contenteditable="false">
+                    Лимитированные серии - каждая модель выпускается тиражом от 75 до 500 штук, что придаёт
+                    уникальность
+                  </div>
+                  <div class="review__menu-wrapper">
+                    <button class="review__menu-button" type="button" aria-label="меню"></button>
+                    <div class="review__menu-overlay"></div>
+                    <ul class="review__menu-list">
+                      <li class="review__menu-item">
+                        <button class="review__menu-list-button review__menu-list-button--edit"
+                          type="button">Изменить</button>
+                      </li>
+                      <li class="review__menu-item">
+                        <button class="review__menu-list-button review__menu-list-button--delete"
+                          type="button">Удалить</button>
+                      </li>
+                    </ul>
                   </div>
                 </div>
-                <div class="product-slider__slide slide-zoomed">
-                  <div class="product-slider__slide-zoom">
-                    <img class="product-slider__slide-img" src="./images/watch-3.jpg" alt="">
+              </article>
+              <article class="review">
+                <div class="review__avatar-wrapper">
+                  <img class="review__avatar" src="./images/avatar.jpg" alt="аватар" width="40" height="40">
+                </div>
+                <div class="review__heading">
+                  <h3 class="review__name">teleskop teleskop</h3>
+                  <time class="review__date" datetime="2021-02-10T00:00:00.000Z">10 февраля 2021 </time>
+                </div>
+                <div class="review__content">
+                  <div class="review__content-text" contenteditable="false">
+                    Лимитированные серии - каждая модель выпускается тиражом от 75 до 500 штук, что придаёт
+                    уникальность
+                  </div>
+                  <div class="review__menu-wrapper">
+                    <button class="review__menu-button" type="button" aria-label="меню"></button>
+                    <div class="review__menu-overlay"></div>
+                    <ul class="review__menu-list">
+                      <li class="review__menu-item">
+                        <button class="review__menu-list-button review__menu-list-button--edit"
+                          type="button">Изменить</button>
+                      </li>
+                      <li class="review__menu-item">
+                        <button class="review__menu-list-button review__menu-list-button--delete"
+                          type="button">Удалить</button>
+                      </li>
+                    </ul>
                   </div>
                 </div>
-              </div>
-              <div class="product-slider__pagination"></div>
+              </article>
+              <article class="review">
+                <div class="review__avatar-wrapper">
+                  <img class="review__avatar" src="./images/avatar.jpg" alt="аватар" width="40" height="40">
+                </div>
+                <div class="review__heading">
+                  <h3 class="review__name">teleskop teleskop</h3>
+                  <time class="review__date" datetime="2021-02-10T00:00:00.000Z">10 февраля 2021 </time>
+                </div>
+                <div class="review__content">
+                  <div class="review__content-text" contenteditable="false">
+                    Лимитированные серии - каждая модель выпускается тиражом от 75 до 500 штук, что придаёт
+                    уникальность
+                  </div>
+                  <div class="review__menu-wrapper">
+                    <button class="review__menu-button" type="button" aria-label="меню"></button>
+                    <div class="review__menu-overlay"></div>
+                    <ul class="review__menu-list">
+                      <li class="review__menu-item">
+                        <button class="review__menu-list-button review__menu-list-button--edit"
+                          type="button">Изменить</button>
+                      </li>
+                      <li class="review__menu-item">
+                        <button class="review__menu-list-button review__menu-list-button--delete"
+                          type="button">Удалить</button>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </article>
+            </div>
+            <div class="reviews__pagination">
+              <nav class="pagination">
+                <ul class="pagination__list">
+                  <li class="pagination__item">
+                    <a class="pagination__button" href="#">
+                      <svg class="pagination__button-icon" fill="currentColor" focusable="false" viewBox="0 0 24 24"
+                        aria-hidden="true">
+                        <path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"></path>
+                      </svg>
+                    </a>
+                  </li>
+                  <li class="pagination__item">
+                    <a class="pagination__button" href="#">1</a>
+                  </li>
+                  <li class="pagination__item">
+                    <a class="pagination__button pagination__button--ellipsis" href="#">...</a>
+                  </li>
+                  <li class="pagination__item">
+                    <a class="pagination__button" href="#">2</a>
+                  </li>
+                  <li class="pagination__item">
+                    <a class="pagination__button" href="#">3</a>
+                  </li>
+                  <li class="pagination__item">
+                    <a class="pagination__button pagination__button--active" href="#">4</a>
+                  </li>
+                  <li class="pagination__item">
+                    <a class="pagination__button" href="#">5</a>
+                  </li>
+                  <li class="pagination__item">
+                    <a class="pagination__button" href="#">6</a>
+                  </li>
+                  <li class="pagination__item">
+                    <a class="pagination__button pagination__button--ellipsis" href="#">...</a>
+                  </li>
+                  <li class="pagination__item">
+                    <a class="pagination__button" href="#">9</a>
+                  </li>
+                  <li class="pagination__item">
+                    <a class="pagination__button" href="#">
+                      <svg class="pagination__button-icon" fill="currentColor" focusable="false" viewBox="0 0 24 24"
+                        aria-hidden="true">
+                        <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"></path>
+                      </svg>
+                    </a>
+                  </li>
+                </ul>
+              </nav>
+            </div>
+          </section>
+        </div>
+      </section>
 
-              <div class="product-slider__button-prev">
-                <svg class="product-slider__button-prev-icon product-slider__button-icon" fill="currentColor"
-                  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 268.8 268.8">
-                  <path
-                    d="M265.2 125.6l-80-80a12.5 12.5 0 00-17.7 17.7l58.7 58.6H12.5a12.5 12.5 0 000 25h213.7l-58.7 58.7a12.5 12.5 0 1017.7 17.7l80-80a12.5 12.5 0 000-17.7z"
-                    fill="currentColor" />
-                </svg>
+      <section class="single-slider">
+        <div class="single-slider__inner">
+          <h2 class="single-slider__title">
+            Просмотренные товары
+          </h2>
+          <div class="single-slider__container slider-viewed">
+            <div class="single-slider__wrapper">
+              <div class="single-slider__slide">
+                <article class="single-product">
+                  <header class="single-product__header">
+                    <a class="single-product__img-wrapper" href="single.html">
+                      <img class="single-product__img" src="images/product-1.jpeg" alt="">
+                    </a>
+                  </header>
+                  <h3 class="single-product__title">
+                    <a class="single-product__title-link" href="single.html">Royal London 34534-345345</a>
+                  </h3>
+                  <div class="single-product__price-wrapper">
+                    <span class="single-product__price">13 400 ₽</span>
+                    <span class="single-product__price-old">21 100 ₽</span>
+                  </div>
+                  <button class="single-product__button" type="button">
+                    Купить
+                  </button>
+                </article>
               </div>
-              <div class="product-slider__button-next">
-                <svg class="product-slider__button-next-icon product-slider__button-icon" fill="currentColor"
-                  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 268.8 268.8">
-                  <path
-                    d="M265.2 125.6l-80-80a12.5 12.5 0 00-17.7 17.7l58.7 58.6H12.5a12.5 12.5 0 000 25h213.7l-58.7 58.7a12.5 12.5 0 1017.7 17.7l80-80a12.5 12.5 0 000-17.7z"
-                    fill="currentColor" />
-                </svg>
+              <div class="single-slider__slide">
+                <article class="single-product">
+                  <header class="single-product__header">
+                    <a class="single-product__img-wrapper" href="single.html">
+                      <img class="single-product__img" src="images/product-1.jpeg" alt="">
+                    </a>
+                  </header>
+                  <h3 class="single-product__title">
+                    <a class="single-product__title-link" href="single.html">Royal London</a>
+                  </h3>
+                  <div class="single-product__price-wrapper">
+                    <span class="single-product__price">143 400 ₽</span>
+                    <span class="single-product__price-old">221 100 ₽</span>
+                  </div>
+                  <button class="single-product__button" type="button">
+                    Купить
+                  </button>
+                </article>
               </div>
+              <div class="single-slider__slide">
+                <article class="single-product">
+                  <header class="single-product__header">
+                    <a class="single-product__img-wrapper" href="single.html">
+                      <img class="single-product__img" src="images/product-1.jpeg" alt="">
+                    </a>
+                  </header>
+                  <h3 class="single-product__title">
+                    <a class="single-product__title-link" href="single.html">Royal London</a>
+                  </h3>
+                  <div class="single-product__price-wrapper">
+                    <span class="single-product__price">143 400 ₽</span>
+                    <span class="single-product__price-old">221 100 ₽</span>
+                  </div>
+                  <button class="single-product__button" type="button">
+                    Купить
+                  </button>
+                </article>
+              </div>
+              <div class="single-slider__slide">
+                <article class="single-product">
+                  <header class="single-product__header">
+                    <a class="single-product__img-wrapper" href="single.html">
+                      <img class="single-product__img" src="images/product-1.jpeg" alt="">
+                    </a>
+                  </header>
+                  <h3 class="single-product__title">
+                    <a class="single-product__title-link" href="single.html">Royal London</a>
+                  </h3>
+                  <div class="single-product__price-wrapper">
+                    <span class="single-product__price">143 400 ₽</span>
+                    <span class="single-product__price-old">221 100 ₽</span>
+                  </div>
+                  <button class="single-product__button" type="button">
+                    Купить
+                  </button>
+                </article>
+              </div>
+              <div class="single-slider__slide">
+                <article class="single-product">
+                  <header class="single-product__header">
+                    <a class="single-product__img-wrapper" href="single.html">
+                      <img class="single-product__img" src="images/product-1.jpeg" alt="">
+                    </a>
+                  </header>
+                  <h3 class="single-product__title">
+                    <a class="single-product__title-link" href="single.html">Royal London</a>
+                  </h3>
+                  <div class="single-product__price-wrapper">
+                    <span class="single-product__price">143 400 ₽</span>
+                    <span class="single-product__price-old">221 100 ₽</span>
+                  </div>
+                  <button class="single-product__button" type="button">
+                    Купить
+                  </button>
+                </article>
+              </div>
+              <div class="single-slider__slide">
+                <article class="single-product">
+                  <header class="single-product__header">
+                    <a class="single-product__img-wrapper" href="single.html">
+                      <img class="single-product__img" src="images/product-1.jpeg" alt="">
+                    </a>
+                  </header>
+                  <h3 class="single-product__title">
+                    <a class="single-product__title-link" href="single.html">Royal London</a>
+                  </h3>
+                  <div class="single-product__price-wrapper">
+                    <span class="single-product__price">143 400 ₽</span>
+                    <span class="single-product__price-old">221 100 ₽</span>
+                  </div>
+                  <button class="single-product__button" type="button">
+                    Купить
+                  </button>
+                </article>
+              </div>
+              <div class="single-slider__slide">
+                <article class="single-product">
+                  <header class="single-product__header">
+                    <a class="single-product__img-wrapper" href="single.html">
+                      <img class="single-product__img" src="images/product-1.jpeg" alt="">
+                    </a>
+                  </header>
+                  <h3 class="single-product__title">
+                    <a class="single-product__title-link" href="single.html">Royal London</a>
+                  </h3>
+                  <div class="single-product__price-wrapper">
+                    <span class="single-product__price">143 400 ₽</span>
+                    <span class="single-product__price-old">221 100 ₽</span>
+                  </div>
+                  <button class="single-product__button" type="button">
+                    Купить
+                  </button>
+                </article>
+              </div>
+              <div class="single-slider__slide">
+                <article class="single-product">
+                  <header class="single-product__header">
+                    <a class="single-product__img-wrapper" href="single.html">
+                      <img class="single-product__img" src="images/product-1.jpeg" alt="">
+                    </a>
+                  </header>
+                  <h3 class="single-product__title">
+                    <a class="single-product__title-link" href="single.html">Royal London</a>
+                  </h3>
+                  <div class="single-product__price-wrapper">
+                    <span class="single-product__price">143 400 ₽</span>
+                    <span class="single-product__price-old">221 100 ₽</span>
+                  </div>
+                  <button class="single-product__button" type="button">
+                    Купить
+                  </button>
+                </article>
+              </div>
+              <div class="single-slider__slide">
+                <article class="single-product">
+                  <header class="single-product__header">
+                    <a class="single-product__img-wrapper" href="single.html">
+                      <img class="single-product__img" src="images/product-1.jpeg" alt="">
+                    </a>
+                  </header>
+                  <h3 class="single-product__title">
+                    <a class="single-product__title-link" href="single.html">Royal London</a>
+                  </h3>
+                  <div class="single-product__price-wrapper">
+                    <span class="single-product__price">143 400 ₽</span>
+                    <span class="single-product__price-old">221 100 ₽</span>
+                  </div>
+                  <button class="single-product__button" type="button">
+                    Купить
+                  </button>
+                </article>
+              </div>
+            </div>
+
+            <div class="single-slider__button-prev">
+              <svg class="single-slider__button-prev-icon single-slider__button-icon" fill="currentColor"
+                xmlns="http://www.w3.org/2000/svg" viewBox="0 0 268.8 268.8">
+                <path
+                  d="M265.2 125.6l-80-80a12.5 12.5 0 00-17.7 17.7l58.7 58.6H12.5a12.5 12.5 0 000 25h213.7l-58.7 58.7a12.5 12.5 0 1017.7 17.7l80-80a12.5 12.5 0 000-17.7z"
+                  fill="currentColor" />
+              </svg>
+            </div>
+            <div class="single-slider__button-next">
+              <svg class="single-slider__button-next-icon single-slider__button-icon" fill="currentColor"
+                xmlns="http://www.w3.org/2000/svg" viewBox="0 0 268.8 268.8">
+                <path
+                  d="M265.2 125.6l-80-80a12.5 12.5 0 00-17.7 17.7l58.7 58.6H12.5a12.5 12.5 0 000 25h213.7l-58.7 58.7a12.5 12.5 0 1017.7 17.7l80-80a12.5 12.5 0 000-17.7z"
+                  fill="currentColor" />
+              </svg>
             </div>
           </div>
         </div>
-      </div>
-      <div class="product__body">
-        <h1 class="product__title">
-          Royal London 2353453 -34534
-        </h1>
-        <div class="product__price-wrapper">
-          <span class="product__price">13 400 ₽</span>
-          <span class="product__price-old">21 100 ₽</span>
-        </div>
-        <div class="product__add-to-cart-wrapper">
-          <div class="quantity product__quantity">
-            <button class="quantity__button" type="button">–</button>
-            <input class="quantity__input" type="number" name="quantity" value="1" min="1" max="10">
-            <button class="quantity__button" type="button">+</button>
-          </div>
+      </section>
 
-          <button class="product__add-to-cart" type="button">
-            В корзину
-          </button>
-        </div>
-      </div>
-    </section>
+      <section class="single-slider">
+        <div class="single-slider__inner">
+          <h2 class="single-slider__title">
+            Связанные товары
+          </h2>
+          <div class="single-slider__container slider-related">
+            <div class="single-slider__wrapper">
+              <div class="single-slider__slide">
+                <article class="single-product">
+                  <header class="single-product__header">
+                    <a class="single-product__img-wrapper" href="single.html">
+                      <img class="single-product__img" src="images/product-1.jpeg" alt="">
+                    </a>
+                  </header>
+                  <h3 class="single-product__title">
+                    <a class="single-product__title-link" href="single.html">Royal London 34534-345345</a>
+                  </h3>
+                  <div class="single-product__price-wrapper">
+                    <span class="single-product__price">13 400 ₽</span>
+                    <span class="single-product__price-old">21 100 ₽</span>
+                  </div>
+                  <button class="single-product__button" type="button">
+                    Купить
+                  </button>
+                </article>
+              </div>
+            </div>
 
-    <section class="tabbed">
-      <div class="tabbed__container">
-        <h2 class="visually-hidden">Вкладки</h2>
-        <ul class="tabbed__list">
-          <li class="tabbed__item">
-            <button class="tabbed__button">Описание</button>
-          </li>
-          <li class="tabbed__item">
-            <button class="tabbed__button">Отзывы</button>
-          </li>
-        </ul>
-        <section class="tabbed__section description">
-          <h2 class="visually-hidden">Описание</h2>
-          <p class="tabbed__section-text">
-            Лимитированные серии - каждая модель выпускается тиражом от 75 до 500 штук, что придаёт уникальность
-            каждым часам. Серии часов посвящаются популярным самолётам, вертолётам, лётчикам-асам и талантливым
-            конструкторам, а так же важным событиям мира авиации. Страна-производитель: Россия; Страна-изготовитель:
-            Россия; Модель: H0959E02-05B; Пол: мужские; Механизм: кварцевый; Тип крепления: ремешок; Материал
-            крепления: кожа; Цвет крепления: синий; Материал корпуса: сталь; Покрытие корпуса: полированная сталь;
-            Стекло: минеральное; Цвет циферблата: синий; Индикация: арабские цифры; Водозащита: 5 АТМ; Гарантия: 24
-            месяца; Размеры: диаметр 41 мм, толщина 11 мм.
-          </p>
-        </section>
-        <section class="tabbed__section reviews">
-          <h2 class="visually-hidden">Отзывы</h2>
-          <div class="add-review">
-            <div class="add-review__avatar-wrapper">
-              <img class="add-review__avatar" src="./images/avatar.jpg" alt="аватар" width="40" height="40">
+            <div class="single-slider__button-prev">
+              <svg class="single-slider__button-prev-icon single-slider__button-icon" fill="currentColor"
+                xmlns="http://www.w3.org/2000/svg" viewBox="0 0 268.8 268.8">
+                <path
+                  d="M265.2 125.6l-80-80a12.5 12.5 0 00-17.7 17.7l58.7 58.6H12.5a12.5 12.5 0 000 25h213.7l-58.7 58.7a12.5 12.5 0 1017.7 17.7l80-80a12.5 12.5 0 000-17.7z"
+                  fill="currentColor" />
+              </svg>
             </div>
-            <form class="add-review__form" method="POST">
-              <label class="add-review__content">
-                <textarea class="add-review__text" name="review"></textarea>
-              </label>
-            </form>
-          </div>
-          <div class="reviews__list">
-            <article class="review">
-              <div class="review__avatar-wrapper">
-                <img class="review__avatar" src="./images/avatar.jpg" alt="аватар" width="40" height="40">
-              </div>
-              <div class="review__heading">
-                <h3 class="review__name">teleskop teleskop</h3>
-                <time class="review__date" datetime="2021-02-10T00:00:00.000Z">10 февраля 2021 </time>
-              </div>
-              <div class="review__content">
-                <div class="review__content-text" contenteditable="false">
-                  Лимитированные серии - каждая модель выпускается тиражом от 75 до 500 штук, что придаёт
-                  уникальность
-                </div>
-                <div class="review__menu-wrapper">
-                  <button class="review__menu-button" type="button" aria-label="меню"></button>
-                  <div class="review__menu-overlay"></div>
-                  <ul class="review__menu-list">
-                    <li class="review__menu-item">
-                      <button class="review__menu-list-button review__menu-list-button--edit"
-                        type="button">Изменить</button>
-                    </li>
-                    <li class="review__menu-item">
-                      <button class="review__menu-list-button review__menu-list-button--delete"
-                        type="button">Удалить</button>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </article>
-            <article class="review">
-              <div class="review__avatar-wrapper">
-                <img class="review__avatar" src="./images/avatar.jpg" alt="аватар" width="40" height="40">
-              </div>
-              <div class="review__heading">
-                <h3 class="review__name">teleskop teleskop</h3>
-                <time class="review__date" datetime="2021-02-10T00:00:00.000Z">10 февраля 2021 </time>
-              </div>
-              <div class="review__content">
-                <div class="review__content-text" contenteditable="false">
-                  Лимитированные серии - каждая модель выпускается тиражом от 75 до 500 штук, что придаёт
-                  уникальность
-                </div>
-                <div class="review__menu-wrapper">
-                  <button class="review__menu-button" type="button" aria-label="меню"></button>
-                  <div class="review__menu-overlay"></div>
-                  <ul class="review__menu-list">
-                    <li class="review__menu-item">
-                      <button class="review__menu-list-button review__menu-list-button--edit"
-                        type="button">Изменить</button>
-                    </li>
-                    <li class="review__menu-item">
-                      <button class="review__menu-list-button review__menu-list-button--delete"
-                        type="button">Удалить</button>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </article>
-            <article class="review">
-              <div class="review__avatar-wrapper">
-                <img class="review__avatar" src="./images/avatar.jpg" alt="аватар" width="40" height="40">
-              </div>
-              <div class="review__heading">
-                <h3 class="review__name">teleskop teleskop</h3>
-                <time class="review__date" datetime="2021-02-10T00:00:00.000Z">10 февраля 2021 </time>
-              </div>
-              <div class="review__content">
-                <div class="review__content-text" contenteditable="false">
-                  Лимитированные серии - каждая модель выпускается тиражом от 75 до 500 штук, что придаёт
-                  уникальность
-                </div>
-                <div class="review__menu-wrapper">
-                  <button class="review__menu-button" type="button" aria-label="меню"></button>
-                  <div class="review__menu-overlay"></div>
-                  <ul class="review__menu-list">
-                    <li class="review__menu-item">
-                      <button class="review__menu-list-button review__menu-list-button--edit"
-                        type="button">Изменить</button>
-                    </li>
-                    <li class="review__menu-item">
-                      <button class="review__menu-list-button review__menu-list-button--delete"
-                        type="button">Удалить</button>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </article>
-          </div>
-          <div class="reviews__pagination">
-            <nav class="pagination">
-              <ul class="pagination__list">
-                <li class="pagination__item">
-                  <a class="pagination__button" href="#">
-                    <svg class="pagination__button-icon" fill="currentColor" focusable="false" viewBox="0 0 24 24"
-                      aria-hidden="true">
-                      <path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"></path>
-                    </svg>
-                  </a>
-                </li>
-                <li class="pagination__item">
-                  <a class="pagination__button" href="#">1</a>
-                </li>
-                <li class="pagination__item">
-                  <a class="pagination__button pagination__button--ellipsis" href="#">...</a>
-                </li>
-                <li class="pagination__item">
-                  <a class="pagination__button" href="#">2</a>
-                </li>
-                <li class="pagination__item">
-                  <a class="pagination__button" href="#">3</a>
-                </li>
-                <li class="pagination__item">
-                  <a class="pagination__button pagination__button--active" href="#">4</a>
-                </li>
-                <li class="pagination__item">
-                  <a class="pagination__button" href="#">5</a>
-                </li>
-                <li class="pagination__item">
-                  <a class="pagination__button" href="#">6</a>
-                </li>
-                <li class="pagination__item">
-                  <a class="pagination__button pagination__button--ellipsis" href="#">...</a>
-                </li>
-                <li class="pagination__item">
-                  <a class="pagination__button" href="#">9</a>
-                </li>
-                <li class="pagination__item">
-                  <a class="pagination__button" href="#">
-                    <svg class="pagination__button-icon" fill="currentColor" focusable="false" viewBox="0 0 24 24"
-                      aria-hidden="true">
-                      <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"></path>
-                    </svg>
-                  </a>
-                </li>
-              </ul>
-            </nav>
-          </div>
-        </section>
-      </div>
-    </section>
-
-    <section class="single-slider">
-      <div class="single-slider__inner">
-        <h2 class="single-slider__title">
-          Просмотренные товары
-        </h2>
-        <div class="single-slider__container slider-viewed">
-          <div class="single-slider__wrapper">
-            <div class="single-slider__slide">
-              <article class="single-product">
-                <header class="single-product__header">
-                  <a class="single-product__img-wrapper" href="single.html">
-                    <img class="single-product__img" src="images/product-1.jpeg" alt="">
-                  </a>
-                </header>
-                <h3 class="single-product__title">
-                  <a class="single-product__title-link" href="single.html">Royal London 34534-345345</a>
-                </h3>
-                <div class="single-product__price-wrapper">
-                  <span class="single-product__price">13 400 ₽</span>
-                  <span class="single-product__price-old">21 100 ₽</span>
-                </div>
-                <button class="single-product__button" type="button">
-                  Купить
-                </button>
-              </article>
+            <div class="single-slider__button-next">
+              <svg class="single-slider__button-next-icon single-slider__button-icon" fill="currentColor"
+                xmlns="http://www.w3.org/2000/svg" viewBox="0 0 268.8 268.8">
+                <path
+                  d="M265.2 125.6l-80-80a12.5 12.5 0 00-17.7 17.7l58.7 58.6H12.5a12.5 12.5 0 000 25h213.7l-58.7 58.7a12.5 12.5 0 1017.7 17.7l80-80a12.5 12.5 0 000-17.7z"
+                  fill="currentColor" />
+              </svg>
             </div>
-            <div class="single-slider__slide">
-              <article class="single-product">
-                <header class="single-product__header">
-                  <a class="single-product__img-wrapper" href="single.html">
-                    <img class="single-product__img" src="images/product-1.jpeg" alt="">
-                  </a>
-                </header>
-                <h3 class="single-product__title">
-                  <a class="single-product__title-link" href="single.html">Royal London</a>
-                </h3>
-                <div class="single-product__price-wrapper">
-                  <span class="single-product__price">143 400 ₽</span>
-                  <span class="single-product__price-old">221 100 ₽</span>
-                </div>
-                <button class="single-product__button" type="button">
-                  Купить
-                </button>
-              </article>
-            </div>
-            <div class="single-slider__slide">
-              <article class="single-product">
-                <header class="single-product__header">
-                  <a class="single-product__img-wrapper" href="single.html">
-                    <img class="single-product__img" src="images/product-1.jpeg" alt="">
-                  </a>
-                </header>
-                <h3 class="single-product__title">
-                  <a class="single-product__title-link" href="single.html">Royal London</a>
-                </h3>
-                <div class="single-product__price-wrapper">
-                  <span class="single-product__price">143 400 ₽</span>
-                  <span class="single-product__price-old">221 100 ₽</span>
-                </div>
-                <button class="single-product__button" type="button">
-                  Купить
-                </button>
-              </article>
-            </div>
-            <div class="single-slider__slide">
-              <article class="single-product">
-                <header class="single-product__header">
-                  <a class="single-product__img-wrapper" href="single.html">
-                    <img class="single-product__img" src="images/product-1.jpeg" alt="">
-                  </a>
-                </header>
-                <h3 class="single-product__title">
-                  <a class="single-product__title-link" href="single.html">Royal London</a>
-                </h3>
-                <div class="single-product__price-wrapper">
-                  <span class="single-product__price">143 400 ₽</span>
-                  <span class="single-product__price-old">221 100 ₽</span>
-                </div>
-                <button class="single-product__button" type="button">
-                  Купить
-                </button>
-              </article>
-            </div>
-            <div class="single-slider__slide">
-              <article class="single-product">
-                <header class="single-product__header">
-                  <a class="single-product__img-wrapper" href="single.html">
-                    <img class="single-product__img" src="images/product-1.jpeg" alt="">
-                  </a>
-                </header>
-                <h3 class="single-product__title">
-                  <a class="single-product__title-link" href="single.html">Royal London</a>
-                </h3>
-                <div class="single-product__price-wrapper">
-                  <span class="single-product__price">143 400 ₽</span>
-                  <span class="single-product__price-old">221 100 ₽</span>
-                </div>
-                <button class="single-product__button" type="button">
-                  Купить
-                </button>
-              </article>
-            </div>
-            <div class="single-slider__slide">
-              <article class="single-product">
-                <header class="single-product__header">
-                  <a class="single-product__img-wrapper" href="single.html">
-                    <img class="single-product__img" src="images/product-1.jpeg" alt="">
-                  </a>
-                </header>
-                <h3 class="single-product__title">
-                  <a class="single-product__title-link" href="single.html">Royal London</a>
-                </h3>
-                <div class="single-product__price-wrapper">
-                  <span class="single-product__price">143 400 ₽</span>
-                  <span class="single-product__price-old">221 100 ₽</span>
-                </div>
-                <button class="single-product__button" type="button">
-                  Купить
-                </button>
-              </article>
-            </div>
-            <div class="single-slider__slide">
-              <article class="single-product">
-                <header class="single-product__header">
-                  <a class="single-product__img-wrapper" href="single.html">
-                    <img class="single-product__img" src="images/product-1.jpeg" alt="">
-                  </a>
-                </header>
-                <h3 class="single-product__title">
-                  <a class="single-product__title-link" href="single.html">Royal London</a>
-                </h3>
-                <div class="single-product__price-wrapper">
-                  <span class="single-product__price">143 400 ₽</span>
-                  <span class="single-product__price-old">221 100 ₽</span>
-                </div>
-                <button class="single-product__button" type="button">
-                  Купить
-                </button>
-              </article>
-            </div>
-            <div class="single-slider__slide">
-              <article class="single-product">
-                <header class="single-product__header">
-                  <a class="single-product__img-wrapper" href="single.html">
-                    <img class="single-product__img" src="images/product-1.jpeg" alt="">
-                  </a>
-                </header>
-                <h3 class="single-product__title">
-                  <a class="single-product__title-link" href="single.html">Royal London</a>
-                </h3>
-                <div class="single-product__price-wrapper">
-                  <span class="single-product__price">143 400 ₽</span>
-                  <span class="single-product__price-old">221 100 ₽</span>
-                </div>
-                <button class="single-product__button" type="button">
-                  Купить
-                </button>
-              </article>
-            </div>
-            <div class="single-slider__slide">
-              <article class="single-product">
-                <header class="single-product__header">
-                  <a class="single-product__img-wrapper" href="single.html">
-                    <img class="single-product__img" src="images/product-1.jpeg" alt="">
-                  </a>
-                </header>
-                <h3 class="single-product__title">
-                  <a class="single-product__title-link" href="single.html">Royal London</a>
-                </h3>
-                <div class="single-product__price-wrapper">
-                  <span class="single-product__price">143 400 ₽</span>
-                  <span class="single-product__price-old">221 100 ₽</span>
-                </div>
-                <button class="single-product__button" type="button">
-                  Купить
-                </button>
-              </article>
-            </div>
-          </div>
-
-          <div class="single-slider__button-prev">
-            <svg class="single-slider__button-prev-icon single-slider__button-icon" fill="currentColor"
-              xmlns="http://www.w3.org/2000/svg" viewBox="0 0 268.8 268.8">
-              <path
-                d="M265.2 125.6l-80-80a12.5 12.5 0 00-17.7 17.7l58.7 58.6H12.5a12.5 12.5 0 000 25h213.7l-58.7 58.7a12.5 12.5 0 1017.7 17.7l80-80a12.5 12.5 0 000-17.7z"
-                fill="currentColor" />
-            </svg>
-          </div>
-          <div class="single-slider__button-next">
-            <svg class="single-slider__button-next-icon single-slider__button-icon" fill="currentColor"
-              xmlns="http://www.w3.org/2000/svg" viewBox="0 0 268.8 268.8">
-              <path
-                d="M265.2 125.6l-80-80a12.5 12.5 0 00-17.7 17.7l58.7 58.6H12.5a12.5 12.5 0 000 25h213.7l-58.7 58.7a12.5 12.5 0 1017.7 17.7l80-80a12.5 12.5 0 000-17.7z"
-                fill="currentColor" />
-            </svg>
           </div>
         </div>
-      </div>
-    </section>
-
-    <section class="single-slider">
-      <div class="single-slider__inner">
-        <h2 class="single-slider__title">
-          Связанные товары
-        </h2>
-        <div class="single-slider__container slider-related">
-          <div class="single-slider__wrapper">
-            <div class="single-slider__slide">
-              <article class="single-product">
-                <header class="single-product__header">
-                  <a class="single-product__img-wrapper" href="single.html">
-                    <img class="single-product__img" src="images/product-1.jpeg" alt="">
-                  </a>
-                </header>
-                <h3 class="single-product__title">
-                  <a class="single-product__title-link" href="single.html">Royal London 34534-345345</a>
-                </h3>
-                <div class="single-product__price-wrapper">
-                  <span class="single-product__price">13 400 ₽</span>
-                  <span class="single-product__price-old">21 100 ₽</span>
-                </div>
-                <button class="single-product__button" type="button">
-                  Купить
-                </button>
-              </article>
-            </div>
-          </div>
-
-          <div class="single-slider__button-prev">
-            <svg class="single-slider__button-prev-icon single-slider__button-icon" fill="currentColor"
-              xmlns="http://www.w3.org/2000/svg" viewBox="0 0 268.8 268.8">
-              <path
-                d="M265.2 125.6l-80-80a12.5 12.5 0 00-17.7 17.7l58.7 58.6H12.5a12.5 12.5 0 000 25h213.7l-58.7 58.7a12.5 12.5 0 1017.7 17.7l80-80a12.5 12.5 0 000-17.7z"
-                fill="currentColor" />
-            </svg>
-          </div>
-          <div class="single-slider__button-next">
-            <svg class="single-slider__button-next-icon single-slider__button-icon" fill="currentColor"
-              xmlns="http://www.w3.org/2000/svg" viewBox="0 0 268.8 268.8">
-              <path
-                d="M265.2 125.6l-80-80a12.5 12.5 0 00-17.7 17.7l58.7 58.6H12.5a12.5 12.5 0 000 25h213.7l-58.7 58.7a12.5 12.5 0 1017.7 17.7l80-80a12.5 12.5 0 000-17.7z"
-                fill="currentColor" />
-            </svg>
-          </div>
-        </div>
-      </div>
-    </section>
-  </main>
+      </section>
+    </main>
+  </div>
 
   <footer class="footer">
     <div class="footer__container">
