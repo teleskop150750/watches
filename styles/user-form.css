@@ -1,3 +1,9 @@
+.user-form {
+  display: grid;
+  gap: 2rem;
+  justify-items: start;
+}
+
 .user-form-section {
   padding: 2rem 0 4rem;
 }
@@ -21,7 +27,6 @@
   row-gap: 1.4rem;
   column-gap: 2rem;
   justify-content: start;
-  margin-bottom: 2rem;
 }
 
 @media (min-width: 740px) {
@@ -41,12 +46,18 @@
   font-weight: 400;
 }
 
+.user-form__section--user-info {
+  font-size: 1.8em;
+  font-weight: 500;
+}
+
 .user-form__group {
   width: 100%;
 }
 
 .user-form__label {
   display: block;
+  margin: 0;
   margin-bottom: 0.4em;
   font-size: 0.95em;
   text-transform: uppercase;
@@ -63,6 +74,7 @@
 .user-form__input {
   width: 100%;
   padding: 0.62rem 1rem;
+  margin: 0;
   background-color: var(--color-grey-lightest-55a);
   border: none;
   border-radius: 0;
@@ -77,6 +89,6 @@
   padding: 1em 2em;
   font-size: 0.9em;
   color: var(--color-white);
-  background-color: var(--color-blue-light);
+  background-color: var(--color-blue-medium);
   border: 0;
 }

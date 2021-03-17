@@ -338,31 +338,110 @@
         <div class="user__container">
           <nav class="user-menu">
             <p class="user-menu__heading">Личный кабинет</p>
-            <button class="user-menu__item user-menu__item--active">Профиль</button>
-            <button class="user-menu__item">Изменить данные</button>
-            <button class="user-menu__item">История заказов</button>
+            <button class="user-menu__item user-menu__item-toggle user-menu__item--active">Профиль</button>
+            <button class="user-menu__item user-menu__item-toggle">Изменить данные</button>
+            <button class="user-menu__item user-menu__item-toggle">Изменить пароль</button>
+            <button class="user-menu__item user-menu__item-toggle">История заказов</button>
             <button class="user-menu__item">Выход</button>
           </nav>
-          <section class="user__info">
-            <h2 class="user__info-title">Профиль</h2>
-            <div class="user__info-wrapper">
+          <section class="user-section user-section--active">
+            <div class="user-form__section">
+              <h2 class="user-form__section-title user-form__section--user-info">Профиль</h2>
+              <div class="user-form__group">
+                <h3 class="user-form__label">Имя</h3>
+                <p class="user-form__input">Валентин</p>
+              </div>
+              <div class="user-form__group">
+                <h3 class="user-form__label">Фамилия</h3>
+                <p class="user-form__input">Степанов</p>
+              </div>
+              <div class="user-form__group">
+                <h3 class="user-form__label">E-Mail</h3>
+                <p class="user-form__input">teleskop130640@gmail.com</p>
+              </div>
+              <div class="user-form__group">
+                <h3 class="user-form__label">Телефон</h3>
+                <p class="user-form__input">89008383423</p>
+              </div>
+              <div class="user-form__group">
+                <h3 class="user-form__label">Адрес доставки</h3>
+                <p class="user-form__input">Москва, ул. Московская</p>
+              </div>
+            </div>
+          </section>
+
+          <section class="user-section">
+            <form class="user-form user-form-section__user-form">
+              <section class="user-form__section">
+                <h2 class="user-form__section-title user-form__section--user-info">Изменить данные</h2>
+                <div class="user-form__group">
+                  <label class="user-form__label user-form__label--required" for="firstname">Имя</label>
+                  <input class="user-form__input" type="text" name="firstname" id="firstname" minlength="2"
+                    maxlength="15" placeholder="Имя">
+                </div>
+                <div class="user-form__group">
+                  <label class="user-form__label user-form__label--required" for="lastname">Фамилия</label>
+                  <input class="user-form__input" type="text" name="lastname" id="lastname" minlength="2" maxlength="15"
+                    placeholder="Фамилия">
+                </div>
+                <div class="user-form__group">
+                  <label class="user-form__label user-form__label--required" for="email">E-Mail</label>
+                  <input class="user-form__input" type="text" name="email" id="email" placeholder="E-Mail">
+                </div>
+                <div class="user-form__group">
+                  <label class="user-form__label user-form__label--required" for="telephone">Телефон</label>
+                  <input class="user-form__input" type="text" name="telephone" id="telephone" minlength="2"
+                    maxlength="15" placeholder="Телефон">
+                </div>
+                <div class="user-form__group">
+                  <label class="user-form__label user-form__label--required" for="address">Адрес доставки</label>
+                  <input class="user-form__input" type="text" name="address" id="address" minlength="2" maxlength="15"
+                    autocomplete="off" placeholder="Адрес доставки">
+                </div>
+              </section>
+              <button class="user-form__button">Сохранить</button>
+            </form>
+          </section>
+
+          <section class="user-section">
+            <form class="user-form user-form-section__user-form">
+              <section class="user-form__section">
+                <h2 class="user-form__section-title user-form__section--user-info">Изменить пароль</h2>
+                <div class="user-form__group">
+                  <label class="user-form__label user-form__label--required" for="password">Пароль</label>
+                  <input class="user-form__input" type="password" name="password" id="password" minlength="6"
+                    placeholder="Пароль">
+                </div>
+                <div class="user-form__group">
+                  <label class="user-form__label user-form__label--required" for="confirm">Подтвердить пароль</label>
+                  <input class="user-form__input" type="password" name="confirm" id="confirm"
+                    placeholder="Подтвердить пароль">
+                </div>
+              </section>
+              <button class="user-form__button">Сохранить</button>
+            </form>
+          </section>
+
+          <section class="user-section">
+            <div class="user__info">
+              <h2 class="user__info-title">Профиль3</h2>
               <div class="user__info-group">
                 <h3 class="user__info-group-title">Имя</h3>
                 <p class="user__info-group-text">Валентин</p>
               </div>
-              <div class="uuser__info-group">
+              <div class="user__info-group">
                 <h3 class="user__info-group-title">Фамилия</h3>
                 <p class="user__info-group-text">Степанов</p>
               </div>
-              <div class="uuser__info-group">
+              <div class="user__info-group">
                 <h3 class="user__info-group-title">E-Mail</h3>
                 <p class="user__info-group-text">teleskop130640@gmail.com</p>
               </div>
-              <div class="uuser__info-group">
+              <div class="user__info-group">
                 <h3 class="user__info-group-title">Телефон</h3>
                 <p class="user__info-group-text">89008383423</p>
               </div>
-              <div class="uuser__info-group">
+              <div class="user__info-group">
                 <h3 class="user__info-group-title">Адрес доставки</h3>
                 <p class="user__info-group-text">Москва, ул. Московская</p>
               </div>
