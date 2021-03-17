@@ -1,30 +1,29 @@
 .quantity {
   display: flex;
-  height: 2.4rem;
+  height: 2.4em;
+  font-size: 1rem;
   background-color: var(--color-grey-lightest-55a);
 }
 
 .quantity__button {
-  width: 2.4rem;
-  height: 2.4rem;
+  width: 2.4em;
+  height: 2.4em;
   background-color: transparent;
   border: 0;
 }
 
 .quantity__input {
-  width: 2.4rem;
-  height: 2.4rem;
+  width: 2.4em;
+  height: 2.4em;
   text-align: center;
   background-color: transparent;
   border: 0;
   -moz-appearance: textfield;
-  appearance: none;
+  -webkit-appearance: textfield;
+  appearance: textfield;
 }
 
 .quantity__input::-webkit-inner-spin-button,
 .quantity__input::-webkit-outer-spin-button {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  margin: 0;
+  display: none;
 }

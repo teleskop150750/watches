@@ -4,11 +4,14 @@
   margin: 0 auto;
 }
 
+.single-slider__title {
+  margin: 0;
+  margin-bottom: 1.3rem;
+}
+
 .single-slider__container {
   position: relative;
   z-index: 1;
-
-  /* height: 300px; */
   padding: 0 0 3rem 0;
   margin-right: auto;
   margin-left: auto;

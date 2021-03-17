@@ -1,3 +1,7 @@
 @import 'styles/breadcrumbs.css';
-@import 'styles/cart-products.css';
 @import 'styles/quantity.css';
+@import 'styles/cart-products.css';
+
+.main {
+  padding-bottom: 4rem;
+}

@@ -1,8 +1,8 @@
 @import 'styles/main-slider.css';
 @import 'styles/brands.css';
 @import 'styles/hits.css';
-@import 'styles/cart-product.css';
+@import 'styles/card-product.css';
 
-.content {
+.main {
   padding-bottom: 2rem;
 }
