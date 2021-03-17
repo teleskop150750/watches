@@ -1,6 +1,6 @@
 export default () => {
-  const [minus, plus] = document.querySelectorAll('.product__quantity-button');
-  const input = document.querySelector('.product__quantity-input');
+  const [minus, plus] = document.querySelectorAll('.quantity__button');
+  const input = document.querySelector('.quantity__input');
 
   minus.addEventListener('click', () => {
     if (+input.value > 1) {
