@@ -35,6 +35,22 @@
   }
 }
 
+.user-form__section--user-info {
+  grid-template-columns: minmax(280px, 1fr);
+}
+
+@media (min-width: 700px) {
+  .user-form__section--user-info {
+    grid-template-columns: minmax(280px, 470px);
+  }
+}
+
+@media (min-width: 1040px) {
+  .user-form__section {
+    grid-template-columns: minmax(300px, 470px) minmax(300px, 470px);
+  }
+}
+
 .user-form__section--sognin {
   grid-template-columns: minmax(300px, 470px);
 }
@@ -44,11 +60,6 @@
   margin: 0;
   font-size: 1.3em;
   font-weight: 400;
-}
-
-.user-form__section--user-info {
-  font-size: 1.8em;
-  font-weight: 500;
 }
 
 .user-form__group {

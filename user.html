@@ -31,7 +31,7 @@
 
           <div class="header__top-user-wrapper">
             <div class="user-overlay"></div>
-            <button class="header__top-user" type="button" aria-label="user"></button>
+            <button class="header__top-user" type="button" aria-label="пользователь"></button>
             <ul class="header__top-user-list">
               <li class="header__top-user-list-item">
                 <a class="header__top-user-list-item-link" href="./sognin.html">Войти</a>
@@ -54,7 +54,7 @@
     <div class="header__bottom">
       <div class="search-overlay"></div>
       <div class="header__bottom-container">
-        <button class="header__bottom-open-nav" type="button" aria-label="user-menu">
+        <button class="header__bottom-open-nav" type="button" aria-label="меню">
           <span class="header__bottom-open-nav-liner"></span>
           <span class="header__bottom-open-nav-liner"></span>
           <span class="header__bottom-open-nav-liner"></span>
@@ -307,11 +307,11 @@
           </nav>
         </div>
 
-        <button class="search-button header__bottom-search-button" type="button" aria-label="search"></button>
+        <button class="search-button header__bottom-search-button" type="button" aria-label="показать поиск"></button>
 
         <form class="header__bottom-search">
           <input class="header__bottom-search-input" type="search" name="search" autocomplete="off" placeholder="Поиск">
-          <button class="search-button header__bottom-search-submit" type="submit"></button>
+          <button class="search-button header__bottom-search-submit" type="submit" aria-label="поиск"></button>
         </form>
       </div>
     </div>
@@ -345,8 +345,8 @@
             <button class="user-menu__item">Выход</button>
           </nav>
           <section class="user-section user-section--active">
-            <div class="user-form__section">
-              <h2 class="user-form__section-title user-form__section--user-info">Профиль</h2>
+            <div class="user-form__section user-form__section--user-info">
+              <h2 class="user-form__section-title user-form__section-title--user-info">Профиль</h2>
               <div class="user-form__group">
                 <h3 class="user-form__label">Имя</h3>
                 <p class="user-form__input">Валентин</p>
@@ -371,9 +371,9 @@
           </section>
 
           <section class="user-section">
-            <form class="user-form user-form-section__user-form">
-              <section class="user-form__section">
-                <h2 class="user-form__section-title user-form__section--user-info">Изменить данные</h2>
+            <form class="user-form">
+              <section class="user-form__section user-form__section--user-info">
+                <h2 class="user-form__section-title user-form__section-title--user-info">Изменить данные</h2>
                 <div class="user-form__group">
                   <label class="user-form__label user-form__label--required" for="firstname">Имя</label>
                   <input class="user-form__input" type="text" name="firstname" id="firstname" minlength="2"
@@ -405,8 +405,8 @@
 
           <section class="user-section">
             <form class="user-form user-form-section__user-form">
-              <section class="user-form__section">
-                <h2 class="user-form__section-title user-form__section--user-info">Изменить пароль</h2>
+              <section class="user-form__section user-form__section--user-info">
+                <h2 class="user-form__section-title user-form__section-title--user-info">Изменить пароль</h2>
                 <div class="user-form__group">
                   <label class="user-form__label user-form__label--required" for="password">Пароль</label>
                   <input class="user-form__input" type="password" name="password" id="password" minlength="6"
