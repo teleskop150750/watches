@@ -1,0 +1,26 @@
+.cart-products__container {
+  max-width: var(--max-width);
+  padding: 0 1rem;
+  margin: 0 auto;
+}
+
+.cart-products__list {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.cart-products__item {
+  padding: 1rem;
+  border: 1px solid;
+}
+
+.product__button-delete {
+  width: 1rem;
+  height: 1rem;
+  background-color: transparent;
+  background-image: url('../images/delete.svg');
+  background-repeat: no-repeat;
+  background-size: 100%;
+  border: none;
+}

@@ -56,4 +56,9 @@
   display: block;
   padding: 0.3em 0;
   line-height: 1;
+  color: var(--color-blue-medium);
+}
+
+.breadcrumbs__link--last {
+  color: var(--color-grey-medium);
 }

@@ -117,11 +117,11 @@ export default () => {
       && scrolled < scrollPrev
       && !navbar.classList.contains('header__bottom--show')
     ) || (
-        scrolled > headerHeight + 300
+      scrolled > headerHeight + 300
         && scrolled < scrollPrev
         && navbar.classList.contains('header__bottom--show')
         && navbar.classList.contains('header__bottom--hide')
-      )
+    )
     ) {
       if (!isUp) {
         timeStart = new Date().getTime();

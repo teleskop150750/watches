@@ -1,0 +1,30 @@
+.quantity {
+  display: flex;
+  height: 2.4rem;
+  background-color: var(--color-grey-lightest-55a);
+}
+
+.quantity__button {
+  width: 2.4rem;
+  height: 2.4rem;
+  background-color: transparent;
+  border: 0;
+}
+
+.quantity__input {
+  width: 2.4rem;
+  height: 2.4rem;
+  text-align: center;
+  background-color: transparent;
+  border: 0;
+  -moz-appearance: textfield;
+  appearance: none;
+}
+
+.quantity__input::-webkit-inner-spin-button,
+.quantity__input::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  margin: 0;
+}
