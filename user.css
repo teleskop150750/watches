@@ -5,6 +5,10 @@
   padding-bottom: 3rem;
 }
 
+.user__wrapper {
+  padding: 1rem 0;
+}
+
 .user__container {
   display: grid;
   gap: 2rem;
