@@ -334,11 +334,11 @@
       </div>
     </section>
     <main class="main">
-      <section class="cart-products">
-        <div class="cart-products__container">
-          <h1 class="cart-products__title">Оформление заказа</h1>
-          <ul class="cart-products__list">
-            <li class="product cart-products__item">
+      <div class="cart">
+        <div class="cart__container">
+          <h1 class="cart__title">Оформление заказа</h1>
+          <ul class="cart__list">
+            <li class="product cart__product">
               <div class="product__img-wrapper">
                 <a class="product__img-link" href="single.html" aria-label="Royal London">
                   <img class="product__img" src="images/product-1.jpeg" alt="">
@@ -419,11 +419,17 @@
               <button class="product__button-delete"></button>
             </li>
           </ul>
-          <button class="cart-products__set">
+
+          <div class="cart__sum">
+            <span class="cart__sum-text">Всего</span>
+            <span class="cart__sum-price">21 100 ₽</span>
+          </div>
+
+          <button class="cart__set">
             Оформить
           </button>
         </div>
-      </section>
+      </div>
     </main>
   </div>
 

@@ -1,10 +1,10 @@
-.cart-products__container {
+.cart__container {
   max-width: var(--max-width);
   padding: 0 1rem;
   margin: 0 auto;
 }
 
-.cart-products__list {
+.cart__list {
   padding: 0;
   margin: 0;
   margin-bottom: 2rem;
@@ -130,10 +130,22 @@
   }
 }
 
-.cart-products__set {
+.cart__sum {
+  display: flex;
+  gap: 1rem;
+  justify-content: flex-end;
+  font-size: 1.4rem;
+}
+
+.cart__sum-price {
+  font-weight: 500;
+  color: var(--color-blue-medium);
+}
+
+.cart__set {
   padding: 1em 2em;
   font-size: 0.9em;
   color: var(--color-white);
-  background-color: var(--color-blue-light);
+  background-color: var(--color-blue-medium);
   border: 0;
 }
