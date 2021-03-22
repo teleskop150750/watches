@@ -338,32 +338,37 @@
       <section class="user-form-section">
         <div class="user-form-section__container">
           <h1 class="user-form-section__title">Регистрация</h1>
-          <form class="user-form user-form-section__user-form">
+          <form class="user-form user-form-section__user-form" novalidate>
             <section class="user-form__section">
               <h2 class="user-form__section-title sr-only">Контактная информация</h2>
               <div class="user-form__group">
                 <label class="user-form__label user-form__label--required" for="firstname">Имя</label>
                 <input class="user-form__input" type="text" name="firstname" id="firstname" minlength="2" maxlength="15"
-                  placeholder="Имя">
+                  placeholder="Имя" required>
+                  <div class="user-form__error"></div>
               </div>
               <div class="user-form__group">
                 <label class="user-form__label user-form__label--required" for="lastname">Фамилия</label>
                 <input class="user-form__input" type="text" name="lastname" id="lastname" minlength="2" maxlength="15"
-                  placeholder="Фамилия">
+                  placeholder="Фамилия" required>
+                  <div class="user-form__error"></div>
               </div>
               <div class="user-form__group">
                 <label class="user-form__label user-form__label--required" for="email">E-Mail</label>
-                <input class="user-form__input" type="text" name="email" id="email" placeholder="E-Mail">
+                <input class="user-form__input" type="text" name="email" id="email" placeholder="E-Mail" required>
+                <div class="user-form__error"></div>
               </div>
               <div class="user-form__group">
                 <label class="user-form__label user-form__label--required" for="telephone">Телефон</label>
                 <input class="user-form__input" type="text" name="telephone" id="telephone" minlength="2" maxlength="15"
-                  placeholder="Телефон">
+                  placeholder="Телефон" required>
+                  <div class="user-form__error"></div>
               </div>
               <div class="user-form__group">
                 <label class="user-form__label user-form__label--required" for="address">Адрес доставки</label>
                 <input class="user-form__input" type="text" name="address" id="address" minlength="2" maxlength="15"
-                  autocomplete="off" placeholder="Адрес доставки">
+                  autocomplete="off" placeholder="Адрес доставки" required>
+                  <div class="user-form__error"></div>
               </div>
             </section>
             <section class="user-form__section">
@@ -371,12 +376,14 @@
               <div class="user-form__group">
                 <label class="user-form__label user-form__label--required" for="password">Пароль</label>
                 <input class="user-form__input" type="password" name="password" id="password" minlength="6"
-                  placeholder="Пароль">
+                  placeholder="Пароль" required>
+                  <div class="user-form__error"></div>
               </div>
               <div class="user-form__group">
                 <label class="user-form__label user-form__label--required" for="confirm">Подтвердить пароль</label>
                 <input class="user-form__input" type="password" name="confirm" id="confirm"
-                  placeholder="Подтвердить пароль">
+                  placeholder="Подтвердить пароль" required>
+                  <div class="user-form__error"></div>
               </div>
             </section>
             <button class="user-form__button">Зарегистрироваться</button>

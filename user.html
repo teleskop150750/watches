@@ -373,31 +373,36 @@
 
           <section class="user-section">
             <form class="user-form">
-              <section class="user-form__section user-form__section--user-info">
+              <section class="user-form__section user-form__section--user-info user-form__section--user-edit">
                 <h2 class="user-form__section-title user-form__section-title--user-info">Изменить данные</h2>
                 <div class="user-form__group">
                   <label class="user-form__label user-form__label--required" for="firstname">Имя</label>
                   <input class="user-form__input" type="text" name="firstname" id="firstname" minlength="2"
                     maxlength="15" placeholder="Имя">
+                  <div class="user-form__error"></div>
                 </div>
                 <div class="user-form__group">
                   <label class="user-form__label user-form__label--required" for="lastname">Фамилия</label>
                   <input class="user-form__input" type="text" name="lastname" id="lastname" minlength="2" maxlength="15"
                     placeholder="Фамилия">
+                  <div class="user-form__error"></div>
                 </div>
                 <div class="user-form__group">
                   <label class="user-form__label user-form__label--required" for="email">E-Mail</label>
                   <input class="user-form__input" type="text" name="email" id="email" placeholder="E-Mail">
+                  <div class="user-form__error"></div>
                 </div>
                 <div class="user-form__group">
                   <label class="user-form__label user-form__label--required" for="telephone">Телефон</label>
                   <input class="user-form__input" type="text" name="telephone" id="telephone" minlength="2"
                     maxlength="15" placeholder="Телефон">
+                  <div class="user-form__error"></div>
                 </div>
                 <div class="user-form__group">
                   <label class="user-form__label user-form__label--required" for="address">Адрес доставки</label>
                   <input class="user-form__input" type="text" name="address" id="address" minlength="2" maxlength="15"
                     autocomplete="off" placeholder="Адрес доставки">
+                  <div class="user-form__error"></div>
                 </div>
               </section>
               <button class="user-form__button">Сохранить</button>
@@ -406,17 +411,19 @@
 
           <section class="user-section">
             <form class="user-form user-form-section__user-form">
-              <section class="user-form__section user-form__section--user-info">
+              <section class="user-form__section user-form__section--user-info user-form__section--user-edit">
                 <h2 class="user-form__section-title user-form__section-title--user-info">Изменить пароль</h2>
                 <div class="user-form__group">
                   <label class="user-form__label user-form__label--required" for="password">Пароль</label>
                   <input class="user-form__input" type="password" name="password" id="password" minlength="6"
                     placeholder="Пароль">
+                  <div class="user-form__error"></div>
                 </div>
                 <div class="user-form__group">
                   <label class="user-form__label user-form__label--required" for="confirm">Подтвердить пароль</label>
                   <input class="user-form__input" type="password" name="confirm" id="confirm"
                     placeholder="Подтвердить пароль">
+                  <div class="user-form__error"></div>
                 </div>
               </section>
               <button class="user-form__button">Сохранить</button>
