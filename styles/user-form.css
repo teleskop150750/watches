@@ -63,12 +63,9 @@
 .user-form__section-title {
   grid-column: 1 / -1;
   margin: 0;
+  margin-bottom: 1rem;
   font-size: 1.3em;
   font-weight: 500;
-}
-
-.user-form__section--user-edit .user-form__section-title {
-  margin-bottom: 1rem;
 }
 
 .user-form__group {
