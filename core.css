@@ -1,6 +1,6 @@
-@import 'styles/global.css';
-@import 'styles/page.css';
-@import 'styles/header.css';
-@import 'styles/header-top.css';
-@import 'styles/header-bottom.css';
-@import 'styles/footer.css';
+@import 'styles/core/global.css';
+@import 'styles/core/page.css';
+@import 'styles/core/header.css';
+@import 'styles/core/header-top.css';
+@import 'styles/core/header-bottom.css';
+@import 'styles/core/footer.css';

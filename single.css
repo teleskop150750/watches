@@ -1,8 +1,8 @@
 @import 'styles/breadcrumbs.css';
-@import 'styles/product.css';
+@import 'styles/single/product.css';
 @import 'styles/quantity.css';
-@import 'styles/product-slider.css';
-@import 'styles/tabbed.css';
-@import 'styles/reviews.css';
+@import 'styles/single/product-slider.css';
+@import 'styles/single/tabbed.css';
+@import 'styles/single/reviews.css';
 @import 'styles/pagination.css';
-@import 'styles/single-slider.css';
+@import 'styles/single/single-slider.css';
