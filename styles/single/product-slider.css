@@ -133,7 +133,7 @@
   list-style: none;
   touch-action: pan-y;
   user-select: none;
-  background-color: var(--color-grey-lightest);
+  background-color: var(--color-grey-ultra-lighter);
 }
 
 .zoom-slider__close {
@@ -144,7 +144,7 @@
   z-index: 20;
   width: 2rem;
   height: 2rem;
-  background-color: var(--color-grey-lightest-55a);
+  background-color: var(--color-grey-ultra-light);
   border: 0;
   border-radius: 2rem;
   box-shadow: var(--box-shadow);

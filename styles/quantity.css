@@ -2,7 +2,7 @@
   display: flex;
   height: 2.4em;
   font-size: 1rem;
-  background-color: var(--color-grey-lightest-55a);
+  background-color: var(--color-grey-ultra-light);
 }
 
 .quantity__button {
