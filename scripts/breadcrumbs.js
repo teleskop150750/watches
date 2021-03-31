@@ -1,4 +1,4 @@
-import throttle from './throttle.js';
+import throttle from './core/throttle.js';
 
 const slider = document.querySelector('.breadcrumbs__wrapper');
 const sliderTrack = slider.querySelector('.breadcrumbs__list');

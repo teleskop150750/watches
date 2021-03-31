@@ -1,7 +1,7 @@
-import headerUser from './scripts/headerUser.js';
-import navMobile from './scripts/navMobile.js';
-import navScroll from './scripts/navScroll.js';
-import headerSearch from './scripts/headerSearch.js';
+import headerUser from './scripts/core/headerUser.js';
+import navMobile from './scripts/core/navMobile.js';
+import navScroll from './scripts/core/navScroll.js';
+import headerSearch from './scripts/core/headerSearch.js';
 
 // header User
 headerUser();

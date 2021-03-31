@@ -1,6 +1,6 @@
 // eslint-disable-next-line import/no-named-as-default
-import Swiper from '../libs/swiper/swiper.js';
-import { body } from './globalVars.js';
+import Swiper from '../../libs/swiper/swiper.js';
+import { body } from '../core/globalVars.js';
 
 const sliderObject = {
   init: false,

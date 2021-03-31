@@ -1,10 +1,10 @@
-import { body } from './globalVars.js';
+import { body } from '../core/globalVars.js';
 import heightToggle from './heightToggle.js';
-import nouislider from '../libs/noUiSlider/nouislider.js';
+import nouislider from '../../libs/noUiSlider/nouislider.js';
 import createRandeSlider from './createRandeSlider.js';
 import filterPrice, { setRangeSlider } from './filter-price.js';
-import pageLock from './pageLock.js';
-import pageUnlock from './pageUnlock.js';
+import pageLock from '../core/pageLock.js';
+import pageUnlock from '../core/pageUnlock.js';
 
 const clearPriceSlider = (slider, inputsArr) => {
   const inputs = inputsArr;
