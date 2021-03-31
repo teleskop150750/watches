@@ -129,16 +129,21 @@
 
 /* search button */
 .search-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 2em;
   height: 2em;
   margin: 0;
   font-size: inherit;
   background-color: transparent;
-  background-image: url('../images/search.svg');
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: 63%;
   border: none;
+}
+
+.search-button__icon {
+  display: block;
+  width: 63%;
+  height: 63%;
 }
 
 /* ===================================================== */
@@ -315,13 +320,21 @@
   height: 3rem;
   padding: 0;
   background-color: var(--color-grey-lightest-55a);
-  background-image: url('../images/nav-back.svg');
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: 10px;
   border: none;
   border-radius: 5px;
+  outline: none;
   transition: all 0.2s ease;
+}
+
+.header__bottom-nav-mobile-header-back:focus,
+.header__bottom-nav-mobile-header-back:hover {
+  color: var(--color-blue-medium);
+}
+
+.header__bottom-nav-mobile-header-back-icon {
+  display: block;
+  width: 10px;
+  height: 10px;
 }
 
 /* ===================================================== */
@@ -343,9 +356,14 @@
 
 .menu-mobile__link {
   display: block;
+  width: 100%;
   padding: 1rem 0;
+  margin: 0;
   color: var(--color-grey-medium);
+  text-align: left;
   cursor: pointer;
+  background-color: transparent;
+  border: none;
 }
 
 .menu-mobile__link--all {
@@ -356,7 +374,7 @@
   position: relative;
 }
 
-.menu-mobile__link-submenu::before {
+.menu-mobile__link-submenu::after {
   position: absolute;
   top: 50%;
   right: 1.1rem;
@@ -364,7 +382,7 @@
   width: 10px;
   height: 10px;
   content: '';
-  background-image: url('../images/nav-arrow-left.svg');
+  background-image: url('/images/nav-arrow-left.svg');
   background-repeat: no-repeat;
   background-position: center;
   background-size: 10px;
@@ -420,7 +438,7 @@
   width: 10px;
   height: 10px;
   content: '';
-  background-image: url('../images/nav-back.svg');
+  background-image: url('/images/nav-back.svg');
   background-repeat: no-repeat;
   background-position: center;
   background-size: 10px;

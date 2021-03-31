@@ -26,13 +26,20 @@
         <div class="header__top-right">
           <div class="header__top-cart-wrapper">
             <a class="header__top-cart-link" href="cart.html">
+              <svg class="header__top-cart-link-icon">
+                <use xlink:href="images/svg-sprite.svg#cart"></use>
+              </svg>
               <span class="header__top-cart-count">8</span>
             </a>
           </div>
 
           <div class="header__top-user-wrapper">
             <div class="user-overlay"></div>
-            <button class="header__top-user" type="button" aria-label="пользователь"></button>
+            <button class="header__top-user" type="button" aria-label="пользователь">
+              <svg class="header__top-user-icon">
+                <use xlink:href="images/svg-sprite.svg#user"></use>
+              </svg>
+            </button>
             <ul class="header__top-user-list">
               <li class="header__top-user-list-item">
                 <a class="header__top-user-list-item-link" href="./sognin.html">Войти</a>
@@ -68,12 +75,16 @@
               <h3 class="header__bottom-nav-mobile-header-title">
                 Категории
               </h3>
-              <button class="header__bottom-nav-mobile-header-back" type="button" aria-label="закрыть меню"></button>
+              <button class="header__bottom-nav-mobile-header-back" type="button" aria-label="закрыть меню">
+                <svg class="header__bottom-nav-mobile-header-back-icon">
+                  <use xlink:href="images/svg-sprite.svg#nav-back"></use>
+                </svg>
+              </button>
             </div>
             <nav class="menu-mobile header__bottom-nav-mobile-list-wrapper">
               <ul class="menu-mobile__list">
                 <li class="menu-mobile__item">
-                  <a href="#" class="menu-mobile__link menu-mobile__link-submenu">
+                  <a class="menu-mobile__link menu-mobile__link-submenu">
                     Мужские
                   </a>
                   <ul class="menu-mobile__list menu-mobile__list--hidden">
@@ -308,11 +319,19 @@
           </nav>
         </div>
 
-        <button class="search-button header__bottom-search-button" type="button" aria-label="показать поиск"></button>
+        <button class="search-button header__bottom-search-button" type="button" aria-label="показать поиск">
+          <svg class="search-button__icon">
+            <use xlink:href="images/svg-sprite.svg#search"></use>
+          </svg>
+        </button>
 
         <form class="header__bottom-search">
           <input class="header__bottom-search-input" type="search" name="search" autocomplete="off" placeholder="Поиск">
-          <button class="search-button header__bottom-search-submit" type="submit" aria-label="поиск"></button>
+          <button class="search-button header__bottom-search-submit" type="submit" aria-label="поиск">
+            <svg class="search-button__icon">
+              <use xlink:href="images/svg-sprite.svg#search"></use>
+            </svg>
+          </button>
         </form>
       </div>
     </div>
@@ -352,7 +371,11 @@
           <header class="filters__header">
             <button class="filters__clear" type="button">Сбросить</button>
             <h2 class="filters__title">Фильтры</h2>
-            <button class="filters__close" type="button" aria-label="закрыть фильтры"></button>
+            <button class="filters__close" type="button" aria-label="закрыть фильтры">
+              <svg class="filters__close-icon">
+                <use xlink:href="images/svg-sprite.svg#close"></use>
+              </svg>
+            </button>
           </header>
 
           <div class="filters__body">
@@ -639,6 +662,9 @@
           <div class="products__header-container-bottom">
             <div class="products__sort-wrapper">
               <button class="products__header-button products__header-button--sort" type="button">
+                <svg class="products__header-button-icon">
+                  <use xlink:href="images/svg-sprite.svg#sort"></use>
+                </svg>
                 По умолчанию
               </button>
               <div class="products__sort-overlay"></div>
@@ -666,6 +692,9 @@
 
 
             <button class="products__header-button products__header-button--filters" type="button">
+              <svg class="products__header-button-icon">
+                <use xlink:href="images/svg-sprite.svg#filters"></use>
+              </svg>
               Фильтры
             </button>
           </div>

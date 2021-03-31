@@ -47,12 +47,10 @@
   border: none;
 }
 
-.products__header-button::before {
+.products__header-button-icon {
   display: block;
   width: 1.5em;
   height: 1.5em;
-  font-size: 1rem;
-  content: '';
 }
 
 /* ========================================== */
@@ -76,10 +74,6 @@
 
 .products__sort-wrapper {
   position: relative;
-}
-
-.products__header-button--sort::before {
-  background-image: url('../images/sort.svg');
 }
 
 .products__sort-list {
@@ -131,15 +125,10 @@
   width: 1.8em;
   height: 1.8em;
   content: '';
-  background-image: url('../images/check-sort.svg');
+  background-image: url('/images/check-sort.svg');
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
-}
-
-/* ========================================== */
-.products__header-button--filters::before {
-  background-image: url('../images/filters.svg');
 }
 
 /* ========================================== */

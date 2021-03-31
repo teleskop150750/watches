@@ -96,10 +96,13 @@
   width: 2rem;
   height: 2rem;
   background-color: transparent;
-  background-image: url('../images/close.svg');
-  background-repeat: no-repeat;
-  background-position: center;
   border: none;
+}
+
+.filters__close-icon {
+  display: block;
+  width: 100%;
+  height: 100%;
 }
 
 /* =========================================================== */
@@ -262,7 +265,7 @@
 
 .check__input:checked + .check__box {
   background-color: var(--color-blue-medium);
-  background-image: url('../images/check-filter.svg');
+  background-image: url('/images/check-filter.svg');
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
